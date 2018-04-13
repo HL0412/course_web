@@ -1,0 +1,1 @@
+import pymysqlpymysql.install_as_MySQLdb()default_app_config = 'course_manager.apps.CourseManagerConfig'
