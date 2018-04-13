@@ -24,6 +24,11 @@ xadmin.autodiscover()
 
 urlpatterns = [
 
-    url(r'xadmin/', include(xadmin.site.urls)),
+    url(r'^xadmin/', include(xadmin.site.urls)),
+    url(r'^college/', include('college.urls', namespace='college')),
+    url(r'^course_manage/', include('course_manage.urls', namespace='course_manage')),
+    url(r'^guestbook/', include('guestbook.urls', namespace='guestbook')),
+    url(r'^platfrom/', include('platfrom.urls', namespace='platfrom')),
+    url(r'^users/', include('users.urls', namespace='users')),
 
 ]

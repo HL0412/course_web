@@ -1,0 +1,1 @@
+from django.conf.urls import urlfrom college import viewsapp_name = 'course_manager'       #这里一定要写urlpatterns = []
