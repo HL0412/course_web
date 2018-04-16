@@ -30,22 +30,3 @@ class LogAdmin(object):
     model_icon = 'fa fa-cog'
 
 xadmin.site.register(Log, LogAdmin)
-
-from xadmin import views
-
-# 添加标题和底部
-class GlobalSetting:
-    # 设置base_site.html的Title
-    site_title = '课程教学网站后台管理'
-    # 设置base_site.html的Footer
-    site_footer = 'Huangli--成都理工大学工程技技术学院 '
-    #设置菜单折叠
-    menu_style = "accordion"
-    # global_search_models = [V_UserInfo, UserDistrict]
-    # global_models_icon = {
-    #     V_UserInfo: "glyphicon glyphicon-user", UserDistrict: "fa fa-cloud"
-    # }  # 设置models的全局图标
-    # menu_style = "default"
-
-
-xadmin.site.register(views.CommAdminView, GlobalSetting)

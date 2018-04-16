@@ -33,8 +33,7 @@
       <li class="app_menu dropdown-submenu {% if item.selected %} active{% endif %}">
         <a href="#" class="section">
           {% if item.icon %}<i class="icon fa-fw {{item.icon}}"></i>
-          <!--{% elif item.first_icon %}<i class="icon fa-fw {{item.first_icon}}"></i>-->
-          <!--{% autoescape off %}{% trans item.titile %}{% endautoescape %}-->
+          {% elif item.first_icon %}<i class="icon fa-fw {{item.first_icon}}"></i>
           {%else%}<i class="icon fa-fw fa fa-circle-o"></i>{% endif %}
         </a><hr/>
         <ul class="dropdown-menu">

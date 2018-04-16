@@ -8,5 +8,6 @@ class GuestBookAdmin:
     list_display = ['title', 'ID_Card', 'author', 'sex', 'checkout', 'type', 'add_time']
     search_fileds = ['title', 'ID_Card', 'author']
     list_filter = ['title', 'ID_Card', 'author']
+    model_icon = 'fa fa-list'
 
 xadmin.site.register(GuestBook, GuestBookAdmin)

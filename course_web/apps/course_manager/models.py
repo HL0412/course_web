@@ -1,10 +1,27 @@
 from datetime import datetime
-from email.policy import default
-
 from django.db import models
-
+from college.models import Department
 # Create your models here.
-from users.models import Teacher
+
+
+class Teacher(models.Model):
+    '''教师表'''
+    teacher_name = models.CharField(max_length=45, verbose_name='姓名')
+    teacher_num = models.CharField(max_length=45, verbose_name='职工号')
+    sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
+    department = models.ForeignKey(Department, verbose_name='系', on_delete=models.CASCADE)
+    phone = models.CharField(max_length=32, null=True, blank=True, verbose_name='电话')
+    email = models.EmailField(null=True, blank=True, max_length=50, verbose_name='邮箱')
+    picture = models.ImageField(null=True, blank=True, upload_to='static/teacher', verbose_name='头像')
+    age = models.IntegerField(default=18, verbose_name='年龄' )
+    add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
+    class Meta:
+        db_table = 'teacher_info'
+        verbose_name = '教师信息'
+        verbose_name_plural = "教师信息"
+
+    def __str__(self):
+        return self.teacher_name
 
 class Course(models.Model):
 
@@ -24,7 +41,7 @@ class Course(models.Model):
 
 class Video(models.Model):
 
-    course = models.ForeignKey(Course, verbose_name='课程名')
+    course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
     video_name = models.CharField(max_length=100, verbose_name='视频名')
     url = models.URLField(max_length=150, verbose_name='视频地址')
     learn_times = models.IntegerField(default=0, verbose_name='学习时长（分钟数)')
@@ -39,7 +56,7 @@ class Video(models.Model):
 
 class Data(models.Model):
 
-    course = models.ForeignKey(Course, verbose_name='课程名')
+    course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
     data_name = models.CharField(max_length=100, verbose_name='资料名称')
     data = models.FileField(upload_to='static/course/data', verbose_name='课程资料', max_length=100)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
@@ -53,7 +70,7 @@ class Data(models.Model):
 
 class PPT(models.Model):
 
-    course = models.ForeignKey(Course, verbose_name='课程名')
+    course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
     ppt_name = models.CharField(max_length=100, verbose_name='课件名称')
     ppt = models.FileField(upload_to='static/course/ppt', verbose_name='课件', max_length=100)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')

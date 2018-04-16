@@ -16,7 +16,7 @@ class Department(models.Model):
         return self.department_name
 
 class Classroom(models.Model):
-    department =  models.ForeignKey(Department, verbose_name='系名')
+    department =  models.ForeignKey(Department, verbose_name='系名', on_delete=models.CASCADE)
     grade = models.CharField(max_length=45, verbose_name='年级')
     major =models.CharField(max_length=45,  verbose_name='专业')
     classes = models.IntegerField(unique=True, verbose_name='班号', default=1)

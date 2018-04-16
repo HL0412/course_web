@@ -1,11 +1,9 @@
 from datetime import datetime
-
 from django.db import models
+from course_manager.models import Course, Teacher
+from users.models import Student
 
 # Create your models here.
-from course_manager.models import Course
-from users.models import Student, Teacher
-
 
 class Notice(models.Model):
 
@@ -38,9 +36,9 @@ class News(models.Model):
         return self.title
 
 class Work(models.Model):
-    student = models.ForeignKey(Student, verbose_name='学生')
-    course = models.ForeignKey(Course, verbose_name='课程名')
-    teacher = models.ForeignKey(Teacher, verbose_name='教师')
+    student = models.ForeignKey(Student, verbose_name='学生', on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, verbose_name='教师', on_delete=models.CASCADE)
     title = models.CharField(max_length=45, verbose_name='作业题目')
     content = models.FileField(upload_to='static/work', verbose_name='作业内容', max_length=100)
     publish_time = models.DateTimeField(default=datetime.now, verbose_name='提交时间')
@@ -53,8 +51,8 @@ class Work(models.Model):
         return self.title
 
 class WorkPublish(models.Model):
-    course = models.ForeignKey(Course, verbose_name='课程名')
-    teacher = models.ForeignKey(Teacher, verbose_name='教师')
+    course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, verbose_name='教师', on_delete=models.CASCADE)
     title = models.CharField(max_length=45, verbose_name='作业题目')
     publish_time = models.DateTimeField(default=datetime.now, verbose_name='发布时间')
     class Meta:
