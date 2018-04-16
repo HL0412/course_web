@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--不支持老版本IE-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--device-width自适应移动端宽度，initial-scale=1不进行缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>课程教学——首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/min.css">
+</head>
+<body>
+<!-- jQuery -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!---bootstrap的核心JS文件必须放在jQuery文件之后，因为bootstrap基于jQuery -->
+<script src="js/bootstrap.min.js"></script>
+<nav class="navbar ">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src=" ">COURSE--HL</a><!---放log的地方-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--具体菜单项-->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li><!--普通菜单-->
+                <li class="dropdown"><!--下拉菜单-->
+                    <a class="dropdown-toggle" href="#" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        课程选择
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdowncolor" aria-labelledby="dropdownMenu">
+                        <li><a href="course.html">数据结构</a></li><!--下拉菜单项-->
+                        <li><a href="#">C语言</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">前端</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">师资队伍</a></li>
+                <li><a href="#">作业展示</a></li>
+                <li><a href="#">课程推荐</a></li>
+                <li><a href="#">新闻动态</a></li>
+                <li><a href="#">交流社区</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+            <form class="navbar-form navbar-left ">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn bg-info">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container col-md-4" id="container-left">
+        <div class="form row">
+            <div class="  col-md-offset-1" id="login_form">
+                <h5 class="form-title">用户登录</h5>
+                <div class="col-md-6" id="login">
+                    <div class="form-group">
+                        <i class="fa fa-user fa-lg"></i>
+                        用户名:
+                       <input class="form-control required" type="text" placeholder="Username" id="username" name="username" autofocus="autofocus" maxlength="20"/>
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock fa-lg"></i>
+                        密码:
+                        <input class="form-control required" type="password" placeholder="Password" id="password" name="password" maxlength="8"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="remember" value="1"/>记住我
+                        </label>
+                    </div>
+                    <div class="form-group col-md-offset-7">
+                        <button type="submit" class="btn btn-success pull-right" name="submit">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form row" id="notice">
+            <h6 class="form-title ">最新公告</h6>
+            <ul class="list-group">
+                <a href="#" class="list-group-item">24*7 支持</a>
+                <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                <a href="#" class="list-group-item">图像的数量</a>
+                <a href="#" class="list-group-item">每年更新成本</a>
+                <a href="#" class="list-group-item">24*7 支持</a>
+                <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                <a href="#" class="list-group-item">图像的数量</a>
+                <a href="#" class="list-group-item">每年更新成本</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container col-md-8" id="container-right">
+        <h5 class="form-title"  >作业展示</h5>
+        <div class="row" id="work">
+            <div class="col-sm-3">
+                <!--img-thumbnail 方形加外边框-->
+                <img src="Images/八镜台.jpg"  class="img-thumbnail" alt="八镜台"/>
+            </div>
+            <div class="col-sm-3">
+                <img src="Images/标建2.jpg" class="img-thumbnail" alt="标建" />
+            </div>
+            <div class="col-sm-3">
+                <img src="Images/标建4.jpg" class="img-thumbnail" alt="标建2"/>
+            </div>
+            <div class="col-sm-3">
+                <img src="Images/城墙2.jpg" class="img-thumbnail" alt="标建2"/>
+            </div>
+        </div>
+        <h5 class="form-title" >新闻动态</h5>
+        <div class="row">
+            <ul class="list-group">
+                <a href="#" class="list-group-item">24*7 支持</a>
+                <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                <a href="#" class="list-group-item">图像的数量</a>
+                <a href="#" class="list-group-item">每年更新成本</a>
+                <a href="#" class="list-group-item">24*7 支持</a>
+                <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                <a href="#" class="list-group-item">图像的数量</a>
+                <a href="#" class="list-group-item">每年更新成本</a>
+            </ul>
+        </div>
+    </div>
+<div  class="container" id="course">
+    <h4 class="course">课程推荐</h4>
+    <!-- Nav tabs页签 -->
+    <ul class="nav nav-tabs" role="tablist">
+        <!--注意这里的#home与下面的div role="tabpanel" class="tab-pane active" id="home" 的id对应实现页签-->
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">GIS基础</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">.NET基础</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Asp.net MVC</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Web GIS</a></li>
+    </ul>
+    <div class="tab-content">
+        <!--active当前选中项-->
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>GIS基础介绍</h3>
+                    <p style="font-size:14px">地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，
+                        对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
+                    <p>位置与地理信息既是LBS的核心，也是LBS的基础。一个单纯的经纬度坐标只有置于特定的地理信息中，代表为某个地点、标志、方位后，才会被用户认识和理解。用户在通过相关技
+                        术获取到位置信息之后，还需要了解所处的地理环境，查询和分析环境信息，从而为用户活动提供信息支持与服务。</p>
+                    <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>.Net基础介绍</h3>
+                    <p style="font-size:14px">.NET是 Microsoft XML Web services 平台。XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，而不管所采用的是哪种操作
+                        系统、设备或编程语言。Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。对个人用户的好处是无缝的、吸引人的体验。</p>
+                    <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Images/.Net.jpg" class="img-thumbnail" alt=".net"/>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Asp .net MVC介绍</h3>
+                    <p style="font-size:14px">ASP.NET MVC 4已经正式发布，并内置于Visual Studio 2012，
+                        新版本ASP.NET MVC版本新增了手机模版、单页应用程序，Web API等模版，更新了一些 javascript 库，其中示例页面也使用了jquery的AJAX登录，
+                        并增加了OAuth认证/Entity Framework5的支持。同时也增强了对HTML5、AsyncController等的支持。</p>
+                    <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Images/MVC.jpg" class="img-thumbnail" alt="MVC"/>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3>Web GIS基础介绍</h3>
+                    <p style="font-size:14px">Web GIS是Internet技术应用于GIS开发的产物，是现代GIS技术的重要组成部分。常见的Web GIS开发软件有超擎图形。
+                        是一个交互式的、分布式的、动态的地理信息系统，是由多个主机、多个数据库的无线终端，并由客户机与服务器（HTTP服务器及应用服务器）相连所组成的。
+                        GIS通过WWW功能得以扩展，真正成为一种大众使用的工具。
+                        从WWW的任意一个节点，Internet用户可以浏览WebGIS站点中的空间数据、制作专题图，以及进行各种空间检索和空间分析，从而使GIS进入千家万户。</p>
+                    <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="Images/WebGIS.jpg" class="img-thumbnail" alt="GIS基础"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div id="copyright"  class="container">
+            <p >版权:&nbsp;&nbsp;2018 ©HuangLi</p>
+            <p>邮箱:1142712515@qq.com </p>
+            <p>成都理工大学工程技术学院</p>
+        </div>
+    </footer>
+</body>
+</html>
