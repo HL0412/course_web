@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}课程教学网--首页{% endblock %}
+
+{% block custom_bread %}
+{% endblock %}
+
+{% block content %}
+
+<!--feature start-->
+    <section>
+		<div class="wp">
+			<ul class="feature">
+				<li class="feature1">
+					<img class="pic" src="{% static 'images/feature1.png' %}"/>
+					<p class="center">专业权威</p>
+				</li>
+				<li class="feature2">
+					<img class="pic" src="{% static 'images/feature2.png' %}"/>
+					<p class="center">课程最新</p>
+				</li>
+				<li class="feature3">
+					<img class="pic" src="{% static 'images/feature3.png' %}"/>
+					<p class="center">名师授课</p>
+				</li>
+				<li class="feature4">
+					<img class="pic" src="{% static 'images/feature4.png' %}"/>
+					<p class="center">数据真实</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!--feature end-->
+<!--module1 start-->
+    <section>
+        <div class="container col-md-4" id="container-left">
+            <div class="form row">
+                <div class="col-md-offset-1" >
+                    <div class="col-md-11">
+                    <h4 class="form-title">用户登录</h4>
+                        <div class="login">
+                            <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
+                                <label>用&nbsp;户&nbsp;名:</label>
+                                <input name="username"   type="text" placeholder="手机号/邮箱" />
+                            </div>
+                            <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
+                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <input name="password"  type="password" placeholder="请输入您的密码" />
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="remember" value="1"/>记住我
+                                    <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info" name="submit">登录</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form row" >
+                <div class="col-md-offset-1" id="notice">
+                    <div class="col-md-11" >
+                    <h4 class="form-title ">最新公告</h4>
+                    <ul class="list-group">
+                        <a href="#" class="list-group-item">24*7 支持</a>
+                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                        <a href="#" class="list-group-item">图像的数量</a>
+                        <a href="#" class="list-group-item">每年更新成本</a>
+                        <a href="#" class="list-group-item">24*7 支持</a>
+                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                        <a href="#" class="list-group-item">图像的数量</a>
+                        <a href="#" class="list-group-item">每年更新成本</a>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container col-md-8" id="container-right">
+            <div class="notice">
+                <h4 class="form-title">作业展示</h4>
+                <div class="row " id="work">
+                    <div class="col-sm-3">
+                        <!--img-thumbnail 方形加外边框-->
+                        <img src="Images/八镜台.jpg"  class="img-thumbnail" alt="八镜台"/>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/标建2.jpg" class="img-thumbnail" alt="标建" />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/标建4.jpg" class="img-thumbnail" alt="标建2"/>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/城墙2.jpg" class="img-thumbnail" alt="标建2"/>
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+                <h4 class="form-title" >新闻动态</h4>
+                <div class="row" id="news">
+                    <ul class="list-group">
+                        <a href="#" class="list-group-item">24*7 支持</a>
+                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                        <a href="#" class="list-group-item">图像的数量</a>
+                        <a href="#" class="list-group-item">每年更新成本</a>
+                        <a href="#" class="list-group-item">24*7 支持</a>
+                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
+                        <a href="#" class="list-group-item">图像的数量</a>
+                        <a href="#" class="list-group-item">每年更新成本</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</section>
+    <section>
+		<div class="module greybg">
+            <div  class="container col-md-12 col-md-offset-0" id="course">
+                <h4 class="form-title ">课程推荐</h4>
+                <!-- Nav tabs页签 -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <!--注意这里的#home与下面的div role="tabpanel" class="tab-pane active" id="home" 的id对应实现页签-->
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">GIS基础</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">.NET基础</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Asp.net MVC</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Web GIS</a></li>
+                </ul>
+                <div class="tab-content">
+                <!--active当前选中项-->
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h3>GIS基础介绍</h3>
+                            <p style="font-size:14px">地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，
+                                对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
+                            <p>位置与地理信息既是LBS的核心，也是LBS的基础。一个单纯的经纬度坐标只有置于特定的地理信息中，代表为某个地点、标志、方位后，才会被用户认识和理解。用户在通过相关技
+                                术获取到位置信息之后，还需要了解所处的地理环境，查询和分析环境信息，从而为用户活动提供信息支持与服务。</p>
+                            <br>
+                            <br>
+                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h3>.Net基础介绍</h3>
+                            <p style="font-size:14px">.NET是 Microsoft XML Web services 平台。XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，而不管所采用的是哪种操作
+                                系统、设备或编程语言。Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。对个人用户的好处是无缝的、吸引人的体验。</p>
+                            <br>
+                            <br>
+                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Images/.Net.jpg" class="img-thumbnail" alt=".net"/>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h3>Asp .net MVC介绍</h3>
+                            <p style="font-size:14px">ASP.NET MVC 4已经正式发布，并内置于Visual Studio 2012，
+                                新版本ASP.NET MVC版本新增了手机模版、单页应用程序，Web API等模版，更新了一些 javascript 库，其中示例页面也使用了jquery的AJAX登录，
+                                并增加了OAuth认证/Entity Framework5的支持。同时也增强了对HTML5、AsyncController等的支持。</p>
+                            <br>
+                            <br>
+                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Images/MVC.jpg" class="img-thumbnail" alt="MVC"/>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h3>Web GIS基础介绍</h3>
+                            <p style="font-size:14px">Web GIS是Internet技术应用于GIS开发的产物，是现代GIS技术的重要组成部分。常见的Web GIS开发软件有超擎图形。
+                                是一个交互式的、分布式的、动态的地理信息系统，是由多个主机、多个数据库的无线终端，并由客户机与服务器（HTTP服务器及应用服务器）相连所组成的。
+                                GIS通过WWW功能得以扩展，真正成为一种大众使用的工具。
+                                从WWW的任意一个节点，Internet用户可以浏览WebGIS站点中的空间数据、制作专题图，以及进行各种空间检索和空间分析，从而使GIS进入千家万户。</p>
+                            <br>
+                            <br>
+                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="Images/WebGIS.jpg" class="img-thumbnail" alt="GIS基础"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block custom_js %}
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+

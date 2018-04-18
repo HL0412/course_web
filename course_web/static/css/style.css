@@ -2443,12 +2443,7 @@ textarea:focus {
     color: #fb8341;
 }
 
-footer .footer {
-    background: #3a3a3a;
-    height: 300px;
-    padding: 15px;
-    color: #717171;
-}
+
 
 footer .footer .nav {
     width: 500px;
@@ -2505,11 +2500,7 @@ footer .footer .cont .third img {
     margin-right: 10px;
 }
 
-footer .footer .tell {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+
 
 footer .footer .links {
     height: auto;
@@ -2536,13 +2527,7 @@ footer .footer .links a:hover {
     text-decoration: underline;
 }
 
-footer .footer .line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid #343434;
-    clear: both;
-    margin: 20px 0;
-}
+
 
 .listtop {
     width: 100%;

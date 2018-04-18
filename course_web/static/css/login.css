@@ -1,10 +1,10 @@
 body{
     width:100%;
     height:100%;
-    background:#77c562;
+    background-color: #008adf;
 }
 a:hover{
-    text-decoration:underline;
+    color: #1cbae4;
 }
 .c-box{
     width:100%;
@@ -15,7 +15,9 @@ a:hover{
     background:#fff;
 }
 .bg-box{
-    background:url(../images/login-bg.png) no-repeat center center;
+    margin-top: 7%;
+    background:url(../images/2.jpg) repeat center center;
+
 }
 .header-box{
     width:1190px;
@@ -55,9 +57,9 @@ a:hover{
     height:68px;
     line-height:68px;
     margin-bottom:15px;
-    padding-top:32px;
+    padding-top:60px;
     padding-left:190px;
-    background:url(../images/logo.png) no-repeat 0 center;
+    background:url(../images/1.jpg) no-repeat 0 center;
 }
 .index-logo{
     position:absolute;

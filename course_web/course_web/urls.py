@@ -13,10 +13,9 @@ Including another pathconf
     1. Import the include() function: from django.urls import include, path
     2. Add a path to pathpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path, include
-from django.views.generic import TemplateView
-
-from users import views
+from django.urls import path, include, re_path
+from users.views import IndexView, LoginView, LogoutView, RegisterView, ForgetPwdView, ModifyPwdView, ResetView, \
+    ActiveUserView
 from xadmin.plugins import xversion
 import xadmin
 
@@ -28,8 +27,18 @@ xadmin.autodiscover()
 urlpatterns = [
 
     path('xadmin/', xadmin.site.urls),
-    path('users/', include('users.urls', namespace='users')),
+    path('', IndexView.as_view(), name='index'),
+    path('login/',LoginView.as_view(),name = 'login'),
+    path('logout/', LogoutView.as_view(), name="logout"),
+    path('register/',RegisterView.as_view(),name = 'register'),
+    re_path('active/(?P<active_code>.*)/',ActiveUserView.as_view(),name='user_active'),
+    path('forget/',ForgetPwdView.as_view(),name='forget_pwd'),
+    re_path('reset/(?P<active_code>.*)/', ResetView.as_view(), name='reset_pwd'),
+    path('modify_pwd/', ModifyPwdView.as_view(), name='modify_pwd'),
     path('captcha/',include('captcha.urls')),
+
+    # 以下是创建的app的urls
+    path('users/', include('users.urls', namespace='users')),
     # path('college/', include('college.urls', namespace='college')),
     # path('course_manage/', include('course_manager.urls', namespace='course_manager')),
     # path('guestbook/', include('guestbook.urls', namespace='guestbook')),
