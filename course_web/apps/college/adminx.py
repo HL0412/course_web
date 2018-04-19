@@ -2,7 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 import xadmin
-from college.models import Classroom, Department
+from college.models import Classroom, Department, Teacher, Student
+
 
 class DepartmentAdmin:
     list_display = ['department_name', 'number', 'add_time']
@@ -16,5 +17,19 @@ class ClassroomAdmin:
     list_filter = ['department', 'grade', 'major', 'classes']
     model_icon = 'fa fa-info'
 
+class TeacherAdmin:
+    list_display = ['teacher_name', 'teacher_num', 'sex', 'age', 'department', 'phone', 'email', 'picture', 'add_time']
+    search_fileds = ['teacher_name', 'teacher_num', 'phone', 'email']
+    list_filter = ['teacher_name', 'teacher_num', 'department', 'phone', 'email']
+    model_icon = 'fa fa-users'
+
+class StudentAdmin:
+    list_display = ['student_name', 'student_num', 'classroom', 'sex', 'age', 'phone', 'email', 'picture', 'add_time']
+    search_fileds = ['student_name', 'student_num', 'phone', 'email']
+    list_filter = ['student_name', 'student_num', 'classroom', 'phone', 'email']
+    model_icon = 'fa fa-user-md'
+
+xadmin.site.register(Student, StudentAdmin)
+xadmin.site.register(Teacher, TeacherAdmin)
 xadmin.site.register(Department, DepartmentAdmin)
 xadmin.site.register(Classroom, ClassroomAdmin)

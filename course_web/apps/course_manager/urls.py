@@ -1,1 +1,1 @@
-from django.conf.urls import urlfrom college import viewsapp_name = 'course_manager'       #这里一定要写urlpatterns = []
+from django.urls import pathfrom college import viewsapp_name = 'course'       #这里一定要写urlpatterns = []

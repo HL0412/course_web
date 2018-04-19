@@ -4,11 +4,14 @@ body{
     padding: 0;
     background-color: aliceblue;
 }
+a{
+    text-decoration: none;
+}
 .navbar{
     /*background-color: #a0ffd3;*/
     background: url("../images/harder.png");
     width: 100%;
-    height: 150px;
+    height: 152px;
 }
 .navbar-brand{
     font-family: "Bodoni MT Black";
@@ -58,6 +61,7 @@ body{
     font-family: "Baskerville Old Face";
 
 }
+/*首页的登录*/
 .login{
     background-color: white;
     height: 300px;
@@ -68,11 +72,24 @@ body{
     font-family: "Arial Rounded MT Bold";
     border:1px solid #dcdcdc;;
 }
+/*首页登录后显示个人信息*/
+.personal_details{
+    background-color: white;
+    height: 300px;
+    border-radius:10px;
+    padding-top: 40px;
+    padding-left: 35px;
+    color: #5bc0de;
+    font-family: "Arial Rounded MT Bold";
+    border:1px solid #dcdcdc;;
+}
+.personal_details dd{
+    line-height: 30px;
+}
 .form-group > input{
     margin-left: 20px;
     width: 64%;
     height: 34px;
-    padding-top: 10px;
 
 }
 .form-group > button{
@@ -133,7 +150,24 @@ body{
 }
 .tab-content{
     margin-left: 40px;
-
+}
+.collapse ul li a{
+    height: 60px;
+}
+#dropdownMenu{
+    background-color: transparent;
+}
+.dropdown-menu{
+    border: none;
+    min-width: 100%;
+}
+.dropdown-menu li a:hover{
+    width: 100%;
+    height: 30px;
+    background: #69ddff;
+    color: white;
+    font-size: 16px;
+    margin-top: 0;
 }
 footer .footer {
     background: #a2dde8;
@@ -145,3 +179,91 @@ footer .footer {
     margin-top: 50px;
     margin-left: 50px;
 }
+
+/*login*/
+.loginbtn {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -50px;
+    background: #8ed9f2;
+    margin-right: -10%;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.registerbtn {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: -50px;
+    background: #8ed9f2;
+    margin-right: -20%;
+    margin-left: 10px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.loginbtn:hover {
+    background: #95e6ff;
+}
+
+.registerbtn:hover {
+    background: #95e6ff;
+}
+
+nav .wp .personal {
+    height: auto;
+    float: right;
+    position: relative;
+    top: -50px;
+    color: white;
+    font-size: 22px;
+}
+
+
+nav .wp .personal .user {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 4px;
+    cursor: pointer;
+    margin-right: -120px;
+}
+
+nav .wp .personal .user dt {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 50%;
+    float: right;
+}
+
+nav .wp .personal .user dd {
+    float: right;
+    color: #fff;
+}
+nav .wp .personal a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: -240px;
+    text-decoration: none;
+    background: #95e6ff;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+}
+
+nav .wp .personal a:hover {
+    background: #0093e9;
+}
+

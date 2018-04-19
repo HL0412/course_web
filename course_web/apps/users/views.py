@@ -1,5 +1,7 @@
 # users/views.py
 import json
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse,HttpResponseRedirect
@@ -7,10 +9,11 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.backends import ModelBackend
 from django.urls import reverse
 
+from course_manager.models import Course
 from .models import UserProfile,EmailVerifyRecord
 from django.db.models import Q
 from django.views.generic.base import View
-from .forms import LoginForm,RegisterForm,ForgetPwdForm,ModifyPwdForm
+from .forms import LoginForm, RegisterForm, ForgetPwdForm, ModifyPwdForm, UserInfoForm
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.hashers import make_password
 from utils.email_send import send_register_eamil
@@ -34,27 +37,11 @@ class CustomBackend(ModelBackend):
 
 class IndexView(View):
     '''首页'''
-    def get(self,request):
-        return render(request, 'index.html')
-#         #轮播图
-#         all_banners = Banner.objects.all().order_by('index')
-#         #课程
-#         courses = Course.objects.filter(is_banner=False)[:6]
-#         #轮播课程
-#         banner_courses = Course.objects.filter(is_banner=True)[:3]
-#         #课程机构
-#         course_orgs = Course.objects.all()[:15]
-#         return render(request,'index.html',{
-#             'all_banners':all_banners,
-#             'courses':courses,
-#             'banner_courses':banner_courses,
-#             'course_orgs':course_orgs,
-#         })
+    def get(self, request):
+        '''获取所有课程名在下拉列表框中展示'''
+        all_courses = Course.objects.all()
+        return render(request, "index.html", {'all_courses': all_courses})
 
-
-
-
-# 登录
 class LoginView(View):
     '''用户登录'''
 
@@ -81,11 +68,35 @@ class LoginView(View):
             # 只有当用户名或密码不存在时，才返回错误信息到前端
             else:
                 return render(request, 'login.html', {'msg': '用户名或密码错误','login_form':login_form})
-
-        # form.is_valid（）已经判断不合法了，所以这里不需要再返回错误信息到前端了
         else:
             return render(request,'login.html',{'login_form':login_form})
 
+# 首页的登录
+class LoginIndexView(View):
+    def get(self,request):
+        return render(request, 'index.html')
+    def post(self,request):
+        # 实例化
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            # 获取用户提交的用户名和密码
+            user_name = request.POST.get('username', None)
+            pass_word = request.POST.get('password', None)
+            # 成功返回user对象,失败None
+            user = authenticate(username=user_name, password=pass_word)
+            # 如果不是null说明验证成功
+            if user is not None:
+                if user.is_active:
+                    # 只有注册激活才能登录
+                    login(request, user)
+                    return HttpResponseRedirect(reverse('index'))
+                else:
+                    return render(request, 'index.html', {'msg': '用户名或密码错误', 'login_form': login_form})
+            # 只有当用户名或密码不存在时，才返回错误信息到前端
+            else:
+                return render(request, 'index.html', {'msg': '用户名或密码错误','login_form':login_form})
+        else:
+            return render(request,'index.html',{'login_form':login_form})
 
 # 激活用户
 class ActiveUserView(View):
@@ -193,20 +204,20 @@ class ModifyPwdView(View):
 
 
 
-# class UserinfoView(LoginRequiredMixin,View):
-#     '''用户个人信息'''
-#     def get(self,request):
-#         return render(request,'usercenter-info.html')
-#
-#     def post(self, request):
-#         user_info_form = UserInfoForm(request.POST, instance=request.user)
-#         if user_info_form.is_valid():
-#             user_info_form.save()
-#             return HttpResponse('{"status":"success"}', content_type='application/json')
-#         else:
-#             return HttpResponse(json.dumps(user_info_form.errors), content_type='application/json')
-#
-#
+class UserinfoView(LoginRequiredMixin,View):
+    '''用户个人信息'''
+    def get(self,request):
+        return render(request,'usercenter-info.html')
+
+    def post(self, request):
+        user_info_form = UserInfoForm(request.POST, instance=request.user)
+        if user_info_form.is_valid():
+            user_info_form.save()
+            return HttpResponse('{"status":"success"}', content_type='application/json')
+        else:
+            return HttpResponse(json.dumps(user_info_form.errors), content_type='application/json')
+
+
 # class UploadImageView(LoginRequiredMixin,View):
 #     '''用户图像修改'''
 #     def post(self,request):

@@ -21,7 +21,7 @@
 				</li>
 				<li class="feature3">
 					<img class="pic" src="{% static 'images/feature3.png' %}"/>
-					<p class="center">名师授课</p>
+					<p class="center">名师讲解</p>
 				</li>
 				<li class="feature4">
 					<img class="pic" src="{% static 'images/feature4.png' %}"/>
@@ -37,26 +37,43 @@
             <div class="form row">
                 <div class="col-md-offset-1" >
                     <div class="col-md-11">
-                    <h4 class="form-title">用户登录</h4>
-                        <div class="login">
-                            <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
-                                <label>用&nbsp;户&nbsp;名:</label>
-                                <input name="username"   type="text" placeholder="手机号/邮箱" />
-                            </div>
-                            <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
-                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-                                <input name="password"  type="password" placeholder="请输入您的密码" />
-                            </div>
-                            <div class="form-group">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="remember" value="1"/>记住我
-                                    <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-info" name="submit">登录</button>
-                            </div>
+                        <!--登录后跳转-->
+                        {% if request.user.is_authenticated %}
+                        <h4 class="form-title">个人信息</h4>
+                        <div class="personal_details">
+                            <dt><img class="img-thumbnail" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                            <dd>昵称：{{ user.nick_name }}</span></dd>
+                            <dd>年龄：{{ user.age }}</dd>
+                            <dd>性别：{{ user.gender }}</dd>
+                            <dd>生日：{{ user.birthday }}</dd>
+                            <dd>地址：{{ user.address }}</dd>
                         </div>
+                        {% else %}
+                        <h4 class="form-title">用户登录</h4>
+                        <form action="/login_index/" method="post" autocomplete="off">
+                            <div class="login">
+                                <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
+                                    <label>用&nbsp;户&nbsp;名:</label>
+                                    <input name="username"   type="text" placeholder="用户名/邮箱" />
+                                </div>
+                                <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
+                                    <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                    <input name="password"  type="password" placeholder="请输入密码" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="remember" value="1"/>记住我
+                                        <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-info" name="submit">登录</button>
+                                    <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
+                                    {% csrf_token %}
+                                </div>
+                            </div>
+                        </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -65,14 +82,14 @@
                     <div class="col-md-11" >
                     <h4 class="form-title ">最新公告</h4>
                     <ul class="list-group">
-                        <a href="#" class="list-group-item">24*7 支持</a>
-                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
-                        <a href="#" class="list-group-item">图像的数量</a>
-                        <a href="#" class="list-group-item">每年更新成本</a>
-                        <a href="#" class="list-group-item">24*7 支持</a>
-                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
-                        <a href="#" class="list-group-item">图像的数量</a>
-                        <a href="#" class="list-group-item">每年更新成本</a>
+                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
+                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
+                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
+                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
                     </ul>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from  xadmin import views
 import xadmin
-from users.models import Student, EmailVerifyRecord
+from users.models import EmailVerifyRecord
 
 
 # 创建xadmin的最基本管理器配置，并与view绑定
@@ -23,12 +23,6 @@ class GlobalSettings(object):
     # # 收起菜单
     # menu_style = 'accordion'
 
-class StudentAdmin:
-    list_display = ['student_name', 'student_num', 'classroom', 'sex', 'age', 'phone', 'email', 'picture', 'add_time']
-    search_fileds = ['student_name', 'student_num', 'phone', 'email']
-    list_filter = ['student_name', 'student_num', 'classroom', 'phone', 'email']
-    model_icon = 'fa fa-user-md'
-
 class EmailVerifyRecordAdmin(object):
     # 显示的列
     list_display = ['code', 'email', 'send_type', 'send_time']
@@ -39,7 +33,6 @@ class EmailVerifyRecordAdmin(object):
     model_icon = 'fa fa-envelope'
 
 
-xadmin.site.register(Student, StudentAdmin)
 # xadmin.site.register(Users, UsersAdmin)
 xadmin.site.register(views.BaseAdminView,BaseSetting)
 xadmin.site.register(EmailVerifyRecord,EmailVerifyRecordAdmin)

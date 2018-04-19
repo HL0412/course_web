@@ -9,8 +9,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}课程机构列表首页{% endblock %}</title>
-<meta name="viewport" content="width=device-width, initial-scale=, shrink-to-fit=no">
+    <title>{% block title %}课程列表首页{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -43,16 +43,14 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li><!--普通菜单-->
                 <li class="dropdown"><!--下拉菜单-->
-                    <a class="dropdown-toggle" href="#" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="dropdown-toggle"  id="dropdownMenu" data-toggle="dropdown">
                         课程选择
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu dropdowncolor" aria-labelledby="dropdownMenu">
-
-                        <li><a href="#">数据结构</a></li><!--下拉菜单项-->
-                        <li><a href="#">C语言</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">前端</a></li>
+                        {% for course in all_courses %}
+                        <li><a href="#">{{course.course_name}}</a></li>
+                        {% endfor %}
                     </ul>
                 </li>
                 <li><a href="#">师资队伍</a></li>
@@ -68,10 +66,21 @@
                 </div>
                 <button type="submit" class="btn bg-info">搜索</button>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'login' %}">登录</a></li>
-                <li><a href="{% url 'register' %}">注册</a></li>
-            </ul>
+            <div class="wp" >
+                <!--登录后跳转-->
+                {% if request.user.is_authenticated %}
+                    <div class="personal">
+                        <dl class="user fr">
+                            <dd>{{ user.username }}</dd>
+                            <dt><img width="30" height="30" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                        </dl>
+                        <a class="fr" href="{% url 'logout' %}">退出</a>
+                    </div>
+                {% else %}
+                    <a  class="fr registerbtn" href="{% url 'register' %}">注册</a>
+                    <a  class="fr loginbtn" href="{% url 'login' %}">登录</a>
+                {% endif %}
+            </div>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
