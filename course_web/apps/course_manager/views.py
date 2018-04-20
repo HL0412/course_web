@@ -4,9 +4,15 @@ from django.shortcuts import render
 from django.views.generic.base import View
 # Create your views here.
 from course_manager.models import Course
-class CourseListView(View):
 
+
+class CourseListView(View):
     # 课程列表
     def get(self, request):
-        coursees = Course.objects.all().order_by('-add_time'),
-        teachers = Course.objects.all()
+    #     return  render(request, 'course/course_list')
+    #
+    # def post(self, request):
+        course_name = request.GET.get('course_name')
+        courses = Course.objects.filter(course_name = course_name)
+        print(courses)
+        return render(request, 'course/course_list.html', {'courses' : courses})

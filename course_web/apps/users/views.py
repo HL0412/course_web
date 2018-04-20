@@ -10,11 +10,11 @@ from django.contrib.auth.backends import ModelBackend
 from django.urls import reverse
 
 from course_manager.models import Course
+from platfrom.models import Notice, News
 from .models import UserProfile,EmailVerifyRecord
 from django.db.models import Q
 from django.views.generic.base import View
 from .forms import LoginForm, RegisterForm, ForgetPwdForm, ModifyPwdForm, UserInfoForm
-from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth.hashers import make_password
 from utils.email_send import send_register_eamil
 
@@ -39,8 +39,13 @@ class IndexView(View):
     '''首页'''
     def get(self, request):
         '''获取所有课程名在下拉列表框中展示'''
+
         all_courses = Course.objects.all()
-        return render(request, "index.html", {'all_courses': all_courses})
+        all_notices = Notice.objects.all().order_by('-publish_time')
+        all_news = News.objects.all().order_by('-publish_time')
+        return render(request, "index.html", {'all_courses': all_courses, 'notices': all_notices, 'news' : all_news})
+
+
 
 class LoginView(View):
     '''用户登录'''

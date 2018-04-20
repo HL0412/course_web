@@ -6,29 +6,55 @@
 {% endblock %}
 
 {% block content %}
-
+<section>
+    <div class="dialog" id="jsDialog">
+        <!--提示弹出框-->
+        <div class="successbox dialogbox" id="jsSuccessTips">
+            <h1>成功提交</h1>
+            <div class="close jsCloseDialog"><img src="{% static 'images/dig_close.png' %}"/></div>
+            <div class="cont">
+                <h2>您的需求提交成功！</h2>
+                <p></p>
+            </div>
+        </div>
+        <div  class="noactivebox dialogbox" id="jsUnactiveForm" >
+            <h1>邮件验证提示</h1>
+            <div class="close jsCloseDialog"><img src="{% static 'images/dig_close.png' %}"/></div>
+            <div class="center">
+                <img src="{% static 'images/send.png' %}"/>
+                <p>我们已经向您的邮箱<span class="green" id="jsEmailToActive">12@13.com</span>发送了邮件，<br/>为保证您的账号安全，请及时验证邮箱</p>
+                <p class="a"><a class="btn" id="jsGoToEmail" target="_blank" href="http://mail.qq.com">去邮箱验证</a></p>
+                <p class="zy_success upmove"></p>
+                <p style="display: none;" class="sendE2">没收到，您可以查看您的垃圾邮件和被过滤邮件，也可以再次发送验证邮件（<span class="c5c">60s</span>）</p>
+                <p class="sendE">没收到，您可以查看您的垃圾邮件和被过滤邮件，<br/>也可以<span class="c5c green" id="jsSenEmailAgin" style="cursor: pointer;">再次发送验证邮件</span></p>
+            </div>
+        </div>
+    </div>
+</section>
 <!--feature start-->
     <section>
-		<div class="wp">
-			<ul class="feature">
-				<li class="feature1">
-					<img class="pic" src="{% static 'images/feature1.png' %}"/>
-					<p class="center">专业权威</p>
-				</li>
-				<li class="feature2">
-					<img class="pic" src="{% static 'images/feature2.png' %}"/>
-					<p class="center">课程最新</p>
-				</li>
-				<li class="feature3">
-					<img class="pic" src="{% static 'images/feature3.png' %}"/>
-					<p class="center">名师讲解</p>
-				</li>
-				<li class="feature4">
-					<img class="pic" src="{% static 'images/feature4.png' %}"/>
-					<p class="center">数据真实</p>
-				</li>
-			</ul>
-		</div>
+        <div class="container">
+            <div class="wp row">
+                <ul class="feature">
+                    <li class="feature1 col-md-3">
+                        <img class="pic" src="{% static 'images/feature1.png' %}"/>
+                        <p class="center">专业权威</p>
+                    </li>
+                    <li class="feature2 col-md-3">
+                        <img class="pic" src="{% static 'images/feature2.png' %}"/>
+                        <p class="center">课程最新</p>
+                    </li>
+                    <li class="feature3 col-md-3">
+                        <img class="pic" src="{% static 'images/feature3.png' %}"/>
+                        <p class="center">名师讲解</p>
+                    </li>
+                    <li class="feature4 col-md-3">
+                        <img class="pic" src="{% static 'images/feature4.png' %}"/>
+                        <p class="center">数据真实</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 	</section>
 <!--feature end-->
 <!--module1 start-->
@@ -41,8 +67,9 @@
                         {% if request.user.is_authenticated %}
                         <h4 class="form-title">个人信息</h4>
                         <div class="personal_details">
-                            <dt><img class="img-thumbnail" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
-                            <dd>昵称：{{ user.nick_name }}</span></dd>
+                            <img class="img-thumbnail" src="{{ MEDIA_URL }}{{ request.user.image }}"/>
+                            <dd>用户名：{{ user.username}}</dd>
+                            <dd>昵称：{{ user.nick_name }}</dd>
                             <dd>年龄：{{ user.age }}</dd>
                             <dd>性别：{{ user.gender }}</dd>
                             <dd>生日：{{ user.birthday }}</dd>
@@ -52,6 +79,7 @@
                         <h4 class="form-title">用户登录</h4>
                         <form action="/login_index/" method="post" autocomplete="off">
                             <div class="login">
+                                <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
                                 <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
                                     <label>用&nbsp;户&nbsp;名:</label>
                                     <input name="username"   type="text" placeholder="用户名/邮箱" />
@@ -60,7 +88,13 @@
                                     <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
                                     <input name="password"  type="password" placeholder="请输入密码" />
                                 </div>
-                                <div class="form-group">
+                                <div class="error btns login-form-tips" id="jsLoginTips">
+                                    {% for key,error in login_form.errors.items %}
+                                        {{ error }}
+                                        {% endfor %}
+                                    {{ msg }}
+                                </div>
+                                <div class="auto-box marb38">
                                     <label class="checkbox">
                                         <input type="checkbox" name="remember" value="1"/>记住我
                                         <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
@@ -88,6 +122,8 @@
                         <li><a href="#" class="list-group-item">每年更新成本</a></li>
                         <li><a href="#" class="list-group-item">24*7 支持</a></li>
                         <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
                         <li><a href="#" class="list-group-item">图像的数量</a></li>
                         <li><a href="#" class="list-group-item">每年更新成本</a></li>
                     </ul>
@@ -120,14 +156,16 @@
                 <h4 class="form-title" >新闻动态</h4>
                 <div class="row" id="news">
                     <ul class="list-group">
-                        <a href="#" class="list-group-item">24*7 支持</a>
-                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
-                        <a href="#" class="list-group-item">图像的数量</a>
-                        <a href="#" class="list-group-item">每年更新成本</a>
-                        <a href="#" class="list-group-item">24*7 支持</a>
-                        <a href="#" class="list-group-item">免费 Window 空间托管</a>
-                        <a href="#" class="list-group-item">图像的数量</a>
-                        <a href="#" class="list-group-item">每年更新成本</a>
+                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
+                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
+                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
+                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
+                        <li><a href="#" class="list-group-item">图像的数量</a></li>
+                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
                     </ul>
                 </div>
             </div>
@@ -147,74 +185,77 @@
                 </ul>
                 <div class="tab-content">
                 <!--active当前选中项-->
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3>GIS基础介绍</h3>
-                            <p style="font-size:14px">地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，
-                                对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
-                            <p>位置与地理信息既是LBS的核心，也是LBS的基础。一个单纯的经纬度坐标只有置于特定的地理信息中，代表为某个地点、标志、方位后，才会被用户认识和理解。用户在通过相关技
-                                术获取到位置信息之后，还需要了解所处的地理环境，查询和分析环境信息，从而为用户活动提供信息支持与服务。</p>
-                            <br>
-                            <br>
-                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3>GIS基础介绍</h3>
+                                <p>地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，
+                                    对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
+                                <p>位置与地理信息既是LBS的核心，也是LBS的基础。一个单纯的经纬度坐标只有置于特定的地理信息中，代表为某个地点、标志、方位后，才会被用户认识和理解。用户在通过相关技
+                                    术获取到位置信息之后，还需要了解所处的地理环境，查询和分析环境信息，从而为用户活动提供信息支持与服务。</p>
+                                <br>
+                                <br>
+                                <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3>.Net基础介绍</h3>
+                                <p>.NET是 Microsoft XML Web services 平台。XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，而不管所采用的是哪种操作
+                                    系统、设备或编程语言。Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。对个人用户的好处是无缝的、吸引人的体验。</p>
+                                <br>
+                                <br>
+                                <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="Images/.Net.jpg" class="img-thumbnail" alt=".net"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3>Asp .net MVC介绍</h3>
+                                <p style="font-size:14px">ASP.NET MVC 4已经正式发布，并内置于Visual Studio 2012，
+                                    新版本ASP.NET MVC版本新增了手机模版、单页应用程序，Web API等模版，更新了一些 javascript 库，其中示例页面也使用了jquery的AJAX登录，
+                                    并增加了OAuth认证/Entity Framework5的支持。同时也增强了对HTML5、AsyncController等的支持。</p>
+                                <br>
+                                <br>
+                                <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="Images/MVC.jpg" class="img-thumbnail" alt="MVC"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3>Web GIS基础介绍</h3>
+                                <p style="font-size:14px">Web GIS是Internet技术应用于GIS开发的产物，是现代GIS技术的重要组成部分。常见的Web GIS开发软件有超擎图形。
+                                    是一个交互式的、分布式的、动态的地理信息系统，是由多个主机、多个数据库的无线终端，并由客户机与服务器（HTTP服务器及应用服务器）相连所组成的。
+                                    GIS通过WWW功能得以扩展，真正成为一种大众使用的工具。
+                                    从WWW的任意一个节点，Internet用户可以浏览WebGIS站点中的空间数据、制作专题图，以及进行各种空间检索和空间分析，从而使GIS进入千家万户。</p>
+                                <br>
+                                <br>
+                                <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                            </div>
+                            <div class="col-sm-4">
+                                <img src="Images/WebGIS.jpg" class="img-thumbnail" alt="GIS基础"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3>.Net基础介绍</h3>
-                            <p style="font-size:14px">.NET是 Microsoft XML Web services 平台。XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，而不管所采用的是哪种操作
-                                系统、设备或编程语言。Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。对个人用户的好处是无缝的、吸引人的体验。</p>
-                            <br>
-                            <br>
-                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img src="Images/.Net.jpg" class="img-thumbnail" alt=".net"/>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="messages">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3>Asp .net MVC介绍</h3>
-                            <p style="font-size:14px">ASP.NET MVC 4已经正式发布，并内置于Visual Studio 2012，
-                                新版本ASP.NET MVC版本新增了手机模版、单页应用程序，Web API等模版，更新了一些 javascript 库，其中示例页面也使用了jquery的AJAX登录，
-                                并增加了OAuth认证/Entity Framework5的支持。同时也增强了对HTML5、AsyncController等的支持。</p>
-                            <br>
-                            <br>
-                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img src="Images/MVC.jpg" class="img-thumbnail" alt="MVC"/>
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="settings">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3>Web GIS基础介绍</h3>
-                            <p style="font-size:14px">Web GIS是Internet技术应用于GIS开发的产物，是现代GIS技术的重要组成部分。常见的Web GIS开发软件有超擎图形。
-                                是一个交互式的、分布式的、动态的地理信息系统，是由多个主机、多个数据库的无线终端，并由客户机与服务器（HTTP服务器及应用服务器）相连所组成的。
-                                GIS通过WWW功能得以扩展，真正成为一种大众使用的工具。
-                                从WWW的任意一个节点，Internet用户可以浏览WebGIS站点中的空间数据、制作专题图，以及进行各种空间检索和空间分析，从而使GIS进入千家万户。</p>
-                            <br>
-                            <br>
-                            <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img src="Images/WebGIS.jpg" class="img-thumbnail" alt="GIS基础"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </section>
 {% endblock %}
 {% block custom_js %}
 <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/unslider.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/login.js' %}"  type="text/javascript"></script>
 {% endblock %}
 

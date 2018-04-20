@@ -111,7 +111,7 @@ function login_form_submit(){
                          Dml.fun.showDialog('#jsUnactiveForm');
                     }
                     else{
-                        $jsLoginTips.html("账号或者密码错误，请重新输入").show();
+                        $jsLoginTips.html("账号或密码错误，请重新输入").show();
                     }
                 }
             }

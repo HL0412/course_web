@@ -1,30 +1,35 @@
 /*导航*/
+html{
+    height: 100%;
+}
 body{
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: aliceblue;
+    font-family:  Menlo, Monaco, Consolas, "Courier New", monospace;
+    line-height: 2em;
 }
 a{
     text-decoration: none;
 }
 .navbar{
-    /*background-color: #a0ffd3;*/
     background: url("../images/harder.png");
     width: 100%;
     height: 152px;
 }
 .navbar-brand{
-    font-family: "Bodoni MT Black";
+    font-family: "Bodoni MT Black", fantasy;
     font-language-override: initial;
     font-size: 1.5em;
-    margin-top: 90px;
-    padding-left: 140px;
+    margin-top: 92px;
+    padding-left: 40%;
     color: #ffffff;
 }
 .navbar-form{
     margin-top: 98px;
     color: #5b5f61;
-    padding-right: -150px;
+
 }
 .navbar a:hover{
     color: #1cbae4;
@@ -32,6 +37,7 @@ a{
 .collapse >ul.nav >li >a:hover{
     background-color: transparent;
     color: #1cbae4;
+    cursor: pointer;
 }
 .collapse >ul.nav >li >a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -40,117 +46,6 @@ a{
     font-size: 16px;
 }
 
-/*!*正文页面*!*/
-.container {
-    font-size: 1em;
-    padding-top: 25px;
-    padding-bottom: -10px;
-    margin-top: -20px;
-
-}
-/*首页中左侧登录模块*/
-
-.form-title{
-    background-color: #a2dde8;
-    height: 40px;
-    padding-left: 40px;
-    padding-top: 10px;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 0;
-    font-family: "Baskerville Old Face";
-
-}
-/*首页的登录*/
-.login{
-    background-color: white;
-    height: 300px;
-    border-radius:10px;
-    padding-top: 40px;
-    padding-left: 35px;
-    color: #5bc0de;
-    font-family: "Arial Rounded MT Bold";
-    border:1px solid #dcdcdc;;
-}
-/*首页登录后显示个人信息*/
-.personal_details{
-    background-color: white;
-    height: 300px;
-    border-radius:10px;
-    padding-top: 40px;
-    padding-left: 35px;
-    color: #5bc0de;
-    font-family: "Arial Rounded MT Bold";
-    border:1px solid #dcdcdc;;
-}
-.personal_details dd{
-    line-height: 30px;
-}
-.form-group > input{
-    margin-left: 20px;
-    width: 64%;
-    height: 34px;
-
-}
-.form-group > button{
-    margin-top: 20px;
-    width: 86%;
-
-}
-.checkbox{
-    margin-top: 40px;
-    font-size: 16px;
-    margin-left: 20px;
-}
-.login a {
-    color: #5bc0de;
-    text-decoration: none;
-    position: relative;
-    left: -14%;
-}
-
-.login a:hover{
-    color: #ff4343;
-}
-
-#notice{
-    margin-top: 40px;
-}
-
-#work{
-    height: 300px;
-    background-color: white;
-    border: 1px solid #dcdcdc;;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 40px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}
-
-.news h4{
-    margin-top: 50px;
-}
-#news{
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#course{
-    margin-left: 40px;
-    width: 97.4%;
-}
-
-#course > .nav{
-    margin-top: 40px;
-    margin-left: 40px;
-    color: #69ddff;
-    font-size: 16px;
-}
-.tab-content{
-    margin-left: 40px;
-}
 .collapse ul li a{
     height: 60px;
 }
@@ -169,55 +64,25 @@ a{
     font-size: 16px;
     margin-top: 0;
 }
-footer .footer {
-    background: #a2dde8;
-    height: 200px;
-    color: #ffffff;
-    font-size: 16px;
-}
-.tab-pane img{
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-/*login*/
-.loginbtn {
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    margin-top: -50px;
-    background: #8ed9f2;
-    margin-right: -10%;
-    text-align: center;
-    float: left;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-}
 .registerbtn {
     width: 80px;
     height: 30px;
     line-height: 30px;
     margin-top: -50px;
+    float: right;
     background: #8ed9f2;
-    margin-right: -20%;
-    margin-left: 10px;
     text-align: center;
-    float: left;
     cursor: pointer;
     color: white;
     font-size: 16px;
     border-radius: 5px;
-}
-.loginbtn:hover {
-    background: #95e6ff;
 }
 
 .registerbtn:hover {
     background: #95e6ff;
 }
 
+/* personal */
 nav .wp .personal {
     height: auto;
     float: right;
@@ -226,34 +91,22 @@ nav .wp .personal {
     color: white;
     font-size: 22px;
 }
-
-
 nav .wp .personal .user {
     height: 40px;
     line-height: 40px;
-    margin-top: 4px;
     cursor: pointer;
-    margin-right: -120px;
 }
-
 nav .wp .personal .user dt {
-    margin-right: 20px;
     width: 30px;
     height: 30px;
     background: #fff;
     overflow: hidden;
     border-radius: 50%;
-    float: right;
-}
-
-nav .wp .personal .user dd {
-    float: right;
-    color: #fff;
 }
 nav .wp .personal a {
     color: #fff;
     font-size: 16px;
-    margin-right: -240px;
+    margin-right: -160px;
     text-decoration: none;
     background: #95e6ff;
     width: 80px;
@@ -262,8 +115,233 @@ nav .wp .personal a {
     padding-top: 5px;
     border-radius: 5px;
 }
-
 nav .wp .personal a:hover {
     background: #0093e9;
 }
 
+
+/*!*正文页面*!*/
+.container {
+    font-size: 1em;
+    padding-top: 25px;
+    padding-bottom: -10px;
+    margin-top: -20px;
+}
+/*首页中左侧登录模块*/
+.form-title{
+    background-color: #a2dde8;
+    height: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 0;
+    font-family: "Baskerville Old Face", serif;
+    font-size: 18px;
+
+}
+/*首页的登录*/
+.login{
+    background-color: white;
+    height: 400px;
+    border-radius:10px;
+    padding-top: 40px;
+    padding-left: 35px;
+    color: #5bc0de;
+    font-family: "Arial Rounded MT Bold", cursive;
+    border:1px solid #dcdcdc;;
+    font-size: 16px;
+}
+.login input{
+    color: #5bc0de;
+    font-size: 14px;
+}
+/*首页登录后显示个人信息*/
+.personal_details{
+    background-color: white;
+    height: 400px;
+    border-radius:10px;
+    padding-top: 40px;
+    padding-left: 40px;
+    font-family: "Arial Rounded MT Bold", cursive;
+    border:1px solid #dcdcdc;
+    color: #8a8a8a;
+    font-size: 16px;
+}
+.personal_details img{
+    height: 100px;
+    width: 80px;
+    margin-bottom: 10px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.personal_details dd{
+    line-height: 30px;
+}
+/*from-group*/
+.form-group > input{
+    margin-left: 20px;
+    width: 64%;
+    height: 34px;
+}
+.form-group > button{
+    margin-top: 20px;
+    width: 86%;
+}
+/*login*/
+.checkbox{
+    margin-top: 40px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.login a {
+    color: #5bc0de;
+    text-decoration: none;
+    position: relative;
+    left: -14%;
+}
+
+.login a:hover{
+    color: #ff4343;
+}
+.error{
+    color:#ffbbc7; !important;
+    text-align: center;
+    line-height: 40px !important;
+    margin:10px 10px;
+}
+#notice{
+    margin-top: 40px;
+}
+
+#work{
+    height: 400px;
+    background-color: white;
+    border: 1px solid #dcdcdc;;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#work img{
+    width: 300px;
+    height: 300px;
+}
+/*news*/
+.news h4{
+    margin-top: 40px;
+}
+#news{
+    margin-left: 0;
+    margin-right: 0;
+}
+/*course*/
+#course{
+    margin-left: 40px;
+    width: 97.4%;
+}
+
+#course > .nav{
+    margin-top: 40px;
+    margin-left: 40px;
+    color: #69ddff;
+    font-size: 16px;
+}
+.tab-content{
+    margin-left: 40px;
+}
+.tab-pane h3{
+    margin: 20px 0;
+}
+.tab-pane img{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+/*foot*/
+footer .footer {
+    width: 100%;
+    background: #a2dde8;
+    height: 200px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 10px;
+}
+.footer li p{
+    padding-bottom: 10px;
+}
+
+/*feature*/
+.feature {
+    height: 125px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+.feature li {
+    float: left;
+    height: 90px;
+    margin-top: 17px;
+    border-left: 1px dashed #ccc;
+    position: relative;
+}
+.feature li:first-child {
+    border: 0;
+}
+
+.feature .center {
+    margin-top: 70px;
+    color: #464646;
+}
+
+.feature .pic {
+    position: absolute;
+    top: 20px;
+    left: 125px;
+    transition: all 0.5s ease 0s;
+}
+
+.feature li:hover .pic {
+    -webkit-animation: swing .4s .2s ease both;
+    -moz-animation: swing .4s .2s ease both;
+}
+
+/*course相关样式*/
+
+.content{
+    border:1px solid #dcdcdc;
+    height: 200px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    color: #8a8a8a;
+    font-size: 16px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    border-radius: 10px;
+}
+.message{
+    border:1px solid #dcdcdc;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.message a{
+    color: #8a8a8a;
+    font-size: 16px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    line-height: 70px;
+    text-decoration: none;
+}
+.message a:hover{
+    color: #8ed9f2;
+}
+.course_list{
+    border:1px solid #dcdcdc;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}

@@ -1,1 +1,1 @@
-from django.conf.urls import urlfrom college import viewsapp_name = 'platfrom'       #这里一定要写urlpatterns = []
+from django.urls import pathfrom college import viewsfrom platfrom.views import NoticeListViewapp_name = 'platfrom'       #这里一定要写urlpatterns = [    path('notice/', NoticeListView.as_view(), name='notice')]

@@ -42,7 +42,7 @@ urlpatterns = [
     # 以下是创建的app的urls
     path('users/', include('users.urls', namespace='users')),
     path('college/', include('college.urls', namespace='college')),
-    path('course_manager/', include('course_manager.urls', namespace='course')),
+    path('course/', include('course_manager.urls', namespace='course')),
     path('guestbook/', include('guestbook.urls', namespace='guestbook')),
     path('platfrom/', include('platfrom.urls', namespace='platfrom')),
 
