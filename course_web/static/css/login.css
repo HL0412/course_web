@@ -1,10 +1,11 @@
 body{
     width:100%;
     height:100%;
-    background-color: #008adf;
+    background-color:#1cbae4;
 }
 a:hover{
-    color: #1cbae4;
+    color: #105aff;
+    font-size: 16px;
 }
 .c-box{
     width:100%;
@@ -15,12 +16,11 @@ a:hover{
     background:#fff;
 }
 .bg-box{
-    margin-top: 7%;
+    margin-top: -10%;
     background:url(../images/2.jpg) repeat center center;
-
 }
 .header-box{
-    width:1190px;
+    width:1000px;
     height:38px;
     line-height:38px;
     margin:0 auto;
@@ -42,11 +42,6 @@ a:hover{
 .hd-bar > li > a{
     color:#666;
 }
-.hd-bar > li.active > a,
-.hd-bar > li > a:hover {
-    color:#67ac53;
-}
-
 
 .login-box{
     width:853px;
@@ -57,9 +52,9 @@ a:hover{
     height:68px;
     line-height:68px;
     margin-bottom:15px;
-    padding-top:60px;
-    padding-left:190px;
-    background:url(../images/1.jpg) no-repeat 0 center;
+    padding-top:40px;
+    padding-left:400px;
+    background:url(../images/logo.png) no-repeat 0 center;
 }
 .index-logo{
     position:absolute;
@@ -75,6 +70,8 @@ a:hover{
     color:#fff;
     font-size:30px;
     font-weight: normal;
+    margin-top: -10px;
+    font-family: 隶书, sans-serif;
 }
 .index-font{
     float:right;
@@ -172,10 +169,7 @@ a:hover{
     font-weight:normal;
     text-align:center;
 }
-.form-box > .tab > h2.active{
-     border-bottom:3px solid #6ec55a;
-    color:#333;
-}
+
 .valcode{
     display:none;
     width:200px;
@@ -222,13 +216,13 @@ a:hover{
     cursor: pointer;
 }
 .valcode .sure:hover{
-    background: #FB8344;
+    background: #ff6f72;
 }
 .error{
-    background: #fb8344;
-    color:#fff !important;
+
+    color:#ff6f72 !important;
     text-align: center;
-    line-height: 40px !important;
+    line-height: 20px !important;
     margin:10px 0;
 }
 .form-group{
@@ -313,6 +307,9 @@ a:hover{
 .auto-box > label > a{
     color:#717171;
 }
+.form-box h2{
+    font-family: 新宋体, monospace;
+}
 .form-box a{
     color:#666;
 }
@@ -328,11 +325,11 @@ a:hover{
     border:0;
     cursor:pointer;
 }
-.btn-green{
-    background:#6ec55a;
+.btn-blue{
+    background: #02bbdc;
 }
-.btn-green:hover{
-    background:#5dbf45;
+.btn-blue:hover{
+    background: #0ea5e1;
 }
 .form-p{
     position:absolute;

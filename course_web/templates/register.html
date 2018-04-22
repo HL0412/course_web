@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-    <title>慕学在线注册</title>
+    <title>课程教学网在线注册</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 
@@ -23,11 +23,11 @@
         <form id="jsLoginForm" autocomplete="off">
             <div class="box">
                 <span class="word3">用户名</span>
-                <input type="text" name="account_l" id="account_l" placeholder="手机号/邮箱" />
+                <input type="text" name="account_l" id="account_l" placeholder="用户名/邮箱" />
             </div>
             <div class="box">
                 <span class="word2">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
-                <input type="password" name="password_l" id="password_l" placeholder="请输入您的密码"/>
+                <input type="password" name="password_l" id="password_l" placeholder="请输入密码"/>
             </div>
             <div class="error btns login-form-tips" id="jsLoginTips"></div> <!--登录错误提示-->
             <div class="btns">
@@ -38,7 +38,7 @@
                 <input type="button" value="登录" id="jsLoginBtn" />
             </div>
             <div class="btns">
-                <span class="fr">没有账号？<span class="regist btn">立即注册</span></span>
+                <span class="fr">没有账号？<span class="regist btn">》》》立即注册</span></span>
             </div>
         </form>
     </div>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="auto-box marb8">
                         </div>
-                        <input class="btn btn-green" id="jsEmailRegBtn" type="submit" value="注册并登录" />
+                        <input class="btn btn-blue" id="jsEmailRegBtn" type="submit" value="注册并登录" />
                     <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
                     {% csrf_token %}
                     </form>
