@@ -46,4 +46,11 @@ urlpatterns = [
     path('guestbook/', include('guestbook.urls', namespace='guestbook')),
     path('platfrom/', include('platfrom.urls', namespace='platfrom')),
 
+    # 富文本相关url
+    path('ueditor/',include('DjangoUeditor.urls' )),
+
 ]
+# 全局404页面配置
+handler404 = 'users.views.pag_not_found'
+# 全局500页面配置
+handler500 = 'users.views.page_error'

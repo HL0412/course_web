@@ -2,22 +2,234 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80ffac7b-b4fa-4300-84fe-09bf1b9c26c8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/kindeditor-all-min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/kindeditor-all.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/ar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/ko.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/ru.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/zh-CN.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/zh-TW.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/license.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/anchor/anchor.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/autoheight/autoheight.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/baidumap/baidumap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/baidumap/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/baidumap/map.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/clearhtml/clearhtml.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/code/code.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/code/prettify.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/code/prettify.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/emoticons.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/10.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/100.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/101.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/102.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/103.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/104.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/105.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/106.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/107.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/108.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/109.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/11.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/110.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/111.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/112.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/113.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/114.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/115.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/116.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/117.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/118.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/119.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/12.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/120.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/121.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/122.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/123.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/124.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/125.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/126.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/127.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/128.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/129.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/13.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/130.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/131.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/132.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/133.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/134.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/14.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/15.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/17.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/18.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/19.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/20.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/21.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/22.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/23.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/24.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/25.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/26.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/27.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/28.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/29.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/3.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/30.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/31.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/32.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/33.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/34.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/35.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/36.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/37.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/38.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/39.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/4.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/40.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/41.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/42.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/43.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/44.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/45.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/46.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/47.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/48.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/49.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/5.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/50.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/51.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/52.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/53.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/54.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/55.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/56.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/57.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/58.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/59.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/6.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/60.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/61.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/62.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/63.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/65.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/66.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/67.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/68.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/69.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/7.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/70.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/71.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/72.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/73.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/74.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/75.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/76.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/77.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/78.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/79.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/8.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/80.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/81.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/82.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/83.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/84.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/85.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/86.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/87.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/88.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/89.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/9.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/90.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/91.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/92.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/93.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/94.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/95.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/96.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/97.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/98.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/99.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/emoticons/images/static.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/filemanager.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/images/file-16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/images/file-64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/images/folder-16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/images/folder-64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/filemanager/images/go-up.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/fixtoolbar/fixtoolbar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/flash/flash.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/image/image.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/image/images/align_left.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/image/images/align_right.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/image/images/align_top.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/image/images/refresh.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/insertfile/insertfile.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/lineheight/lineheight.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/link/link.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/map/map.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/map/map.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/media/media.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/multiimage/images/image.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/multiimage/images/select-files-en.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/multiimage/images/select-files-zh-CN.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/multiimage/images/swfupload.swf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/multiimage/multiimage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/pagebreak/pagebreak.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/plainpaste/plainpaste.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/preview/preview.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/quickformat/quickformat.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/table/table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/template/html/1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/template/html/2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/template/html/3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/template/template.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/plugins/wordpaste/wordpaste.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/anchor.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/blank.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/flash.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/loading.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/media.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/common/rm.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/default/background.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/default/default.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/default/default.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/qq/editor.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/qq/qq.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/static/js/editor/kindeditor/themes/simple/simple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/templates/college/message.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/templates/college/teacher_list.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/templates/course/data_download.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/templates/guestbook/guestbook.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/course_web/templates/platfrom/work_list.html" />
       <change beforePath="$PROJECT_DIR$/.idea/course_web.iml" afterPath="$PROJECT_DIR$/.idea/course_web.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/college/adminx.py" afterPath="$PROJECT_DIR$/course_web/apps/college/adminx.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/college/models.py" afterPath="$PROJECT_DIR$/course_web/apps/college/models.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/college/urls.py" afterPath="$PROJECT_DIR$/course_web/apps/college/urls.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/college/views.py" afterPath="$PROJECT_DIR$/course_web/apps/college/views.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/course_manager/urls.py" afterPath="$PROJECT_DIR$/course_web/apps/course_manager/urls.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/course_manager/views.py" afterPath="$PROJECT_DIR$/course_web/apps/course_manager/views.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/guestbook/urls.py" afterPath="$PROJECT_DIR$/course_web/apps/guestbook/urls.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/guestbook/views.py" afterPath="$PROJECT_DIR$/course_web/apps/guestbook/views.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/platfrom/urls.py" afterPath="$PROJECT_DIR$/course_web/apps/platfrom/urls.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/apps/platfrom/views.py" afterPath="$PROJECT_DIR$/course_web/apps/platfrom/views.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/course_web/settings.py" afterPath="$PROJECT_DIR$/course_web/course_web/settings.py" />
+      <change beforePath="$PROJECT_DIR$/course_web/course_web/urls.py" afterPath="$PROJECT_DIR$/course_web/course_web/urls.py" />
       <change beforePath="$PROJECT_DIR$/course_web/static/css/login.css" afterPath="$PROJECT_DIR$/course_web/static/css/login.css" />
       <change beforePath="$PROJECT_DIR$/course_web/static/css/min.css" afterPath="$PROJECT_DIR$/course_web/static/css/min.css" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/login-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.png" afterPath="$PROJECT_DIR$/course_web/static/images/logo.png" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/course_web/static/js/foot.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/course_web/templates/base.html" afterPath="$PROJECT_DIR$/course_web/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/forgetpwd.html" afterPath="$PROJECT_DIR$/course_web/templates/forgetpwd.html" />
+      <change beforePath="$PROJECT_DIR$/course_web/templates/course/course_list.html" afterPath="$PROJECT_DIR$/course_web/templates/course/course_list.html" />
       <change beforePath="$PROJECT_DIR$/course_web/templates/index.html" afterPath="$PROJECT_DIR$/course_web/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/login.html" afterPath="$PROJECT_DIR$/course_web/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/register.html" afterPath="$PROJECT_DIR$/course_web/templates/register.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,106 +245,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/static/css/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="330" column="9" lean-forward="false" selection-start-line="330" selection-start-column="9" selection-end-line="330" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="78" column="46" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="121" column="50" lean-forward="false" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forgetpwd.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/templates/forgetpwd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="90" column="46" lean-forward="false" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/course_web/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/course_web/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="178" column="27" lean-forward="false" selection-start-line="178" selection-start-column="27" selection-end-line="178" selection-end-column="27" />
-              <folding>
-                <element signature="e#9122#9130#1" expanded="true" />
-                <element signature="e#9257#9265#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="password_reset.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/templates/password_reset.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="687">
+              <caret line="295" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="min.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course_web/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="66" column="19" lean-forward="true" selection-start-line="61" selection-start-column="11" selection-end-line="66" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guestbook.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course_web/templates/guestbook/guestbook.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="min.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/course_web/static/css/min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="287" column="20" lean-forward="false" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="20" />
+            <state relative-caret-position="667">
+              <caret line="490" column="13" lean-forward="false" selection-start-line="490" selection-start-column="13" selection-end-line="490" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.cookie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/static/js/jquery.cookie.js">
+      <file leaf-file-name="course_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course_web/templates/course/course_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1733">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course_web/static/js/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3094">
-              <caret line="113" column="46" lean-forward="false" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
+            <state relative-caret-position="643">
+              <caret line="105" column="26" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="105" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -145,8 +302,8 @@
       <list>
         <option value="Python Script" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -178,22 +335,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/course_web/manage.py" />
-        <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/views/base.py" />
-        <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/views/list.py" />
-        <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/views/dashboard.py" />
-        <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/models.py" />
-        <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/util.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/college/views.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/users/form.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/guestbook/adminx.py" />
         <option value="$PROJECT_DIR$/course_web/templates/register.py" />
         <option value="$PROJECT_DIR$/course_web/apps/users/registerFrom.py" />
         <option value="$PROJECT_DIR$/course_web/apps/utils/email_send.py" />
         <option value="$PROJECT_DIR$/course_web/templates/send_success.css" />
         <option value="$PROJECT_DIR$/course_web/templates/send_success.html" />
         <option value="$PROJECT_DIR$/course_web/templates/active_fail.html" />
-        <option value="$PROJECT_DIR$/course_web/course_web/settings.py" />
         <option value="$PROJECT_DIR$/course_web/extra_apps/xadmin/plugins/wizard.py" />
         <option value="$PROJECT_DIR$/course_web/templates/password_reset.html" />
         <option value="$PROJECT_DIR$/course/base.html" />
@@ -205,30 +352,40 @@
         <option value="$PROJECT_DIR$/course_web/apps/users/forms.py" />
         <option value="$PROJECT_DIR$/course_web/apps/users/urls.py" />
         <option value="$PROJECT_DIR$/course_web/apps/users/models.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/college/models.py" />
         <option value="$PROJECT_DIR$/course_web/apps/course_manager/adminx.py" />
         <option value="$PROJECT_DIR$/course_web/apps/users/adminx.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/college/adminx.py" />
         <option value="$PROJECT_DIR$/course_web/apps/course_manager/models.py" />
         <option value="$PROJECT_DIR$/course_web/static/css/style.css" />
         <option value="$PROJECT_DIR$/course_web/apps/platfrom/models.py" />
         <option value="$PROJECT_DIR$/course_web/apps/platfrom/adminx.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/platfrom/urls.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/platfrom/views.py" />
-        <option value="$PROJECT_DIR$/course_web/course_web/urls.py" />
         <option value="$PROJECT_DIR$/course_web/apps/users/views.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/course_manager/urls.py" />
-        <option value="$PROJECT_DIR$/course_web/apps/course_manager/views.py" />
         <option value="$PROJECT_DIR$/course_web/static/js/foot.js" />
         <option value="$PROJECT_DIR$/course_web/static/js/login.js" />
-        <option value="$PROJECT_DIR$/course_web/templates/course/course_list.html" />
-        <option value="$PROJECT_DIR$/course_web/templates/base.html" />
-        <option value="$PROJECT_DIR$/course_web/static/css/min.css" />
         <option value="$PROJECT_DIR$/course_web/templates/login.html" />
         <option value="$PROJECT_DIR$/course_web/templates/register.html" />
-        <option value="$PROJECT_DIR$/course_web/static/css/login.css" />
         <option value="$PROJECT_DIR$/course_web/templates/forgetpwd.html" />
+        <option value="$PROJECT_DIR$/course_web/static/css/login.css" />
+        <option value="$PROJECT_DIR$/course_web/apps/college/models.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/college/adminx.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/platfrom/urls.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/platfrom/views.py" />
+        <option value="$PROJECT_DIR$/course_web/templates/platfrom/work_list.html" />
+        <option value="$PROJECT_DIR$/course_web/apps/college/urls.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/college/views.py" />
+        <option value="$PROJECT_DIR$/course_web/templates/college/message.html" />
+        <option value="$PROJECT_DIR$/course_web/templates/college/teacher_list.html" />
+        <option value="$PROJECT_DIR$/course_web/apps/course_manager/views.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/course_manager/urls.py" />
+        <option value="$PROJECT_DIR$/course_web/templates/base.html" />
+        <option value="$PROJECT_DIR$/course_web/apps/guestbook/views.py" />
+        <option value="$PROJECT_DIR$/course_web/apps/guestbook/urls.py" />
         <option value="$PROJECT_DIR$/course_web/templates/index.html" />
+        <option value="$PROJECT_DIR$/course_web/templates/course/course_list.html" />
+        <option value="$PROJECT_DIR$/course_web/templates/course/data_download.html" />
+        <option value="$PROJECT_DIR$/course_web/course_web/settings.py" />
+        <option value="$PROJECT_DIR$/course_web/course_web/urls.py" />
+        <option value="$PROJECT_DIR$/course_web/templates/guestbook/guestbook.html" />
+        <option value="$PROJECT_DIR$/course_web/static/css/min.css" />
       </list>
     </option>
   </component>
@@ -238,10 +395,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-10" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="536" />
+    <option name="y" value="81" />
+    <option name="width" value="1643" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,10 +408,13 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>XML</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Buildout</id>
+            <id>XmlDuplicatedId</id>
           </State>
         </selected-state>
       </profile-state>
@@ -277,6 +438,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,27 +461,6 @@
               <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="course_manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="platfrom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,14 +474,7 @@
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="course_web" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
@@ -348,36 +482,42 @@
               <item name="course_web" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="course_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="course_web" type="462c0819:PsiDirectoryNode" />
+              <item name="course_web" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/MxOnline" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\course_web\course_web\static\images" />
-      <recent name="$PROJECT_DIR$/course_web" />
-      <recent name="$PROJECT_DIR$/course_web/apps" />
-      <recent name="$PROJECT_DIR$/course/image" />
-      <recent name="$PROJECT_DIR$/course_web/templates/course" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/course_web/static/js/editor" />
       <recent name="$PROJECT_DIR$/course_web/static" />
       <recent name="$PROJECT_DIR$/course_web" />
       <recent name="$PROJECT_DIR$/course_web/templates" />
       <recent name="$PROJECT_DIR$/course/image" />
-      <recent name="$PROJECT_DIR$/course_web/static/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/course_web/templates" />
+      <recent name="E:\course_web\course_web\static\images" />
+      <recent name="$PROJECT_DIR$/course_web" />
+      <recent name="$PROJECT_DIR$/course_web/apps" />
+      <recent name="$PROJECT_DIR$/course/image" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -418,29 +558,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="1386" height="788" extended-state="1" />
+    <frame x="536" y="81" width="1643" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25490198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44771242" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28757396" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21673954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35176653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3769063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -455,78 +595,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/course_web/apps/media/org/2016/12/bjdx.jpg" />
-    <entry file="file://$PROJECT_DIR$/course_web/apps/media/org/2016/12/bjdx_bcd0m07.jpg" />
-    <entry file="file://$PROJECT_DIR$/course_web/DjangoUeditor/static/ueditor/php/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/DjangoUeditor/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/DjangoUeditor/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/urls/conf.py" />
-    <entry file="file://$PROJECT_DIR$/course_web/templates/send_success.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/templates/500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/templates/active_fail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/static/images/top_down.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/course_web/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/django/views/generic/base.py" />
     <entry file="file://$PROJECT_DIR$/course_web/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-110">
@@ -548,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/college/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course_web/apps/course_manager/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -562,52 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/college/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="68" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/course_manager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/apps/course_manager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="78" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -622,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#28#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -632,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/templates/course/course_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -660,11 +669,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/course_web/static/images/logo.gif" />
     <entry file="file://$PROJECT_DIR$/course_web/static/images/logo.jpg" />
-    <entry file="file://$PROJECT_DIR$/course_web/static/images/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course_web/static/images/logo2.png" />
     <entry file="file://$PROJECT_DIR$/course_web/static/images/login-bg.png" />
     <entry file="file://$PROJECT_DIR$/course_web/static/css/style.css">
@@ -675,21 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="108" column="27" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course_web/static/js/jquery.cookie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1733">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3094">
           <caret line="113" column="46" lean-forward="false" selection-start-line="113" selection-start-column="46" selection-end-line="113" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,23 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="78" column="46" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/static/css/min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="287" column="20" lean-forward="false" selection-start-line="287" selection-start-column="20" selection-end-line="287" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/static/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="330" column="9" lean-forward="false" selection-start-line="330" selection-start-column="9" selection-end-line="330" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="121" column="50" lean-forward="false" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,26 +718,228 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="90" column="46" lean-forward="false" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/images/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/images/01.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/images/2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/images/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course_web/course_web/urls.py">
+    <entry file="file://$PROJECT_DIR$/course_web/apps/college/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state relative-caret-position="502">
+          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/college/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/platfrom/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/platfrom/work_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/college/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/college/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/college/teacher_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/college/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/course_manager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/course_manager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/guestbook/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/course/data_download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/apps/guestbook/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/js/editor/kindeditor/lang/ar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course_web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="178" column="27" lean-forward="false" selection-start-line="178" selection-start-column="27" selection-end-line="178" selection-end-column="27" />
-          <folding>
-            <element signature="e#9122#9130#1" expanded="true" />
-            <element signature="e#9257#9265#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="687">
+          <caret line="295" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/course_web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1203">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/course_web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="66" column="19" lean-forward="true" selection-start-line="61" selection-start-column="11" selection-end-line="66" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/course/course_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="105" column="26" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="105" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/templates/guestbook/guestbook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_web/static/css/min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="490" column="13" lean-forward="false" selection-start-line="490" selection-start-column="13" selection-end-line="490" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -9,10 +9,10 @@ from course_manager.models import Course
 class CourseListView(View):
     # 课程列表
     def get(self, request):
-    #     return  render(request, 'course/course_list')
-    #
-    # def post(self, request):
         course_name = request.GET.get('course_name')
         courses = Course.objects.filter(course_name = course_name)
-        print(courses)
         return render(request, 'course/course_list.html', {'courses' : courses})
+
+class DataDownloadView(View):
+    def get(self, request):
+        return render(request, 'course/data_download.html')

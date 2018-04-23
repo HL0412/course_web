@@ -1,1 +1,1 @@
-from django.urls import pathfrom college import viewsfrom course_manager.views import CourseListViewapp_name = 'course'       #这里一定要写urlpatterns = [    path('course_list/', CourseListView.as_view(), name='course_list')]
+from django.urls import pathfrom college import viewsfrom course_manager.views import CourseListView, DataDownloadViewapp_name = 'course'       #这里一定要写urlpatterns = [    path('course_list/', CourseListView.as_view(), name='course_list'),    path('data_download/', DataDownloadView.as_view(), name='data_download')]
