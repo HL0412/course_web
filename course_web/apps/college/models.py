@@ -34,6 +34,7 @@ class Teacher(models.Model):
     '''教师表'''
     teacher_name = models.CharField(max_length=45, verbose_name='姓名')
     teacher_num = models.CharField(max_length=45, verbose_name='职工号')
+    teacher_rank = models.CharField(max_length=45, verbose_name='职称')
     sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
     department = models.ForeignKey(Department, verbose_name='系', on_delete=models.CASCADE)
     phone = models.CharField(max_length=32, null=True, blank=True, verbose_name='电话')

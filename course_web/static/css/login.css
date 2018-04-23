@@ -16,7 +16,7 @@ a:hover{
     background:#fff;
 }
 .bg-box{
-    margin-top: -10%;
+    /*margin-top: -10%;*/
     background:url(../images/2.jpg) repeat center center;
 }
 .header-box{

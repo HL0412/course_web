@@ -1,1 +1,1 @@
-from django.conf.urls import urlfrom college import viewsapp_name = 'college'       #这里一定要写urlpatterns = []
+from django.urls import pathfrom college.views import TeacherListView, MessageViewapp_name = 'college'       #这里一定要写urlpatterns = [    path('teacher_list/', TeacherListView.as_view(), name='teacher_list'),    path('message/', MessageView.as_view(), name='message')]

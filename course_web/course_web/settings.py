@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'college',
     'platfrom',
     'captcha',
+    'DjangoUeditor',
 ]
 
 SITE_ID = 1

@@ -18,9 +18,9 @@ class ClassroomAdmin:
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:
-    list_display = ['teacher_name', 'teacher_num', 'sex', 'age', 'department', 'phone', 'email', 'picture', 'add_time']
-    search_fileds = ['teacher_name', 'teacher_num', 'phone', 'email']
-    list_filter = ['teacher_name', 'teacher_num', 'department', 'phone', 'email']
+    list_display = ['teacher_name', 'teacher_num', 'teacher_rank', 'sex', 'age', 'department', 'phone', 'email', 'picture', 'add_time']
+    search_fileds = ['teacher_name', 'teacher_num', 'teacher_rank', 'phone', 'email']
+    list_filter = ['teacher_name', 'teacher_num', 'department', 'phone', 'teacher_rank', 'email']
     model_icon = 'fa fa-users'
 
 class StudentAdmin:
