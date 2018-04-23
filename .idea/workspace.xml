@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80ffac7b-b4fa-4300-84fe-09bf1b9c26c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/course_web.iml" afterPath="$PROJECT_DIR$/.idea/course_web.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/css/login.css" afterPath="$PROJECT_DIR$/course_web/static/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/css/min.css" afterPath="$PROJECT_DIR$/course_web/static/css/min.css" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/login-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo.png" afterPath="$PROJECT_DIR$/course_web/static/images/logo.png" />
-      <change beforePath="$PROJECT_DIR$/course_web/static/images/logo2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/base.html" afterPath="$PROJECT_DIR$/course_web/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/forgetpwd.html" afterPath="$PROJECT_DIR$/course_web/templates/forgetpwd.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/index.html" afterPath="$PROJECT_DIR$/course_web/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/login.html" afterPath="$PROJECT_DIR$/course_web/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/course_web/templates/register.html" afterPath="$PROJECT_DIR$/course_web/templates/register.html" />
-    </list>
+    <list default="true" id="80ffac7b-b4fa-4300-84fe-09bf1b9c26c8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,8 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/course_web/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="178" column="27" lean-forward="false" selection-start-line="178" selection-start-column="27" selection-end-line="178" selection-end-column="27" />
+            <state relative-caret-position="-17">
+              <caret line="170" column="17" lean-forward="false" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
               <folding>
                 <element signature="e#9122#9130#1" expanded="true" />
                 <element signature="e#9257#9265#1" expanded="true" />
@@ -238,7 +221,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-10" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
@@ -418,7 +401,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="0" width="1386" height="788" extended-state="1" />
+    <frame x="-10" y="0" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25490198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -759,8 +742,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/course_web/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="178" column="27" lean-forward="false" selection-start-line="178" selection-start-column="27" selection-end-line="178" selection-end-column="27" />
+        <state relative-caret-position="-17">
+          <caret line="170" column="17" lean-forward="false" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
           <folding>
             <element signature="e#9122#9130#1" expanded="true" />
             <element signature="e#9257#9265#1" expanded="true" />
