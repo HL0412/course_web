@@ -155,13 +155,13 @@ nav .personal a:hover {
 .login .marb8 input {
     color: #5bc0de;
     font-size: 14px;
-    width: 190px;
+    width: 62%;
     border-radius: 5px;
 }
 .login .marb20 input {
     color: #5bc0de;
     font-size: 14px;
-    width: 190px;
+    width: 62%;
     border-radius: 5px;
 }
 /*首页登录后显示个人信息*/
@@ -448,22 +448,22 @@ footer .footer .links a:hover {
 .course_list img{
     width: 200px;
     height: 200px;
-    margin-left: 30px;
     transition: all 0.5s ease 0s;
+    display: block;
+    margin: 0 auto;
 }
 .course_list img:hover{
     -webkit-animation: swing .4s .2s ease both;
     -moz-animation: swing .4s .2s ease both;
 }
 .course_list dt{
-    margin-bottom: 10px;
     font-size: 1.2em;
     width: 80px;
     height: 30px;
     border-radius: 10px;
-    text-align: center;
-    padding-top: 10px;
-    margin-left: 90px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
     
 }
 .course_list dt a{
@@ -487,9 +487,11 @@ footer .footer .links a:hover {
     font-size: 14px;
     border-radius: 2px;
     cursor: pointer;
+    margin-right: 0;
 }
 .pagination a{
     text-decoration: none;
+    color: white;
 }
 .pagination li:hover{
      background-color: #c4d6dc;
@@ -518,7 +520,7 @@ footer .footer .links a:hover {
     width: 120px;
     height: 80px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .myself dt{
     padding-top: 20px;
@@ -543,10 +545,7 @@ textarea{
     float: right;
     font-size: 14px;
     font-weight: inherit;
-
-
 }
-
 .guestbook_content label input{
     width: 180px;
     height: 30px;
@@ -555,7 +554,8 @@ textarea{
 .guestbook .fl{
     margin-top: 30px;
     height: 30px;
-    width: 200px;
+    width: 80%;
+    padding-left: 10px;
 }
 .guestbook img{
     width: 30px;
@@ -563,15 +563,24 @@ textarea{
 }
 .guestbook{
     border: 1px solid #dcdcdc;
-    height: 400px;
+    height: 500px;
     width: 20%;
     margin-top: 50px;
     margin-left: 20px;
     margin-bottom: 50px;
     background: #ffffff;
+    padding-left: 2%;
+    overflow: hidden;
 }
 .guestbook h3{
     margin-top: 80px;
+    background: whitesmoke;
+    width: 120%;
+    height: 40px;
+    padding: 15px;
+    margin-left: -30px;
+    font-size: 14px;
+    color: #f56152;
 }
 .guestbook li{
     margin-top: 10px;
@@ -583,22 +592,28 @@ textarea{
     background: #42baff;
     cursor: pointer;
     position: absolute;
-    right: 20px;
-    top: 30px;
+    right: 12%;
+    top: 6%;
 }
 .guestbook_list{
-    margin-left: 40px;
+    margin-left: 3.2%;
     margin-top: 50px;
-    height: 400px;
+    height: 500px;
     border: 1px solid #dcdcdc;
     background: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
+    width: 73.2%;
+    overflow: hidden;
+
 }
 .guestbook_list h2{
-    margin-top: 20px;
-    margin-left: 10px;
-    font-weight: bold;
+    background: whitesmoke;
+    height: 50px;
+    width: 120%;
+    padding: 20px;
+    margin-left: -20px;
     margin-bottom: 20px;
+    color: #00c6ff;
 }
 .guestbook_list .pagination{
     position: absolute;
@@ -623,3 +638,267 @@ textarea{
 
 }
 
+
+/*课程列表*/
+/*banner*/
+.banner {
+    height: 320px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    /*background: #f6f6f6;*/
+    /*border-bottom: 1px solid #f6f6f6;*/
+    padding-top: 10px;
+}
+
+/*.banner*/
+.banner .fl {
+    position: relative;
+    height: 300px;
+    width: 1200px;
+}
+
+/*焦点图 CSS*/
+.imgslide {
+    height: 478px;
+    width: 880px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgslide li,
+.imgslide2 li,
+.imgslide3 li,
+.imgslide4 li,
+.imgslide5 li {
+    float: left;
+}
+
+.unslider-arrow,
+.unslider-arrow2,
+.unslider-arrow3,
+.unslider-arrow4,
+.unslider-arrow5 {
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    z-index: 100;
+    width: 33px;
+    height: 50px;
+}
+
+.unslider-arrow.prev,
+.unslider-arrow2.prev,
+.unslider-arrow3.prev,
+.unslider-arrow4.prev,
+.unslider-arrow5.prev {
+    left: 0;
+    background: url(../images/slide_l.png) no-repeat center center;
+}
+
+.unslider-arrow.prev:hover,
+.unslider-arrow2.prev:hover,
+.unslider-arrow3.prev:hover,
+.unslider-arrow4.prev:hover,
+.unslider-arrow5.prev:hover {
+    background: url(../images/slide_l_1.png) no-repeat center center;
+}
+
+.unslider-arrow.next,
+.unslider-arrow2.next,
+.unslider-arrow3.next,
+.unslider-arrow4.next,
+.unslider-arrow5.next {
+    right: 0;
+    background: url(../images/slide_r.png) no-repeat center center;
+}
+
+.unslider-arrow.next:hover,
+.unslider-arrow2.next:hover,
+.unslider-arrow3.next:hover,
+.unslider-arrow4.next:hover,
+.unslider-arrow5.next:hover {
+    background: url(../images/slide_r_1.png) no-repeat center center;
+}
+
+.imgslide .dots,
+.imgslide2 .dots,
+.imgslide3 .dots,
+.imgslide4 .dots,
+.imgslide5 .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 80px;
+    margin-left: -40px;
+}
+.imgslide .dots{
+    width:110px;
+    margin-left:-55px;
+}
+
+.imgslide .dots li,
+.imgslide2 .dots li,
+.imgslide3 .dots li,
+.imgslide4 .dots li,
+.imgslide5 .dots li {
+    float: left;
+    margin: 5px;
+    background: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.imgslide .dots .active,
+.imgslide2 .dots .active,
+.imgslide3 .dots .active,
+.imgslide4 .dots .active,
+.imgslide5 .dots .active {
+    background: #717171 !important;
+    color: #717171 !important;
+}
+
+.banner .fr {
+    width: 310px;
+    height: 100%;
+    position: relative;
+}
+
+.banner .top {
+    background: #fff;
+    height: 340px;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.banner .fr .head {
+    height: 78px;
+    background: #95ddff;
+}
+
+.banner .fr .center {
+    line-height: 100%;
+}
+
+.banner .fr h1 {
+    color: #fff;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+.banner .fr p {
+    padding-top: 5px;
+    color: #f3f3f3;
+}
+
+.banner .fr form {
+    position: relative;
+}
+
+.banner .fr input {
+    text-indent: 40px;
+    width: 265px;
+    padding: 7px 0;
+    line-height: 24px;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    margin: 5px auto;
+}
+
+.banner .fr .icon1 {
+    background: url(../images/banner_icon1.png) no-repeat 8px center;
+}
+
+.banner .fr .icon2 {
+    background: url(../images/banner_icon2.png) no-repeat 8px center;
+}
+
+.banner .fr .icon3{
+    background: url(../images/banner_icon3.png) no-repeat 8px center;
+}
+
+.banner .fr .demand_form_tips {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    font-size: 14px;
+    color: #ff8400;
+    display: none;
+}
+
+/*
+.banner .fr .vali{position: relative;width: 265px;line-height: 40px;height: 40px;border: 1px solid #c6c6c6; border-radius: 3px;left:18px;top: 140px;margin: 10px 0;}
+*/
+.banner .fr .submit {
+    margin-top: 28px;
+    border-radius: 0;
+    border: 0;
+    color: #fff;
+    text-indent: 0;
+    font-size: 14px;
+    top: 230px;
+    background: #ff9d33 url(../images/banner_icon4.png) no-repeat 70% center;
+    cursor: pointer;
+}
+
+.banner .fr .submit:hover {
+    background: #ff8400 url(../images/banner_icon4.png) no-repeat 70% center;
+}
+
+.banner .bottom {
+    width: 290px;
+    background: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.banner .bottom h1 {
+    font-size: 16px;
+    color: #545454;
+    padding-top: 10px;
+}
+
+.banner .bottom ul {
+    width: 270px;
+    padding-left: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.banner .bottom li {
+    line-height: 25px;
+    list-style: disc;
+    color: #999;
+}
+
+.banner .bottom a {
+    color: #999;
+}
+
+.banner .bottom .more {
+    color: #717171;
+    font-size: 12px;
+    float: right;
+}
+
+/*教师列表*/
+.teacher_list img{
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding: 20px;
+}
+.professor{
+    margin: 0 auto;
+    width: 100%;
+    height: 240px;
+}

@@ -61,61 +61,62 @@
     <section>
         <div class="container col-md-4" id="container-left">
             <div class="form row">
-
-                    <div class="col-md-11">
-                        <!--登录后跳转-->
-                        {% if request.user.is_authenticated %}
-                        <h4 class="form-title">个人信息</h4>
-                        <div class="personal_details">
-                            <img class="img-thumbnail" src="{{ MEDIA_URL }}{{ request.user.image }}"/>
-                            <dd>用户名：{{ user.username}}</dd>
-                            <dd>昵称：{{ user.nick_name }}</dd>
-                            <dd>年龄：{{ user.age }}</dd>
-                            <dd>性别：{{ user.gender }}</dd>
-                            <dd>生日：{{ user.birthday }}</dd>
-                            <dd>地址：{{ user.address }}</dd>
-                        </div>
-                        {% else %}
-                        <h4 class="form-title">用户登录</h4>
-                        <form action="/login_index/" method="post" autocomplete="off">
-                            <div class="login">
-                                <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
-                                <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
-                                    <label>用&nbsp;户&nbsp;名:</label>
-                                    <input name="username"   type="text" placeholder="用户名/邮箱" />
-                                </div>
-                                <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
-                                    <label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-                                    <input name="password"  type="password" placeholder="请输入密码" />
-                                </div>
-                                <div class="error btns login-form-tips" id="jsLoginTips">
-                                    {% for key,error in login_form.errors.items %}
-                                        {{ error }}
-                                        {% endfor %}
-                                    {{ msg }}
-                                </div>
-                                <div class="auto-box marb38">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="remember" value="1"/>记住我
-                                        <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-info" name="submit">登录</button>
-                                    <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
-                                    {% csrf_token %}
-                                </div>
-                            </div>
-                        </form>
-                        {% endif %}
+                <div class="col-md-11">
+                    <!--登录后跳转-->
+                    {% if request.user.is_authenticated %}
+                    <h4 class="form-title">个人信息</h4>
+                    <div class="personal_details">
+                        <img class="img-thumbnail" src="{{ MEDIA_URL }}{{ request.user.image }}"/>
+                        <dd>用户名：{{ user.username}}</dd>
+                        <dd>昵称：{{ user.nick_name }}</dd>
+                        <dd>年龄：{{ user.age }}</dd>
+                        <dd>性别：{{ user.gender }}</dd>
+                        <dd>生日：{{ user.birthday }}</dd>
+                        <dd>地址：{{ user.address }}</dd>
                     </div>
-
+                    {% else %}
+                    <h4 class="form-title">用户登录</h4>
+                    <form action="/login_index/" method="post" autocomplete="off">
+                        <div class="login">
+                            <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
+                            <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
+                                <label>用&nbsp;户&nbsp;名:</label>
+                                <input name="username"   type="text" placeholder="用户名/邮箱" />
+                            </div>
+                            <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
+                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <input name="password"  type="password" placeholder="请输入密码" />
+                            </div>
+                            <div class="error btns login-form-tips" id="jsLoginTips">
+                                {% for key,error in login_form.errors.items %}
+                                    {{ error }}
+                                    {% endfor %}
+                                {{ msg }}
+                            </div>
+                            <div class="auto-box marb38">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="remember" value="1"/>记住我
+                                    <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info" name="submit">登录</button>
+                                <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
+                                {% csrf_token %}
+                            </div>
+                        </div>
+                    </form>
+                    {% endif %}
+                </div>
             </div>
             <div class="form row" >
                 <div id="notice">
                     <div class="col-md-11" >
                         <h4 class="form-title ">最新公告</h4>
                         <ul class="list-group">
+                            <!--{% for notice in notices %}-->
+                                <!--<li><a href="{% url 'college:notice_detail'%}?{{ notice.id }}">{{ notice.title }}</a></li>-->
+                            <!--{% endfor %}-->
                             <li><a href="#" class="list-group-item">24*7 支持</a></li>
                             <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
                             <li><a href="#" class="list-group-item">图像的数量</a></li>
@@ -137,45 +138,24 @@
             <div class="notice">
                 <h4 class="form-title">作业展示</h4>
                 <div class="row " id="work">
-                    <!--<div class="col-sm-3">-->
-                        <!--&lt;!&ndash;img-thumbnail 方形加外边框&ndash;&gt;-->
-                        <!--<img src="Images/八镜台.jpg"  class="img-thumbnail" alt="八镜台"/>-->
+                    <!--{% for work in works %}-->
+                        <!--<div class="col-sm-3">-->
+                        <!--<img src="{{ MEDIA_URL }}{{ request.work.image }}"  class="img-thumbnail" alt="{{ work.title}} "/>-->
                     <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<img src="Images/标建2.jpg" class="img-thumbnail" alt="标建" />-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<img src="Images/标建4.jpg" class="img-thumbnail" alt="标建2"/>-->
-                    <!--</div>-->
-                    <!--<div class="col-sm-3">-->
-                        <!--<img src="Images/城墙2.jpg" class="img-thumbnail" alt="标建2"/>-->
-                    <!--</div>-->
+                    <!--{% endfor %}-->
 
-                    <div id="myCarousel" class="carousel slide">
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0"
-                                class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img  width="80px" height="200px" src="{% static 'images/2.png' %}" alt="第一张图">
-                            </div>
-                            <div class="item">
-                                <img src="image_2.png" alt="第二张图">
-                            </div>
-                            <div class="item">
-                                <img src="image_3.png" alt="第三张图">
-                            </div>
-                            <div class="item">
-                                <img src="image_4.png" alt="第三张图">
-                            </div>
-                        </div>
-                        <a class="carousel-control left" href="#myCarousel"
-                           data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel"
-                           data-slide="next">&rsaquo;</a>
+                    <div class="col-sm-3">
+                        <!--img-thumbnail 方形加外边框-->
+                        <img src="Images/八镜台.jpg"  class="img-thumbnail" alt=" "/>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/标建2.jpg" class="img-thumbnail" alt=" " />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/标建4.jpg" class="img-thumbnail" alt=" "/>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="Images/城墙2.jpg" class="img-thumbnail" alt=" "/>
                     </div>
                 </div>
             </div>
@@ -183,6 +163,9 @@
                 <h4 class="form-title" >新闻动态</h4>
                 <div class="row" id="news">
                     <ul class="list-group">
+                         <!--{% for news in news_all %}-->
+                                <!--<li><a href="{% url 'college:news_detail'%}?{{ notice.id }}">{{ news.title }}</a></li>-->
+                            <!--{% endfor %}-->
                         <li><a href="#" class="list-group-item">24*7 支持</a></li>
                         <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
                         <li><a href="#" class="list-group-item">图像的数量</a></li>
@@ -222,7 +205,8 @@
                                     术获取到位置信息之后，还需要了解所处的地理环境，查询和分析环境信息，从而为用户活动提供信息支持与服务。</p>
                                 <br>
                                 <br>
-                                <p><a href="#" class="btn btn-info" role="button">详细了解</a></p>
+                                <!--该地方需要URL后面跟参数-->
+                                <p><a href="{% url 'course:course_detail' %}" class="btn btn-info" role="button">详细了解</a></p>
                             </div>
                         </div>
                     </div>
@@ -278,7 +262,6 @@
             </div>
         </div>
     </section>
-
 <script>
     $(function(){
         $(".next-slide").click(function(){

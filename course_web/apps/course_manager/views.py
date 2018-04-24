@@ -13,6 +13,32 @@ class CourseListView(View):
         courses = Course.objects.filter(course_name = course_name)
         return render(request, 'course/course_list.html', {'courses' : courses})
 
+
 class DataDownloadView(View):
+    #资料下载
     def get(self, request):
         return render(request, 'course/data_download.html')
+
+
+class CourseVideoView(View):
+    #课程视屏
+    def get(self, request):
+        return render(request, 'course/course_video.html')
+
+
+class CourseDataView(View):
+    #课程资料
+    def get(self, request):
+        return render(request, 'course/course_data.html')
+
+
+class CoursePPTView(View):
+    #课件
+    def get(self, request):
+        return render(request, 'course/course_PPT.html')
+
+
+class CourseWorkView(View):
+    #课程作业
+    def get(self, request):
+        return render(request, 'course/course_work.html')
