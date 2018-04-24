@@ -1,4 +1,8 @@
 /*导航*/
+*{
+    margin: 0;
+    padding: 0;
+}
 html{
     height: 100%;
 }
@@ -78,6 +82,8 @@ a{
     border-radius: 5px;
     margin-top: 100px;
     font-family: 幼圆, serif;
+    display:inline;
+
 }
 
 .registerbtn:hover {
@@ -102,6 +108,7 @@ nav .personal .user dt {
     overflow: hidden;
     border-radius: 50%;
     margin-left: -120px;
+    display:inline;
 }
 nav .personal a {
     color: #fff;
@@ -114,6 +121,7 @@ nav .personal a {
     text-align: center;
     padding-top: 10px;
     border-radius: 5px;
+    display:inline;
 }
 nav .personal a:hover {
     background: #0093e9;
@@ -146,7 +154,7 @@ nav .personal a:hover {
     height: 400px;
     border-radius:10px;
     padding-top: 40px;
-    padding-left: 25px;
+    padding-left: 20px;
     color: #5bc0de;
     font-family: "Arial Rounded MT Bold", cursive;
     border:1px solid #dcdcdc;;
@@ -155,13 +163,13 @@ nav .personal a:hover {
 .login .marb8 input {
     color: #5bc0de;
     font-size: 14px;
-    width: 62%;
+    width: 60%;
     border-radius: 5px;
 }
 .login .marb20 input {
     color: #5bc0de;
     font-size: 14px;
-    width: 62%;
+    width: 60%;
     border-radius: 5px;
 }
 /*首页登录后显示个人信息*/
@@ -188,8 +196,7 @@ nav .personal a:hover {
 }
 /*from-group*/
 .form-group > input{
-    margin-left: 20px;
-    width: 64%;
+    margin-left: 10px;
     height: 34px;
 }
 .form-group > button{
@@ -295,6 +302,7 @@ footer .footer .nav {
 footer .footer .nav li {
     float: left;
     border-right: 1px solid #fff;
+    display:inline;
 }
 
 footer .footer .nav li:last-child {
@@ -323,6 +331,7 @@ footer .footer .cont {
 footer .footer .cont li {
     width: 33.3%;
     float: left;
+    display:inline;
 }
 
 footer .footer .cont .code {
@@ -334,6 +343,7 @@ footer .footer .cont .third {
     float: right;
     width: 250px;
     margin-top: 35px;
+    display:inline;
 }
 
 footer .footer .cont .third img {
@@ -351,11 +361,13 @@ footer .footer .links span {
     float: left;
     color: #717171;
     margin: 5px;
+    display:inline;
 }
 
 footer .footer .links li {
     float: left;
     margin: 5px;
+    display:inline;
 }
 
 footer .footer .links a {
@@ -378,6 +390,7 @@ footer .footer .links a:hover {
     margin-top: 17px;
     border-left: 1px dashed #ccc;
     position: relative;
+    display:inline;
 }
 .feature li:first-child {
     border: 0;
@@ -488,6 +501,7 @@ footer .footer .links a:hover {
     border-radius: 2px;
     cursor: pointer;
     margin-right: 0;
+    display:inline;
 }
 .pagination a{
     text-decoration: none;
@@ -545,6 +559,7 @@ textarea{
     float: right;
     font-size: 14px;
     font-weight: inherit;
+    display:inline;
 }
 .guestbook_content label input{
     width: 180px;
@@ -585,8 +600,6 @@ textarea{
 .guestbook li{
     margin-top: 10px;
     font-size: 14px;
-    overflow: hidden;
-
 }
 .guestbook .search_btn {
     background: #42baff;
@@ -604,7 +617,6 @@ textarea{
     font-size: 14px;
     width: 73.2%;
     overflow: hidden;
-
 }
 .guestbook_list h2{
     background: whitesmoke;
@@ -620,23 +632,29 @@ textarea{
     bottom: 0;
     right: 0;
 }
+.guestbook_list ul li{
+    border-bottom:1px #dcdcdc solid;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
 .guestbook_list .contents{
-    width: 90%;
+    width: 84%;
     margin-left: 20px;
     overflow: hidden;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    text-align: center;
 }
 .guestbook_list .time{
     width: 10%;
     float: right;
     text-align: center;
-    margin: 0;
+    display:inline;
+
 
 }
-.guestbook_list li{
-    border-bottom:1px #dcdcdc solid;
-    padding:10px;
 
-}
 
 
 /*课程列表*/
@@ -673,6 +691,7 @@ textarea{
 .imgslide4 li,
 .imgslide5 li {
     float: left;
+    display:inline;
 }
 
 .unslider-arrow,
@@ -753,6 +772,7 @@ textarea{
     text-align: center;
     cursor: pointer;
     overflow: hidden;
+    display:inline;
 }
 
 .imgslide .dots .active,
@@ -886,16 +906,25 @@ textarea{
     color: #717171;
     font-size: 12px;
     float: right;
+    display:inline;
 }
 
 /*教师列表*/
+.teacher_list dl{
+    height: 240px;
+    width: 240px;
+    background: white;
+    display: block;
+    margin: 0 auto;
+
+}
 .teacher_list img{
     height: 200px;
     width: 200px;
+    padding: 40px;
     display: block;
     margin: 0 auto;
-    margin-left: 20px;
-    padding: 20px;
+
 }
 .professor{
     margin: 0 auto;
