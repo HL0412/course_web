@@ -18,6 +18,11 @@ class TeacherListView(View):
                       {'perfessor' : perfessor, 'associate_perfessor':associate_perfessor, 'teach':teach})
 
 
+class TeacherDetailView(View):
+    def get(self, request):
+        return render(request, 'college/teacher_detail.html')
+
+
 class MessageView(View):
     # 关于我们信息
     def get(self, request):
