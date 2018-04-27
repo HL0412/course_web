@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/min.css' %}">
 
     {% block custom_css %}
 
@@ -92,19 +91,19 @@
 {% block content %}
 {% endblock %}
 
+
 <footer>
     <div class="footer">
         <div class="wp">
             <ul class="cont">
-                <li ><img class="fr" src="{% static 'images/logo.png' %}"/>
+                <li class="logo"><a href=""><img src="{% static 'images/logo.png' %}"/></a></li>
                 <li class="third"><img class="fl" src="{% static 'images/tell.png' %}"/>
                     <p class="tell">电话:0833-7821417 </p>
                     <p class="addrice">成都理工大学工程技术学院</p>
-                </li>
             </ul>
         </div>
+        <p class="line"></p>
         <div class="wp clear">
-            <br>
             <span class="fl"> 2018 www.course.com 成都理工大学工程技术学院--课程教学网保留所有权利</span>
             <span class="fr">copyright -- 2018 ©Huangli</span>
         </div>
@@ -122,8 +121,8 @@
 
 <script src="{% static 'js/selectUi.js' %}" type='text/javascript'></script>
 <script src="{% static 'js/deco-common.js' %}" type='text/javascript'></script>
-<script src="{% static 'js/plugins/laydate/laydate.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/plugins/layer/layer.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'js/plugins/laydate/laydate.js' %}"></script>
+<script src="{% static 'js/plugins/layer/layer.js' %}"></script>
 <script src="{% static 'js/plugins/queryCity/js/public.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/unslider.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/plugins/jquery.scrollLoading.js' %}" type="text/javascript"></script>
@@ -152,8 +151,7 @@
 
 </script>
 
-{% block custom_js %}
-{% endblock %}
+{% block custom_js %}{% endblock %}
 
 </body>
 </html>
