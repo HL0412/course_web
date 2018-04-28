@@ -10,8 +10,12 @@ class NoticeListView(View):
         return render(request, 'index.html', {'notices' : all_notices})
 
 
-
 class WorkListView(View):
     def get(self, request):
         all_work = WorkCommit.objects.all()
         return render(request, 'platfrom/work_list.html', {'work': all_work})
+
+
+class PlatfromListView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_list.html')

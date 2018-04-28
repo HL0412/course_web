@@ -6,7 +6,7 @@ from college.models import Teacher
 
 class Course(models.Model):
 
-    course_name = models.CharField(max_length=45, verbose_name=u"课程名")
+    name = models.CharField(max_length=45, verbose_name=u"课程名")
     course_num = models.IntegerField(unique=True, verbose_name=u"课程号")
     course_intro = models.TextField(null=True, blank=True, verbose_name='课程介绍')
     course_picture = models.ImageField(null=True, blank=True, upload_to='static/course/image', default='static/image/default.png', max_length=100, verbose_name='课程图片')

@@ -1,6 +1,6 @@
 body {
     overflow: auto;
-     background-color: aliceblue;
+    background-color: aliceblue;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -953,7 +953,7 @@ textarea{
     height: 200px;
     width: 200px;
     padding-top: 20px;
-    margin-left: 10px;
+    margin-left: 1%;
 }
 .teacher_list img{
     height: 200px;
@@ -1087,7 +1087,7 @@ textarea{
     background: url(../images/check.png) no-repeat 440px center;
 }
 
-#jsCompanyInfoForm .rightput {
+#jsdepartmentInfoForm .rightput {
     background: url(../images/check.png) no-repeat 500px center;
 }
 
@@ -2566,7 +2566,7 @@ textarea:focus {
     margin: 0;
 }
 
-.module3 .company {
+.module3 .department {
     width: 100%;
     height: 100px;
     border: 1px solid #e5e5e5;
@@ -2576,7 +2576,7 @@ textarea:focus {
     background: #fff;
 }
 
-.module3 .company img {
+.module3 .department img {
     vertical-align: middle;
 }
 
@@ -2994,6 +2994,7 @@ footer .footer .links a:hover {
 .listoptions {
     border: 1px solid #dcdcdc;
     min-height: 50px;
+    background: white;
 }
 
 .listoptions li {
@@ -3013,6 +3014,7 @@ footer .footer .links a:hover {
     background: #f6f6f6;
     color: #808080;
     text-align: center;
+    padding-top: 20px;
 }
 
 .listoptions .more {
@@ -3674,6 +3676,7 @@ footer .footer .links a:hover {
 
 .butler_list_box {
     margin-top: 0;
+
 }
 
 .butler_list_box .left {
@@ -3688,6 +3691,7 @@ footer .footer .links a:hover {
     height: auto;
     overflow: hidden;
     float: right;
+
 }
 
 .butler_list_box .all {
@@ -3721,6 +3725,7 @@ footer .footer .links a:hover {
     border-bottom: 1px solid #e3e3e3;
     padding: 20px;
     position: relative;
+    background: white;
 }
 
 .butler_list .des:last-child {
@@ -3827,7 +3832,7 @@ footer .footer .links a:hover {
     overflow:hidden;
 }
 
-.butler_list .cont li, .companyranklist .cont li {
+.butler_list .cont li, .departmentranklist .cont li {
     float: left;
     width: auto;
     display: inline-block;
@@ -3860,19 +3865,19 @@ footer .footer .links a:hover {
     background: url(../images/share_c7.png) no-repeat left center;
 }
 
-.butler_list .cont .c7, .companyranklist .cont .c8 {
+.butler_list .cont .c7, .departmentranklist .cont .c8 {
     background: url(../images/pic7.png) no-repeat left center;
 }
 
-.butler_list .cont .c8, .companyranklist .cont .c7 {
+.butler_list .cont .c8, .departmentranklist .cont .c7 {
     background: url(../images/share_c8.png) no-repeat left center;
 }
 
-.butler_list .cont .pic9, .companyranklist .cont .pic9 {
+.butler_list .cont .pic9, .departmentranklist .cont .pic9 {
     background: url(../images/pic9.png) no-repeat left center;
 }
 
-.butler_list .cont .pic10, .companyranklist .cont .pic10 {
+.butler_list .cont .pic10, .departmentranklist .cont .pic10 {
     background: url(../images/pic10.png) no-repeat left center;
 }
 
@@ -5332,38 +5337,39 @@ footer .footer .links a:hover {
     line-height: 48px !important;
 }
 
-/*company*/
-.butler_list.company {
+/*department*/
+.butler_list.department {
     margin: 0;
     border: 0 !important;
+    background: white;
 }
 
-.butler_list.company .layout {
+.butler_list.department .layout {
     border: 0;
 }
 
-.butler_list.company .head {
+.butler_list.department .head {
     border-bottom: 0;
 }
 
-.butler_list.company .des {
+.butler_list.department .des {
     height: 170px;
     width: 901px;
 }
 
-.butler_list.company .difdes {
+.butler_list.department .difdes {
     border: 1px solid #eaeaea;
 }
 
-.butler_list.company .buy {
+.butler_list.department .buy {
     top: 70px;
 }
 
-.butler_list.company .des:hover {
-    border: 1px solid #a5d19b;
+.butler_list.department .des:hover {
+    border: 1px solid #88e7ff;
 }
 
-.butler_list.company dt {
+.butler_list.department dt {
     width: 200px;
     height: 120px;
     border-width: 1px;
@@ -5372,11 +5378,11 @@ footer .footer .links a:hover {
     overflow: hidden;
 }
 
-.butler_list.company dd {
+.butler_list.department dd {
     width: 678px !important;
 }
 
-.butler_list.company dd h1 {
+.butler_list.department dd h1 {
     height: 50px;
     line-height: 50px;
     margin-top: 10px;
@@ -5384,27 +5390,27 @@ footer .footer .links a:hover {
     display: inline;
 }
 
-.butler_list.company dd .pic {
+.butler_list.department dd .pic {
     vertical-align: top;
     margin-top: 25px;
     margin-left: 10px;
 }
 
-.butler_list.company dd .pic img {
+.butler_list.department dd .pic img {
     margin-right: 10px;
 }
 
-.butler_list.company .cont li {
+.butler_list.department .cont li {
     width: 100%;
     height: 25px;
     line-height: 25px;
 }
 
-.butler_list.company .cont .first {
+.butler_list.department .cont .first {
     padding: 0;
 }
 
-.butler_list.company .cont p {
+.butler_list.department .cont p {
     display: inline;
     float: left;
     text-indent: 20px;
@@ -5412,30 +5418,31 @@ footer .footer .links a:hover {
     margin-right: 20px;
 }
 
-.butler_list.company .cont a {
+.butler_list.department .cont a {
     color: #717171;
     margin-right: 10px;
 }
 
-.companyright, .companyrank {
+.departmentright, .departmentrank {
     width: 240px !important;
 }
 
-.companyright {
-    background: #717171;
+.departmentright {
+    background: #f4f4f4;
 }
 
-.companyright .rightform {
+.departmentright .rightform {
     height: 180px;
-    background: #717171;
+    background: #f4f4f4;
     width: 90%;
     padding: 5%;
+    margin: 0 auto;
 }
 
-.companyright .head {
+.departmentright .head {
     text-align: center;
     color: #fff;
-    background: #4fb137;
+    background: #a2dde8;
     padding: 0;
     margin: 0;
     font-size: 24px;
@@ -5445,7 +5452,7 @@ footer .footer .links a:hover {
     width: 100%;
 }
 
-.companyright .rightform div {
+.departmentright .rightform div {
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -5454,7 +5461,7 @@ footer .footer .links a:hover {
     margin: 10px 0;
 }
 
-.company-tips {
+.department-tips {
     float: left;
     width: 100%;
     text-align: center;
@@ -5462,51 +5469,51 @@ footer .footer .links a:hover {
     background-color: #ff261e;
 }
 
-.companyright .rightform div.errorput {
+.departmentright .rightform div.errorput {
     border-color: #ff1b11;
     box-shadow: 0 0 5px #ff1b11;
 }
 
-.companyright .rightform input {
+.departmentright .rightform input {
     width: 80%;
     float: left;
     height: 100%;
     border: 0;
 }
 
-.companyright .rightform img {
+.departmentright .rightform img {
     width: 12px;
     float: left;
     margin: 8px;
 }
 
-.companyright .rightform .btn {
+.departmentright .rightform .btn {
     width: 100%;
     height: 30px;
     line-height: 30px;
-    background: #ff9d33;
+    background: #ffa5a7;
     margin: 10px 0;
     text-align: center;
     color: #fff;
     cursor: pointer;
 }
 
-.companyrank .num {
+.departmentrank .num {
     border: 0 !important;
 }
 
-.companyrank .des {
+.departmentrank .des {
     width: 90% !important;
     padding: 5% !important;
     height: 100px !important;
 }
 
-.companyrank .des dd {
+.departmentrank .des dd {
     width: 170px;
     height: 80px;
 }
 
-.companyrank .des p {
+.departmentrank .des p {
     color: #848484;
     text-indent: 15px;
     margin-left: -3px;
@@ -5514,13 +5521,13 @@ footer .footer .links a:hover {
     background: url(../images/share_c8.png) no-repeat left 3px;
 }
 
-.companyheader .head, .companyheader .shead {
+.departmentheader .head, .departmentheader .shead {
     height: 100%;
     overflow: hidden;
     margin-left: 10px;
 }
 
-.companyheader h1 {
+.departmentheader h1 {
     margin-top: 10px;
     margin-left: 0;
     padding: 0;
@@ -5529,7 +5536,7 @@ footer .footer .links a:hover {
     width: 100%;
 }
 
-.companyheader .shead {
+.departmentheader .shead {
     margin-top: 20px;
     color: #a0a0a0;
     line-height: 180%;
@@ -5538,17 +5545,17 @@ footer .footer .links a:hover {
     padding-left: 20px;
 }
 
-.companyheader .shead h2 {
+.departmentheader .shead h2 {
     color: #a0a0a0;
     width: 100%;
 }
 
-.companyheader .shead .key {
+.departmentheader .shead .key {
     font-size: 30px;
     line-height: 40px;
 }
 
-.companyheader .btn {
+.departmentheader .btn {
     width: 140px;
     height: 40px;
     line-height: 40px;
@@ -5561,42 +5568,42 @@ footer .footer .links a:hover {
     cursor: pointer;
 }
 
-.companycenter {
+.departmentcenter {
     line-height: 200%;
 }
 
-.companycenter .head .more {
+.departmentcenter .head .more {
     margin-right: 20px;
 }
 
-.companycenter .brief {
+.departmentcenter .brief {
     border: 0;
     width: 945px;
     height: 280px !important;
 }
 
-.companycenter .star_score {
+.departmentcenter .star_score {
     text-indent: 20px;
     width: 320px;
     border-right: 1px solid #eaeaea;
 }
 
-.companycenter .star_score .star {
+.departmentcenter .star_score .star {
     margin-top: 16px;
 }
 
-.companycenter .star_score li {
+.departmentcenter .star_score li {
     border-bottom: 1px solid #eaeaea;
     height: 50px;
     line-height: 50px;
     margin: 0;
 }
 
-.companycenter .star_score li:last-child {
+.departmentcenter .star_score li:last-child {
     border: 0;
 }
 
-.companycenter .options {
+.departmentcenter .options {
     height: 203px;
     width: 240px;
     float: left;
@@ -5606,11 +5613,11 @@ footer .footer .links a:hover {
     text-indent: 100px;
 }
 
-.companycenter .options li {
+.departmentcenter .options li {
     background: url(../images/check.png) no-repeat 50px center;
 }
 
-.companycenter .imgslide {
+.departmentcenter .imgslide {
     width: 300px;
     height: 383px;
     position: absolute;
@@ -5619,7 +5626,7 @@ footer .footer .links a:hover {
     background: #ccc;
 }
 
-.companycenter .img-box {
+.departmentcenter .img-box {
     width: 300px;
     height: 383px;
     position: absolute;
@@ -5628,18 +5635,18 @@ footer .footer .links a:hover {
     background: #ccc;
 }
 
-.companycenter .imgs, .companycenter .imgs {
+.departmentcenter .imgs, .departmentcenter .imgs {
     width: 100%;
     height: 100%;
 }
 
-.companycenter .imgs li {
+.departmentcenter .imgs li {
     width: 100%;
     float: left;
     height: 100%;
 }
 
-.companycenter .tel {
+.departmentcenter .tel {
     height: 80px;
     border-top: 1px solid #eaeaea;
     text-indent: 60px;
@@ -5647,22 +5654,22 @@ footer .footer .links a:hover {
     background: url(../images/tel.png) no-repeat 20px center;
 }
 
-.companycenter .tel h2 {
+.departmentcenter .tel h2 {
     margin-top: 20px;
     color: #737373;
     font-size: 18px;
 }
 
-.companycenter .tel p {
+.departmentcenter .tel p {
     margin-top: 10px;
     color: #a8a8a8;
 }
 
-.companycenter .green {
+.departmentcenter .green {
     color: #717171;
 }
 
-.companycenter .tel .btn {
+.departmentcenter .tel .btn {
     width: 140px;
     height: 40px;
     line-height: 40px;
@@ -5677,17 +5684,17 @@ footer .footer .links a:hover {
     text-indent: 0
 }
 
-.companycenter .module1_5 {
+.departmentcenter .module1_5 {
     width: 24%;
 }
 
-.companycenter .cont {
+.departmentcenter .cont {
     width: 96%;
     padding: 2%;
     color: #858484;
 }
 
-.companycenter .diarys li {
+.departmentcenter .diarys li {
     width: 23%;
     float: left;
     margin: 1%;
@@ -5697,7 +5704,7 @@ footer .footer .links a:hover {
     color: #fff;
 }
 
-.companycenter .diarys li p {
+.departmentcenter .diarys li p {
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -5710,7 +5717,7 @@ footer .footer .links a:hover {
     text-align: center;
 }
 
-.companycenter .team li {
+.departmentcenter .team li {
     width: 20%;
     float: left;
     overflow: hidden;
@@ -5720,12 +5727,12 @@ footer .footer .links a:hover {
     color: #333;
 }
 
-.companycenter .team li p {
+.departmentcenter .team li p {
     font-size: 16px;
     color: #333;
 }
 
-.companycenter .team .pic {
+.departmentcenter .team .pic {
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -5733,20 +5740,20 @@ footer .footer .links a:hover {
     margin: 20px auto;
 }
 
-.companycenter .group_list {
+.departmentcenter .group_list {
     width: 945px;
     height: auto !important;
     overflow: hidden;
 }
 
-.companycenter .group_list .box {
+.departmentcenter .group_list .box {
     height: 300px;
     position: relative;
     margin: 30px 10px;
     width: 214px !important;
 }
 
-.companycenter .group_list .box .des {
+.departmentcenter .group_list .box .des {
     width: 95%;
     margin: 2%;
     height: 90px;
@@ -5754,31 +5761,31 @@ footer .footer .links a:hover {
     position: relative;
 }
 
-.companycenter .group_list .box .des h2 {
+.departmentcenter .group_list .box .des h2 {
     height: 30px;
     line-height: 30px;
     font-size: 18px !important;
 }
 
-.companycenter .group_list .des span {
+.departmentcenter .group_list .des span {
     position: relative;
 }
 
-.companycenter .brief .des .key {
+.departmentcenter .brief .des .key {
     padding: 0;
     background: none;
 }
 
-.companycenter .comment dl {
+.departmentcenter .comment dl {
     margin: 2%;
     width: 96%;
 }
 
-.companycenter .comment dd {
+.departmentcenter .comment dd {
     width: 780px;
 }
 
-.companycenter .des {
+.departmentcenter .des {
     width: 96%;
     margin: 2%;
     color: #858484;
@@ -5786,27 +5793,27 @@ footer .footer .links a:hover {
     overflow: hidden;
 }
 
-.companycenter .des h2 {
+.departmentcenter .des h2 {
     font-size: 16px;
     color: #333333;
     line-height: 50px;
 }
 
-.companycenter .comenlist {
+.departmentcenter .comenlist {
     width: 100%;
 }
 
-.companycenter .comenlist .commentbox {
+.departmentcenter .comenlist .commentbox {
     width: 865px;
     padding: 10px 10px 10px 70px;
 }
 
-.companycenter .comenlist .head {
+.departmentcenter .comenlist .head {
     left: 10px;
     text-indent: 0;
 }
 
-.companycenter .comenlist .comment-content2 {
+.departmentcenter .comenlist .comment-content2 {
     width: 860px;
 }
 
@@ -5814,30 +5821,30 @@ footer .footer .links a:hover {
     width: 820px;
 }
 
-.companyranklist {
+.departmentranklist {
     border: 1px solid #e4e4e4;
 }
 
-.companyranklist .head {
+.departmentranklist .head {
     border-bottom: 1px solid #e4e4e4;
 }
 
-.companyranklist .cont {
+.departmentranklist .cont {
     height: 125px;
     padding: 2%;
     border-bottom: 1px solid #e4e4e4;
 }
 
-.companyranklist .cont:last-child {
+.departmentranklist .cont:last-child {
     border: 0;
 }
 
-.companyranklist dt {
+.departmentranklist dt {
     width: 100px;
     height: 100%;
 }
 
-.companyranklist .num {
+.departmentranklist .num {
     background: url(../images/rankgold.png) no-repeat center center;
     line-height: 110px;
     color: #fffc00;
@@ -5845,22 +5852,22 @@ footer .footer .links a:hover {
     display: block;
 }
 
-.companyranklist .num2 {
+.departmentranklist .num2 {
     background: url(../images/rankgreen.png) no-repeat center center;
 }
 
-.companyranklist dd {
+.departmentranklist dd {
     float: right;
     width: 90%;
     height: 100%;
     text-indent: 20px;
 }
 
-.companyranklist dd li {
+.departmentranklist dd li {
     line-height: 30px !important;
 }
 
-.companyranklist dd h1 {
+.departmentranklist dd h1 {
     font-size: 24px;
     line-height: 50px;
 }
@@ -6184,8 +6191,8 @@ footer .footer .links a:hover {
     float: left;
 }
 
-/*.personal_des .company*/
-.personal_des .company {
+/*.personal_des .department*/
+.personal_des .department {
     height: auto;
     overflow: hidden;
     width: 943px;
@@ -6193,17 +6200,17 @@ footer .footer .links a:hover {
     padding: 20px 0;
 }
 
-.personal_des .company li {
+.personal_des .department li {
     width: 20%;
     float: left;
     text-align: center;
 }
 
-.personal_des .company a {
+.personal_des .department a {
     color: #464646;
 }
 
-.personal_des .company .pic {
+.personal_des .department .pic {
     border: 1px solid #e3e3e3;
     width: 80%;
     height: 100px;
@@ -6211,7 +6218,7 @@ footer .footer .links a:hover {
     overflow: hidden;
 }
 
-.personal_des .company .btn {
+.personal_des .department .btn {
     width: 100px;
     height: 30px;
     line-height: 30px;
@@ -6220,7 +6227,7 @@ footer .footer .links a:hover {
     margin: 10px auto;
 }
 
-.personal_des .company .btn-get-bid {
+.personal_des .department .btn-get-bid {
     background: #ff7800;
 }
 
@@ -6641,23 +6648,23 @@ footer .footer .links a:hover {
 }
 
 /*person collection*/
-.messages.butler_list.company {
+.messages.butler_list.department {
     width: 943px;
     margin: 0;
     padding: 0;
 }
 
-.messages.butler_list.company .des {
+.messages.butler_list.department .des {
     width: 860px;
     height: 140px;
     padding: 0;
 }
 
-.messages.butler_list.company .des:hover {
+.messages.butler_list.department .des:hover {
     border: 0;
 }
 
-.messages.butler_list.company dt {
+.messages.butler_list.department dt {
     float: left;
     width: 160px;
     height: 90px;
@@ -6665,23 +6672,23 @@ footer .footer .links a:hover {
     border: 1px solid #eaeaea;
 }
 
-.messages.butler_list.company dd {
+.messages.butler_list.department dd {
     margin-top: 20px;
     float: right;
 }
 
-.messages.butler_list.company dd .c8 {
+.messages.butler_list.department dd .c8 {
     display: block;
     background: url(../images/share_c8.png) no-repeat left center;
     text-indent: 20px;
 }
 
-.messages.company .pic {
+.messages.department .pic {
     border: 0;
     height: 30px;
 }
 
-.messagelist .company .checkbox, .messagelist .users .checkbox {
+.messagelist .department .checkbox, .messagelist .users .checkbox {
     margin-top: 60px;
 }
 
@@ -6719,12 +6726,12 @@ footer .footer .links a:hover {
     border: 0;
 }
 
-.company-fav-box {
+.department-fav-box {
     float: left;
     border-top: 1px solid #eaeaea;
 }
 
-.company-fav-box:first-child {
+.department-fav-box:first-child {
     border-top: 0;
 }
 
@@ -8571,7 +8578,7 @@ table .upload-btn {
     margin-bottom: 26px;
 }
 
-.butler-detail-box .butler-company-box {
+.butler-detail-box .butler-department-box {
     width: 270px !important;
     float: right;
     border: 1px solid #eaeaea;
@@ -8580,7 +8587,7 @@ table .upload-btn {
     overflow: hidden;
 }
 
-.butler-company-box .head {
+.butler-department-box .head {
     background: #717171;
     height: 70px;
     color: #fff;
@@ -8589,18 +8596,18 @@ table .upload-btn {
     width: 100%;
 }
 
-.butler-company-box .head h1 {
+.butler-department-box .head h1 {
     color: #fff;
     padding-top: 10px;
 }
 
-.butler-company-box h2 {
+.butler-department-box h2 {
     width: 92%;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.butler-company-box .pic {
+.butler-department-box .pic {
     width: 150px;
     height: 80px;
     margin: 20px auto;
@@ -8608,14 +8615,14 @@ table .upload-btn {
     overflow: hidden;
 }
 
-.butler-company-box .tell {
+.butler-department-box .tell {
     color: #717171;
     font-weight: bold;
     line-height: 30px;
     font-size: 14px;
 }
 
-.butler-company-box .btn {
+.butler-department-box .btn {
     float: none;
     display: block;
     width: 100px;
@@ -8629,12 +8636,12 @@ table .upload-btn {
     text-align: center;
 }
 
-.butler-company-box .btn:hover {
+.butler-department-box .btn:hover {
     background: #ff7800;
     color: #fff;
 }
 
-.butler-company-box .collected {
+.butler-department-box .collected {
     background: #ff7800;
     color: #fff;
 }
@@ -8645,7 +8652,7 @@ table .upload-btn {
     color: #fff !important;
 }
 
-.butler-company-box .clear {
+.butler-department-box .clear {
     width: 80%;
     margin: 0 auto;
     line-height: 25px;
@@ -8653,18 +8660,18 @@ table .upload-btn {
     vertical-align: middle;
 }
 
-.butler-company-box .clear p {
+.butler-department-box .clear p {
     color: #717171;
     font-weight: bold;
     line-height: 30px;
 }
 
-.butler-company-box .clear li img {
+.butler-department-box .clear li img {
     vertical-align: middle;
     width: 20px;
 }
 
-.butler-company-box .clear li .precision img {
+.butler-department-box .clear li .precision img {
     width: 12px;
 }
 
@@ -8784,24 +8791,24 @@ table .upload-btn {
     line-height: 26px;
 }
 
-.company-fav-box .des {
+.department-fav-box .des {
     width: 920px !important;
 }
 
-.butler_list.company-fav-box dd {
+.butler_list.department-fav-box dd {
     width: 735px !important;
 }
 
-.company-credit img {
+.department-credit img {
     margin: 6px 8px 0 0
 }
 
-.companycenter .company-diary-wrap {
+.departmentcenter .department-diary-wrap {
     height: auto !important;
     overflow: hidden;
 }
 
-.companycenter .company-diary-box {
+.departmentcenter .department-diary-box {
     width: 945px;
     height: auto;
     margin-top: 0;
@@ -8810,16 +8817,16 @@ table .upload-btn {
     overflow: hidden;
 }
 
-.companycenter .company-diary-box .left {
+.departmentcenter .department-diary-box .left {
     background: #fff;
     border: 0;
 }
 
-.companycenter .company-diary-box .right {
+.departmentcenter .department-diary-box .right {
     width: 725px;
 }
 
-.companycenter .company-diary-box .middle {
+.departmentcenter .department-diary-box .middle {
     height: auto;
     padding-right: 20px;
     word-break: break-all;
@@ -9399,7 +9406,7 @@ table .upload-btn {
     text-align:left;
 }
 
-.company-payment-info > li{
+.department-payment-info > li{
     float:left;
     width:50%;
     height:30px;
@@ -9408,7 +9415,7 @@ table .upload-btn {
     color:#999;
 }
 
-.company-payment-info > li > span{
+.department-payment-info > li > span{
     color:#666;
 }
 

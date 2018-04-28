@@ -6,9 +6,9 @@ from college.models import Classroom, Department, Teacher, Student
 
 
 class DepartmentAdmin:
-    list_display = ['department_name', 'number', 'add_time']
-    search_fileds = ['department_name', 'number']
-    list_filter = ['department_name', 'number']
+    list_display = ['name', 'desc', 'add_time']
+    search_fileds = ['name']
+    list_filter = ['name', 'add_time']
     model_icon = 'fa fa-home'
 
 class ClassroomAdmin:
@@ -18,15 +18,15 @@ class ClassroomAdmin:
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:
-    list_display = ['teacher_name', 'teacher_num', 'teacher_rank', 'sex', 'age', 'department', 'phone', 'email', 'picture', 'add_time']
-    search_fileds = ['teacher_name', 'teacher_num', 'teacher_rank', 'phone', 'email']
-    list_filter = ['teacher_name', 'teacher_num', 'department', 'phone', 'teacher_rank', 'email']
+    list_display = ['department', 'name', 'number', 'teacher_rank', 'sex', 'age',  'phone', 'email', 'image', 'add_time']
+    search_fileds = ['name', 'number', 'rank', 'phone', 'email']
+    list_filter = ['name', 'number', 'department', 'phone', 'teacher_rank', 'email']
     model_icon = 'fa fa-users'
 
 class StudentAdmin:
-    list_display = ['student_name', 'student_num', 'classroom', 'sex', 'age', 'phone', 'email', 'picture', 'add_time']
-    search_fileds = ['student_name', 'student_num', 'phone', 'email']
-    list_filter = ['student_name', 'student_num', 'classroom', 'phone', 'email']
+    list_display = ['name', 'number', 'classroom', 'sex', 'age', 'phone', 'email', 'image', 'add_time']
+    search_fileds = ['name', 'number', 'phone', 'email']
+    list_filter = ['name', 'number', 'classroom', 'phone', 'email']
     model_icon = 'fa fa-user-md'
 
 xadmin.site.register(Student, StudentAdmin)

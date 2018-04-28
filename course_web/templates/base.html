@@ -42,20 +42,10 @@
             <!--具体菜单项-->
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li><!--普通菜单-->
-                <li class="dropdown"><!--下拉菜单-->
-                    <a class="dropdown-toggle"  id="dropdownMenu" data-toggle="dropdown">
-                        课程选择
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdowncolor" aria-labelledby="dropdownMenu">
-                        {% for course in all_courses %}
-                        <li><a href="{% url 'course:course_list' %}?course_name={{course.course_name}}" >{{course.course_name}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
+                <li><a href="{% url 'college:department_list' %}">教学单位</a></li>
                 <li><a href="{% url 'college:teacher_list' %}">师资队伍</a></li>
                 <li><a href="{% url 'platfrom:work_list' %}">作业展示</a></li>
-                <li><a href="{% url 'course:data_download' %}">资料下载</a></li>
+                <li><a href="{% url 'platfrom:platfrom_list' %}">平台服务</a></li>
                 <li><a href="{% url 'guestbook:guestbook' %}">交流社区</a></li>
                 <li><a href="{% url 'college:message' %}">关于我们</a></li>
             </ul>
