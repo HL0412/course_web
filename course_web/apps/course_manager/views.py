@@ -14,6 +14,7 @@ class CourseListView(View):
         return render(request, 'course/course_list.html', {'courses' : courses})
 
 
+
 class DataDownloadView(View):
     #资料下载
     def get(self, request):

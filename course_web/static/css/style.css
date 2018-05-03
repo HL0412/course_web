@@ -531,8 +531,20 @@ nav .personal a:hover {
     margin-bottom: 0;
     font-family: "Baskerville Old Face", serif;
     font-size: 18px;
-
 }
+.form-title a{
+    float: right;
+    color: #ffffff;
+    padding-top: 2px;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.form-title a:hover{
+    text-decoration: none;
+    color: #5bc0de;
+}
+
 /*首页的登录*/
 .login{
     background-color: #fff;
@@ -1070,8 +1082,8 @@ textarea{
 }
 
 .dialogbox .box.focus, .dialogbox .box.error, .dialogbox .valcode.error {
-    border-color: #6ec558;
-    box-shadow: 0 0 5px #6ec558;
+    border-color: #18c7ff;
+    box-shadow: 0 0 5px #18c7ff;
 }
 
 .dialogbox .box.blur, .dialogbox .valcode.blur {

@@ -12,15 +12,15 @@ class DepartmentAdmin:
     model_icon = 'fa fa-home'
 
 class ClassroomAdmin:
-    list_display = ['department', 'grade', 'major', 'classes', 'add_time']
-    search_fileds = ['department', 'grade', 'major', 'classes']
-    list_filter = ['department', 'grade', 'major', 'classes']
+    list_display = ['name', 'department', 'grade', 'major', 'classes', 'add_time']
+    search_fileds = ['name', 'department', 'grade', 'major', 'classes']
+    list_filter = ['name', 'department', 'grade', 'major', 'classes']
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:
-    list_display = ['department', 'name', 'number', 'teacher_rank', 'sex', 'age',  'phone', 'email', 'image', 'add_time']
+    list_display = ['name', 'number', 'rank', 'sex', 'age',  'phone', 'email', 'image', 'classroom', 'add_time']
     search_fileds = ['name', 'number', 'rank', 'phone', 'email']
-    list_filter = ['name', 'number', 'department', 'phone', 'teacher_rank', 'email']
+    list_filter = ['name', 'number', 'classroom', 'phone', 'rank', 'email']
     model_icon = 'fa fa-users'
 
 class StudentAdmin:
@@ -29,7 +29,8 @@ class StudentAdmin:
     list_filter = ['name', 'number', 'classroom', 'phone', 'email']
     model_icon = 'fa fa-user-md'
 
-xadmin.site.register(Student, StudentAdmin)
-xadmin.site.register(Teacher, TeacherAdmin)
+
 xadmin.site.register(Department, DepartmentAdmin)
 xadmin.site.register(Classroom, ClassroomAdmin)
+xadmin.site.register(Teacher, TeacherAdmin)
+xadmin.site.register(Student, StudentAdmin)

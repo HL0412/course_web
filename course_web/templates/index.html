@@ -112,21 +112,22 @@
             <div class="form row" >
                 <div id="notice">
                     <div class="col-md-11" >
-                        <h4 class="form-title ">最新公告</h4>
+                        <h4 class="form-title ">最新公告
+                        <a href="{%  url 'platfrom:notice_list'%}" class='platform_list'>MORE <<< </a></h4>
                         <ul class="list-group">
-                            <!--{% for notice in notices %}-->
-                                <!--<li><a href="{% url 'college:notice_detail'%}?{{ notice.id }}">{{ notice.title }}</a></li>-->
-                            <!--{% endfor %}-->
-                            <li><a href="#" class="list-group-item">24*7 支持</a></li>
-                            <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
-                            <li><a href="#" class="list-group-item">图像的数量</a></li>
-                            <li><a href="#" class="list-group-item">每年更新成本</a></li>
-                            <li><a href="#" class="list-group-item">24*7 支持</a></li>
-                            <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
-                            <li><a href="#" class="list-group-item">图像的数量</a></li>
-                            <li><a href="#" class="list-group-item">每年更新成本</a></li>
-                            <li><a href="#" class="list-group-item">图像的数量</a></li>
-                            <li><a href="#" class="list-group-item">每年更新成本</a></li>
+                            {% for notice in notices %}
+                                <li><a href="{% url 'platfrom:notice_detail'%}?notice_id = {{ notice.id }}" class="list-group-item">{{ notice.title }}</a></li>
+                            {% endfor %}
+                            <!--<li><a href="#" class="list-group-item">24*7 支持</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">图像的数量</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">每年更新成本</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">24*7 支持</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">图像的数量</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">每年更新成本</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">图像的数量</a></li>-->
+                            <!--<li><a href="#" class="list-group-item">每年更新成本</a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -136,46 +137,25 @@
     <section>
         <div class="container col-md-8" id="container-right">
             <div class="notice">
-                <h4 class="form-title">作业展示</h4>
+                <h4 class="form-title">作业展示
+                <a class='platform_list' href="{%  url 'platfrom:work_list'%}">MORE <<< </a></h4>
                 <div class="row " id="work">
-                    <!--{% for work in works %}-->
-                        <!--<div class="col-sm-3">-->
-                        <!--<img src="{{ MEDIA_URL }}{{ request.work.image }}"  class="img-thumbnail" alt="{{ work.title}} "/>-->
-                    <!--</div>-->
-                    <!--{% endfor %}-->
+                    {% for work in works %}
+                        <div class="col-sm-3 " >
+                        <img src="{{ MEDIA_URL }}{{ request.work.image }}"  class="img-thumbnail" alt="{{ work.title}} "/>
+                    </div>
+                    {% endfor %}
 
-                    <div class="col-sm-3">
-                        <!--img-thumbnail 方形加外边框-->
-                        <img src="Images/八镜台.jpg"  class="img-thumbnail" alt=" "/>
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="Images/标建2.jpg" class="img-thumbnail" alt=" " />
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="Images/标建4.jpg" class="img-thumbnail" alt=" "/>
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="Images/城墙2.jpg" class="img-thumbnail" alt=" "/>
-                    </div>
                 </div>
             </div>
             <div class="news">
-                <h4 class="form-title" >新闻动态</h4>
+                <h4 class="form-title" >新闻动态
+                <a href="{%  url 'platfrom:news_list'%}" class='platform_list'>MORE <<< </a></h4>
                 <div class="row" id="news">
                     <ul class="list-group">
-                         <!--{% for news in news_all %}-->
-                                <!--<li><a href="{% url 'college:news_detail'%}?{{ notice.id }}">{{ news.title }}</a></li>-->
-                            <!--{% endfor %}-->
-                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
-                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
-                        <li><a href="#" class="list-group-item">图像的数量</a></li>
-                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
-                        <li><a href="#" class="list-group-item">24*7 支持</a></li>
-                        <li><a href="#" class="list-group-item">免费 Window 空间托管</a></li>
-                        <li><a href="#" class="list-group-item">图像的数量</a></li>
-                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
-                        <li><a href="#" class="list-group-item">图像的数量</a></li>
-                        <li><a href="#" class="list-group-item">每年更新成本</a></li>
+                        {% for news in news_all %}
+                            <li><a class="list-group-item" href="{% url 'college:news_detail'%}?news_id = {{ news.id }}">{{ news.title }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

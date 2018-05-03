@@ -18,14 +18,22 @@ class Department(models.Model):
 
 class Classroom(models.Model):
     '''班级'''
+    GRADE_CHOICES = (
+
+        ("freshman", u"大一"),
+        ("sophomore", u"大二"),
+        ("junior", u"大三"),
+        ("senior", u"大四"),
+
+    )
     name = models.CharField(max_length=50, verbose_name='班级名称')
     desc = models.TextField(verbose_name='班级描述')
-    grade = models.CharField(max_length=45, verbose_name='年级')
+    department = models.ForeignKey(Department, verbose_name='所在教学单位', on_delete=models.CASCADE)
+    grade = models.CharField(max_length=45, choices=GRADE_CHOICES,verbose_name='年级', default="freshman")
     major =models.CharField(max_length=45,  verbose_name='专业')
     classes = models.IntegerField(verbose_name='班号', default=1)
-    students = models.IntegerField(default=0, verbose_name='学习人数')
+    students = models.IntegerField(default=0, verbose_name='班级人数')
     course_nums = models.IntegerField(default=0, verbose_name='课程数')
-    department = models.ForeignKey(Department, verbose_name='所在教学单位', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -45,6 +53,7 @@ class Teacher(models.Model):
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
     number = models.CharField(max_length=45, verbose_name='职工号')
+    work_years = models.CharField(max_length=45, verbose_name='教学年限')
     rank = models.CharField(max_length=45, verbose_name='职称')
     sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
     phone = models.CharField(max_length=32, null=True, blank=True, verbose_name='电话')

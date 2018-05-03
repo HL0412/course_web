@@ -40,10 +40,10 @@ class IndexView(View):
     def get(self, request):
         '''获取所有课程名在下拉列表框中展示'''
 
-        all_courses = Course.objects.all()
-        all_notices = Notice.objects.all().order_by('-publish_time')
-        all_news = News.objects.all().order_by('-publish_time')
-        return render(request, "index.html", {'all_courses': all_courses, 'notices': all_notices, 'news' : all_news})
+        courses = Course.objects.all()[:4]
+        notices = Notice.objects.all().order_by('-publish_time')[:10]
+        news = News.objects.all().order_by('-publish_time')[:10]
+        return render(request, "index.html", {'all_courses': courses, 'notices': notices, 'news' : news})
 
 
 
