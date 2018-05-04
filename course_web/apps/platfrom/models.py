@@ -24,7 +24,7 @@ class News(models.Model):
 
     title = models.CharField(max_length=45, verbose_name='题目')
     introduction = models.CharField(max_length=100, verbose_name='简介')
-    content = models.TextField(verbose_name='内容'),
+    content = models.TextField(verbose_name='内容')
     picture = models.ImageField(null=True, blank=True, upload_to='static/news', default='image/default.png', max_length=100, verbose_name='图片')
     publish_time = models.DateTimeField(default=datetime.now, verbose_name='发布时间')
     class Meta:
@@ -40,7 +40,7 @@ class WorkCommit(models.Model):
     course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
     teacher = models.ForeignKey(Teacher, verbose_name='教师', on_delete=models.CASCADE)
     title = models.CharField(max_length=45, verbose_name='作业题目')
-    content = models.FileField(upload_to='static/work', verbose_name='作业内容', max_length=100)
+    content = models.FileField(upload_to='work', verbose_name='作业内容', max_length=100)
     commit_time = models.DateTimeField(default=datetime.now, verbose_name='提交时间')
     class Meta:
         db_table = 'work_commit'

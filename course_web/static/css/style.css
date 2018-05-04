@@ -625,7 +625,33 @@ nav .personal a:hover {
 #notice{
     margin-top: 40px;
 }
-
+.detail{
+    width: 74%;
+    height: 600px;
+    margin-left: 13%;
+    border: 1px solid #e9e9e9;
+    background: white;
+    margin-bottom: 5%;
+}
+.detail h2{
+    background: #e9e9e9;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Baskerville Old Face", serif;
+}
+.detail_content{
+    line-height: 2em;
+    padding: 30px;
+    font-size: 14px;
+    color: #535865;
+}
+.detail_content p{
+    text-indent: 2em;
+}
+.detail_content span{
+    padding-left: 81%;
+}
 #work{
     height: 400px;
     background-color: #fff;
@@ -651,12 +677,28 @@ nav .personal a:hover {
 }
 /*course*/
 #course{
-    margin-left: 40px;
-    width: 97.4%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 2em;
+    margin-left: 4%;
+    background: white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 90%;
+    border: 1px solid #d6d6d6;
 }
+#course .btn{
+    margin-bottom: 20px;
+}
+.title-two{
+    width: 102.6%;
+    background: #d6d6d6;
+    padding: 15px;
+    margin-top: -26px;
+    margin-left: -15px;
+    font-family: "Baskerville Old Face", serif;
+    font-size: 18px;
 
+}
 #course > .nav{
     margin-top: 40px;
     margin-left: 40px;
@@ -778,24 +820,28 @@ nav .personal a:hover {
 
 /*留言部分*/
 .guestbook_message{
-    margin-top: 30px;
+    margin-top: 6%;
+    margin-bottom: 10%;
+}
+.guestbook-left{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 20%;
 }
 .myself{
     height: 300px;
-    margin-left: 20px;
     background: #ffffff;
-    width: 20%;
-    margin-right: 40px;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 16px;
     font-family: '等线 Light', monospace;
     border: 1px solid #dcdcdc;
+    padding: 20px;
 }
 .myself img{
     width: 120px;
     height: 80px;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin: 20px;
+
 }
 .myself dt{
     padding-top: 20px;
@@ -830,7 +876,7 @@ textarea{
 .guestbook .fl{
     margin-top: 30px;
     height: 30px;
-    width: 80%;
+    width: 77%;
     padding-left: 10px;
 }
 .guestbook img{
@@ -839,13 +885,10 @@ textarea{
 }
 .guestbook{
     border: 1px solid #dcdcdc;
-    height: 500px;
-    width: 20%;
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-bottom: 50px;
+    height: 600px;
+    margin-top: 20%;
     background: #ffffff;
-    padding-left: 2%;
+    padding-left: 10%;
     overflow: hidden;
 }
 .guestbook h3{
@@ -865,18 +908,16 @@ textarea{
 .guestbook .search_btn {
     background: #42baff;
     cursor: pointer;
-    position: absolute;
-    right: 12%;
-    top: 6%;
+    margin-top: 11.4%;
+    margin-right: 11.4%;
 }
 .guestbook_list{
-    margin-left: 3.2%;
     margin-top: 50px;
-    height: 500px;
+    height: 600px;
     border: 1px solid #dcdcdc;
     background: #ffffff;
     font-size: 14px;
-    width: 73.2%;
+
     overflow: hidden;
 }
 .guestbook_list h2{
@@ -884,14 +925,14 @@ textarea{
     height: 50px;
     width: 120%;
     padding: 20px;
-    margin-left: -20px;
     margin-bottom: 20px;
     color: #00c6ff;
 }
 .guestbook_list .pagination{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: 20px;
+
 }
 .guestbook_list ul li{
     border-bottom:1px #f0f0f0 solid;
@@ -912,6 +953,8 @@ textarea{
     float: right;
     text-align: center;
     display:inline;
+    text-overflow: ellipsis;
+    white-space:nowrap;
 }
 
 /*教师列表*/
@@ -974,11 +1017,11 @@ textarea{
     display: block;
     margin: 0 auto;
     background: white;
-    margin-left: 20%;
+    margin-left: 50%;
 }
 
 .teacher_list dt .name{
-    margin-left: 50%;
+    margin-left: 80%;
     height: 30px;
     width: 60px;
     background-color: #87cde4;
@@ -1283,7 +1326,7 @@ textarea:focus {
 }
 
 .dialogbox .btn {
-    color: #4FB137;
+    color: #18c7ff;
     cursor: pointer;
 }
 
@@ -1291,7 +1334,7 @@ textarea:focus {
     width: 100%;
     height: 45px;
     line-height: 45px;
-    background: #5dbf45;
+    background: #18c7ff;
     color: #fff;
     margin: 0;
     border: 0;
@@ -1309,7 +1352,7 @@ textarea:focus {
 }
 
 .dialogbox .button:hover {
-    background: #4FB137;
+    background: #18c7ff;
 }
 
 .registbox {
@@ -1326,7 +1369,7 @@ textarea:focus {
 }
 
 .registbox .tab .active {
-    color: #4FB137;
+    color: #18c7ff;
 }
 
 .registbox .tab div {
@@ -1350,7 +1393,7 @@ textarea:focus {
     position: absolute;
     right: 3px;
     top: 3px;
-    background: #5dbf45;
+    background: #18c7ff;
     z-index: 99;
     height: 39px;
     line-height: 39px;
@@ -1364,7 +1407,7 @@ textarea:focus {
 }
 
 .registbox .box .sendcode:hover {
-    background: #4FB137;
+    background: #18c7ff;
 }
 
 .registbox .valcode {
@@ -1375,7 +1418,7 @@ textarea:focus {
     right: 0;
     top: -90px;
     background: #fff;
-    border: 1px solid #4FB137;
+    border: 1px solid #18c7ff;
     z-index: 100;
     overflow: hidden;
 }
@@ -1411,14 +1454,14 @@ textarea:focus {
 }
 
 .registbox .valcode .sure {
-    background: #ff9d33;
+    background: #ee9698;
     top: 45px;
     color: #fff;
     cursor: pointer;
 }
 
 .registbox .valcode .sure:hover {
-    background: #FB8344;
+    background: #ee9698;
 }
 
 .registbox .sendmessage {
@@ -1426,7 +1469,7 @@ textarea:focus {
 }
 
 .dialogbox .captcha {
-    background: #4FB137;
+    background: #18b7ef;
     position: absolute;
     right: 5px;
     top: 5px;
@@ -1521,7 +1564,7 @@ textarea:focus {
 
 .changephone .getcode {
     width: auto !important;
-    background: #ff7800;
+    background: #ee9698;
     color: #fff !important;
     display: block;
     height: 35px !important;
@@ -3093,6 +3136,8 @@ footer .footer .links a:hover {
 .list .left {
     width: 900px;
     float: left;
+
+
 }
 
 .list .right {
@@ -4358,7 +4403,7 @@ footer .footer .links a:hover {
 }
 
 .list.share_owner .keep_diary .btn {
-    background: #4fb137;
+    background: #76e0ff;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -5437,15 +5482,16 @@ footer .footer .links a:hover {
 
 .departmentright, .departmentrank {
     width: 240px !important;
+
 }
 
 .departmentright {
-    background: #f4f4f4;
+    background: #9b9b9b;
 }
 
 .departmentright .rightform {
     height: 180px;
-    background: #f4f4f4;
+    background: #9b9b9b;
     width: 90%;
     padding: 5%;
     margin: 0 auto;

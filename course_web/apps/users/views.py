@@ -38,13 +38,11 @@ class CustomBackend(ModelBackend):
 class IndexView(View):
     '''首页'''
     def get(self, request):
-        '''获取所有课程名在下拉列表框中展示'''
-
+        '''获取数据库中前四个课程信息'''
         courses = Course.objects.all()[:4]
         notices = Notice.objects.all().order_by('-publish_time')[:10]
         news = News.objects.all().order_by('-publish_time')[:10]
         return render(request, "index.html", {'all_courses': courses, 'notices': notices, 'news' : news})
-
 
 
 class LoginView(View):

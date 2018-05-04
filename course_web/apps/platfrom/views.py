@@ -13,7 +13,7 @@ class NoticeListView(View):
 class NoticeDetailView(View):
     def get(self, request):
         notice_id = request.GET.get('notice_id')
-        notice = Notice.objects.filter(notice_id)
+        notice = Notice.objects.get(id=notice_id)
         return render(request, 'platfrom/notice_detail.html', {'notice' : notice})
 
 
@@ -26,7 +26,7 @@ class NewsListView(View):
 class NewsDetailView(View):
     def get(self, request):
         news_id = request.GET.get('news_id')
-        news = News.objects.get(news_id)
+        news = News.objects.get(id=news_id)
         return render(request, 'platfrom/news_detail.html', {'news': news})
 
 
@@ -38,4 +38,5 @@ class WorkListView(View):
 
 class PlatfromListView(View):
     def get(self, request):
+
         return render(request, 'platfrom/platfrom_list.html')

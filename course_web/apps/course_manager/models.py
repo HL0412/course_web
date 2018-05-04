@@ -10,15 +10,30 @@ class Course(models.Model):
     course_num = models.IntegerField(unique=True, verbose_name=u"课程号")
     course_intro = models.TextField(null=True, blank=True, verbose_name='课程介绍')
     course_picture = models.ImageField(null=True, blank=True, upload_to='static/course/image', default='static/image/default.png', max_length=100, verbose_name='课程图片')
-    course_teacher = models.ManyToManyField(Teacher, verbose_name='课程教师')
+    course_teacher = models.ForeignKey(Teacher, verbose_name='课程教师', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
+
+
     class Meta:
         db_table = 'course_info'
         verbose_name = '课程信息'
         verbose_name_plural = "课程信息"
+        
+    def get_video(self):
+        return self.video_set.all()
+
+    def get_data(self):
+        return self.data_set.all()
+
+    def get_ppt(self):
+        return self.ppt_set.all()
+
+    def get_teacher(self):
+        return self.teacher_set.all()
+
 
     def __str__(self):
-        return self.course_name
+        return self.name
 
 class Video(models.Model):
 
