@@ -44,18 +44,18 @@
                 <li {% if request.path == '/' %} class="active" {% endif %}><a
                     href="{% url 'index' %}">首页</a>
                 </li>
-                <li {% if request.path|slice:'8' == '/college' %}class="active"{% endif %}>
+                <li {% if request.path|slice:'8' == '/college' %} class="active" {% endif %}>
                     <a href="{% url 'college:department_list' %}">
-                        教学单位<img class="hot" src="{% static 'images/nav_hot.png' %}">
+                        教学单位
                     </a>
                 </li>
-                <li {% if request.path|slice:'16' == '/college/teacher' %}class="active"{% endif %}>
+                <li {% if request.path|slice:'16' == '/college/teacher' %} class="active" {% endif %}>
                     <a href="{% url 'college:teacher_list' %}">师资队伍</a>
                 </li>
-                <li {% if request.path|slice:'14' == '/platfrom/work' %}class="active"{% endif %}>
+                <li {% if request.path|slice:'14' == '/platfrom/work' %} class="active" {% endif %}>
                     <a href="{% url 'platfrom:work_list' %}">作业展示</a>
                 </li>
-                <li {% if request.path|slice:'9' == '/platfrom' %}class="active"{% endif %}>
+                <li {% if request.path|slice:'9' == '/platfrom' %} class="active" {% endif %}>
                     <a href="{% url 'platfrom:platfrom_list' %}">平台服务</a>
                 </li>
                 <li {% if request.path|slice:'10' == '/guestbook' %}class="active"{% endif %}>
@@ -64,13 +64,6 @@
                 <li {% if request.path|slice:'16' == '/college/message' %}class="active"{% endif %}>
                     <a href="{% url 'college:message' %}">关于我们</a>
                 </li>
-                <!--<li class="active"><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>&lt;!&ndash;普通菜单&ndash;&gt;-->
-                <!--<li><a href="{% url 'college:department_list' %}">教学单位</a></li>-->
-                <!--<li><a href="{% url 'college:teacher_list' %}">师资队伍</a></li>-->
-                <!--<li><a href="{% url 'platfrom:work_list' %}">作业展示</a></li>-->
-                <!--<li><a href="{% url 'platfrom:platfrom_list' %}">平台服务</a></li>-->
-                <!--<li><a href="{% url 'guestbook:guestbook' %}">交流社区</a></li>-->
-                <!--<li><a href="{% url 'college:message' %}">关于我们</a></li>-->
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="form-group">
