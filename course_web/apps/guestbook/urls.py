@@ -1,1 +1,1 @@
-from django.urls import pathfrom college import viewsfrom guestbook.views import GuestbookViewapp_name = 'guestbook'       #这里一定要写urlpatterns = [    path('guestbook/', GuestbookView.as_view(), name='guestbook'),]
+from django.urls import pathfrom college import viewsfrom guestbook.views import GuestbookView, PublishGuestbookViewapp_name = 'guestbook'       #这里一定要写urlpatterns = [    path('guestbook/', GuestbookView.as_view(), name='guestbook'),    path('publish_guestbook/', PublishGuestbookView.as_view(), name='publish_guestbook'),]

@@ -13,9 +13,9 @@ Including another pathconf
     1. Import the include() function: from django.urls import include, path
     2. Add a path to pathpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.global_settings import MEDIA_ROOT
-from django.urls import path, include, re_path
 from django.views.static import serve
+from course_web.settings import MEDIA_ROOT
+from django.urls import path, include, re_path
 
 from users.views import IndexView, LoginView, LogoutView, RegisterView, ForgetPwdView, ModifyPwdView, ResetView, \
     ActiveUserView, LoginIndexView
@@ -40,9 +40,9 @@ urlpatterns = [
     re_path('reset/(?P<active_code>.*)/', ResetView.as_view(), name='reset_pwd'),
     path('modify_pwd/', ModifyPwdView.as_view(), name='modify_pwd'),
     path('captcha/',include('captcha.urls')),
-
     # 处理图片显示的url,使用Django自带serve,传入参数告诉它去哪个路径找，我们有配置好的路径MEDIAROOT
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
+
     # 以下是创建的app的urls
     path('users/', include('users.urls', namespace='users')),
     path('college/', include('college.urls', namespace='college')),

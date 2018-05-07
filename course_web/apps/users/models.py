@@ -23,7 +23,7 @@ class UserProfile(AbstractUser):
     adress = models.CharField('地址',max_length=100,default='')
     mobile = models.CharField('手机号',max_length=11,null=True,blank=True)
     # rank = models.CharField('权限',max_length=45, choices=rank_choices,default='学生')
-    image = models.ImageField(upload_to='images/%Y/%m',default='image/default.png',max_length=100)
+    image = models.ImageField(upload_to='users/%Y/%m',default='image/default.png',max_length=100)
 
     class Meta:
         db_table = 'user'

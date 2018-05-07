@@ -10,7 +10,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=45, verbose_name='题目')
     introduction = models.CharField(max_length=100, verbose_name='简介')
     content = models.TextField(verbose_name='内容')
-    picture = models.ImageField(null=True, blank=True, upload_to='static/notice', default='image/default.png', max_length=100, verbose_name='图片')
+    picture = models.ImageField(null=True, blank=True, upload_to='notice/%Y/%m', default='image/default.png', max_length=100, verbose_name='图片')
     publish_time = models.DateTimeField(default=datetime.now, verbose_name='发布时间')
     class Meta:
         db_table = 'notice_info'
@@ -25,7 +25,7 @@ class News(models.Model):
     title = models.CharField(max_length=45, verbose_name='题目')
     introduction = models.CharField(max_length=100, verbose_name='简介')
     content = models.TextField(verbose_name='内容')
-    picture = models.ImageField(null=True, blank=True, upload_to='static/news', default='image/default.png', max_length=100, verbose_name='图片')
+    picture = models.ImageField(null=True, blank=True, upload_to='news/%Y/%m', default='image/default.png', max_length=100, verbose_name='图片')
     publish_time = models.DateTimeField(default=datetime.now, verbose_name='发布时间')
     class Meta:
         db_table = 'news_info'

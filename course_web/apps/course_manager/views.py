@@ -9,11 +9,15 @@ from course_manager.models import Course
 class CourseListView(View):
     # 课程列表
     def get(self, request):
-        course_name = request.GET.get('course_name')
-        courses = Course.objects.filter(course_name = course_name)
+        courses = Course.objects.all()
         return render(request, 'course/course_list.html', {'courses' : courses})
 
-
+class CourseDetailView(View):
+    # 课程详情
+    def get(self, request):
+        id = request.GET.get('id')
+        course = Course.objects.get(id=id)
+        return render(request, 'course/course_detail.html', {'course' : course})
 
 class DataDownloadView(View):
     #资料下载

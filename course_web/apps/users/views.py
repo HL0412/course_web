@@ -39,10 +39,15 @@ class IndexView(View):
     '''首页'''
     def get(self, request):
         '''获取数据库中前四个课程信息'''
-        courses = Course.objects.all()[:4]
+        # courses = Course.objects.all()[:4]
+        course_one = Course.objects.get(id='1')
+        course_two = Course.objects.get(id='2')
+        course_three = Course.objects.get(id='3')
+        course_four = Course.objects.get(id='4')
         notices = Notice.objects.all().order_by('-publish_time')[:10]
         news = News.objects.all().order_by('-publish_time')[:10]
-        return render(request, "index.html", {'all_courses': courses, 'notices': notices, 'news' : news})
+        return render(request, "index.html", {'course_one' : course_one, 'course_two' : course_two, 'course_three' : course_three,
+                                              'course_four' : course_four, 'notices' : notices, 'news' : news})
 
 
 class LoginView(View):
@@ -221,20 +226,20 @@ class UserinfoView(LoginRequiredMixin,View):
             return HttpResponse(json.dumps(user_info_form.errors), content_type='application/json')
 
 
-# class UploadImageView(LoginRequiredMixin,View):
-#     '''用户图像修改'''
-#     def post(self,request):
-#         #上传的文件都在request.FILES里面获取，所以这里要多传一个这个参数
-#         image_form = UploadImageForm(request.POST,request.FILES)
-#         if image_form.is_valid():
-#             image = image_form.cleaned_data['image']
-#             request.user.image = image
-#             request.user.save()
-#             return HttpResponse('{"status":"success"}', content_type='application/json')
-#         else:
-#             return HttpResponse('{"status":"fail"}', content_type='application/json')
-#
-#
+class UploadImageView(LoginRequiredMixin,View):
+    '''用户图像修改'''
+    def post(self,request):
+        #上传的文件都在request.FILES里面获取，所以这里要多传一个这个参数
+        image_form = UploadImageForm(request.POST,request.FILES)
+        if image_form.is_valid():
+            image = image_form.cleaned_data['image']
+            request.user.image = image
+            request.user.save()
+            return HttpResponse('{"status":"success"}', content_type='application/json')
+        else:
+            return HttpResponse('{"status":"fail"}', content_type='application/json')
+
+
 # class UpdatePwdView(View):
 #     """
 #     个人中心修改用户密码

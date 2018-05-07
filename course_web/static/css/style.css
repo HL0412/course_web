@@ -856,8 +856,14 @@ nav .personal a:hover {
 textarea{
     width: 100%;
     height: 210px;
-    border-radius: 10px;
 }
+.guestbook_content h2{
+    background: #d4d4d4;
+    padding: 15px;
+    border: 1px solid #cbcbcb;
+    width: 100%;
+}
+
 .guestbook_content input{
     width: 80px;
     height: 30px;
@@ -922,7 +928,6 @@ textarea{
     border: 1px solid #dcdcdc;
     background: #ffffff;
     font-size: 14px;
-
     overflow: hidden;
 }
 .guestbook_list h2{
@@ -961,7 +966,11 @@ textarea{
     text-overflow: ellipsis;
     white-space:nowrap;
 }
-
+/*作业展示*/
+.work_list{
+    padding: 20px;
+    margin: 10px;
+}
 /*教师列表*/
 .teacher_list{
     margin-top: 40px;
@@ -1152,7 +1161,7 @@ textarea{
 }
 
 .dialogbox .error {
-    background: #fb8344;
+    background: #ee868d;
     color: #fff !important;
     text-align: center;
     height: 40px !important;
@@ -1222,7 +1231,7 @@ textarea{
 }
 
 .promptbox .button .fl {
-    background: #ff7800;
+    background: #ee9698;
 }
 
 .promptbox .button .fr {
@@ -1230,7 +1239,7 @@ textarea{
 }
 
 textarea:focus {
-    border-color: #FF7800;
+    border-color: #ee9698;
 }
 
 .promptbox textarea {
@@ -1251,7 +1260,7 @@ textarea:focus {
 }
 
 .bidtips .tips strong {
-    color: #F83;
+    color: #ee9698;
 }
 
 .groupbox01.dialogbox p, .groupbox02.dialogbox p {
@@ -1941,7 +1950,7 @@ textarea:focus {
 }
 
 .header .exit .btn {
-    color: #ff7800;
+    color: #ee868d;
     cursor: pointer;
 }
 
@@ -2112,7 +2121,7 @@ textarea:focus {
 
 .banner .fr .head {
     height: 78px;
-    background: #4fb137;
+    background: #6fd2df;
 }
 
 .banner .fr .center {
@@ -2161,7 +2170,7 @@ textarea:focus {
     width: 100%;
     padding: 0;
     font-size: 14px;
-    color: #ff8400;
+    color: #ee868d;
     display: none;
 }
 
@@ -2176,12 +2185,12 @@ textarea:focus {
     text-indent: 0;
     font-size: 14px;
     top: 230px;
-    background: #ff9d33 url(../images/banner_icon4.png) no-repeat 70% center;
+    background: #ee868d url(../images/banner_icon4.png) no-repeat 70% center;
     cursor: pointer;
 }
 
 .banner .fr .submit:hover {
-    background: #ff8400 url(../images/banner_icon4.png) no-repeat 70% center;
+    background: #ee868d url(../images/banner_icon4.png) no-repeat 70% center;
 }
 
 .banner .bottom {
@@ -2343,7 +2352,7 @@ textarea:focus {
 }
 
 .module .key, .key {
-    color: #fb8341 !important;
+    color: #ee9698 !important;
     font-size: 14px;
 }
 
@@ -2395,7 +2404,7 @@ textarea:focus {
 }
 
 .group_list .des .key {
-    color: #fb8341
+    color: #ee9698
 }
 
 .group_list .des .fl {
@@ -2470,7 +2479,7 @@ textarea:focus {
 }
 
 .active2 {
-    color: #3d9328 !important;
+    color: #76e0ff !important;
 }
 
 .module1 .imgslide2 {

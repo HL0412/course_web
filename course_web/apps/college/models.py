@@ -58,7 +58,7 @@ class Teacher(models.Model):
     sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
     phone = models.CharField(max_length=32, null=True, blank=True, verbose_name='电话')
     email = models.EmailField(null=True, blank=True, max_length=50, verbose_name='邮箱')
-    image = models.ImageField(null=True, blank=True, upload_to='teachers/%Y/%m', default='', verbose_name='头像')
+    image = models.ImageField(null=True, blank=True, upload_to='teacher/%Y/%m', default='', verbose_name='头像')
     age = models.IntegerField(default=18, verbose_name='年龄' )
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:
@@ -79,7 +79,7 @@ class Student(models.Model):
     sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
     phone = models.CharField(max_length=32, null=True, blank=True,verbose_name='电话')
     email = models.EmailField(null=True, blank=True, max_length=50, verbose_name='邮箱')
-    image = models.ImageField(null=True, blank=True, default='image/default.png', upload_to='students/%Y/%m', verbose_name='头像')
+    image = models.ImageField(null=True, blank=True, default='image/default.png', upload_to='student/%Y/%m', verbose_name='头像')
     age = models.IntegerField(default=18, verbose_name='年龄')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:
