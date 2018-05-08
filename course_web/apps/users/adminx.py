@@ -21,7 +21,7 @@ class GlobalSettings(object):
     # 修改footer
     site_footer = 'Huangli--成都理工大学工程技术学院'
     # # 收起菜单
-    # menu_style = 'accordion'
+    menu_style = 'accordion'
 
 class EmailVerifyRecordAdmin(object):
     # 显示的列

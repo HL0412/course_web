@@ -44,7 +44,7 @@ a:hover{
 }
 
 .login-box{
-    width:853px;
+    width:900px;
     margin:150px auto;
 }
 .hd-login{
@@ -85,9 +85,16 @@ a:hover{
 .slide{
     position: relative;
     width: 483px;
-    height: 472px;
+    height: 500px;
     background:#fff;
     overflow: hidden;
+}
+.checkbox{
+    margin-top: 20px;
+}
+.checkbox label{
+    padding-right: 20px;
+
 }
 .imgslide {
     width:100%;
@@ -145,7 +152,7 @@ a:hover{
 .form-box{
     position:relative;
     width:290px;
-    height: 472px;
+    height: 500px;
     padding:0 40px;
     background:#fff;
     color:#666;

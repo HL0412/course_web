@@ -622,7 +622,7 @@ nav .personal a:hover {
 .error{
     color: #ff6f72; !important;
     text-align: center;
-    line-height: 40px !important;
+    line-height: 20px !important;
     margin:10px 10px;
 }
 #notice{
@@ -834,9 +834,9 @@ nav .personal a:hover {
     width: 20%;
 }
 .myself{
-    height: 300px;
+    height: 340px;
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 16px;
     font-family: '等线 Light', monospace;
     border: 1px solid #dcdcdc;
@@ -844,8 +844,8 @@ nav .personal a:hover {
 }
 .myself img{
     width: 120px;
-    height: 80px;
-    margin: 20px;
+    height: 100px;
+    margin: 10px;
 
 }
 .myself dt{
@@ -855,19 +855,23 @@ nav .personal a:hover {
 }
 textarea{
     width: 100%;
-    height: 210px;
+    height: 240px;
 }
 .guestbook_content h2{
-    background: #d4d4d4;
+    background: #d6d6d6;
     padding: 15px;
-    border: 1px solid #cbcbcb;
     width: 100%;
-}
+    border-left: 1px solid  #bfbfbf;
+    border-right: 1px solid  #bfbfbf;
+    border-top: 1px solid  #bfbfbf;
 
+}
+.guestbook_content h2 label{
+    margin-top: -5px;
+}
 .guestbook_content input{
     width: 80px;
     height: 30px;
-    margin-top: 15px;
     border-radius: 5px;
     background: #8ed9f2;
     font-size: 14px;
@@ -884,6 +888,13 @@ textarea{
     height: 30px;
     background: white;
 }
+.guestbook_more{
+    background: #efefef;
+    padding: 10px;
+    border-left: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+}
 .guestbook .fl{
     margin-top: 30px;
     height: 30px;
@@ -897,10 +908,11 @@ textarea{
 .guestbook{
     border: 1px solid #dcdcdc;
     height: 600px;
-    margin-top: 20%;
+    margin-top: 18%;
     background: #ffffff;
     padding-left: 10%;
     overflow: hidden;
+    border-radius: 10px;
 }
 .guestbook h3{
     margin-top: 80px;
@@ -929,6 +941,7 @@ textarea{
     background: #ffffff;
     font-size: 14px;
     overflow: hidden;
+
 }
 .guestbook_list h2{
     background: whitesmoke;
@@ -1164,8 +1177,8 @@ textarea{
     background: #ee868d;
     color: #fff !important;
     text-align: center;
-    height: 40px !important;
-    line-height: 40px !important;
+    height: 20px !important;
+    line-height: 20px !important;
     margin: 20px 0;
     display: none;
 }
@@ -7015,7 +7028,7 @@ footer .footer .links a:hover {
     width: 300px !important;
     left: 110px;
     height: 40px;
-    line-height: 40px;
+    line-height: 20px;
     color: #fff;
     background: #ff7800;
 }

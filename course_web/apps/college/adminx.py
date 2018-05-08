@@ -18,15 +18,15 @@ class ClassroomAdmin:
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:
-    list_display = ['name', 'number', 'rank', 'sex', 'age',  'phone', 'email', 'image', 'classroom', 'add_time']
-    search_fileds = ['name', 'number', 'rank', 'phone', 'email']
-    list_filter = ['name', 'number', 'classroom', 'phone', 'rank', 'email']
+    list_display = ['name', 'number', 'rank',  'classroom', 'add_time']
+    search_fileds = ['name', 'number']
+    list_filter = ['name', 'number', 'classroom']
     model_icon = 'fa fa-users'
 
 class StudentAdmin:
-    list_display = ['name', 'number', 'classroom', 'sex', 'age', 'phone', 'email', 'image', 'add_time']
-    search_fileds = ['name', 'number', 'phone', 'email']
-    list_filter = ['name', 'number', 'classroom', 'phone', 'email']
+    list_display = ['name', 'number', 'classroom', 'add_time']
+    search_fileds = ['name', 'number']
+    list_filter = ['name', 'number', 'classroom']
     model_icon = 'fa fa-user-md'
 
 

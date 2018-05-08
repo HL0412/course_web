@@ -87,6 +87,10 @@
                                 <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
                                 <input name="password"  type="password" placeholder="请输入密码" />
                             </div>
+                            <div class="checkbox-index">
+                                <input type="checkbox" name="check_box_list" id="student" value="1">&nbsp;<label>学生</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="checkbox" name="check_box_list" id="teacher" value="2">&nbsp;<label>教师</label>
+                            </div>
                             <div class="error btns login-form-tips" id="jsLoginTips">
                                 {% for key,error in login_form.errors.items %}
                                     {{ error }}

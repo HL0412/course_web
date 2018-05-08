@@ -47,9 +47,9 @@
             <div class="fl slide">
                 <div class="imgslide">
                     <ul class="imgs">
-                            <li><a href=""><img width="483" height="472" src="{% static 'images/mysql.jpg' %}" /></a></li>
-                            <li><a href=""><img width="483" height="472" src="{% static 'images/mysql.jpg' %}" /></a></li>
-                            <li><a href=""><img width="483" height="472" src="{% static 'images/mysql.jpg' %}" /></a></li>
+                            <li><a href=""><img width="483" height="500" src="{% static 'images/mysql.jpg' %}" /></a></li>
+                            <li><a href=""><img width="483" height="500" src="{% static 'images/mysql.jpg' %}" /></a></li>
+                            <li><a href=""><img width="483" height="500" src="{% static 'images/mysql.jpg' %}" /></a></li>
                     </ul>
                 </div>
                 <div class="unslider-arrow prev"></div>
@@ -72,6 +72,10 @@
                             {{ error }}
                         {% endfor %}
                         {{ msg }}
+                    </div>
+                    <div class="checkbox">
+                            <input type="checkbox" name="check_box_list" id="student" value="1">&nbsp;<label>学生</label>
+                            <input type="checkbox" name="check_box_list" id="teacher" value="2">&nbsp;<label>教师</label>
                     </div>
                     <div class="auto-box marb38">
                         <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>

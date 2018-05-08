@@ -2,6 +2,8 @@ from datetime import datetime
 from django.db import models
 
 # Create your models here.
+from users.models import UserProfile
+
 
 class Department(models.Model):
     '''教学单位'''
@@ -50,16 +52,12 @@ class Classroom(models.Model):
 
 class Teacher(models.Model):
     '''教师表'''
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
     number = models.CharField(max_length=45, verbose_name='职工号')
     work_years = models.CharField(max_length=45, verbose_name='教学年限')
     rank = models.CharField(max_length=45, verbose_name='职称')
-    sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
-    phone = models.CharField(max_length=32, null=True, blank=True, verbose_name='电话')
-    email = models.EmailField(null=True, blank=True, max_length=50, verbose_name='邮箱')
-    image = models.ImageField(null=True, blank=True, upload_to='teacher/%Y/%m', default='', verbose_name='头像')
-    age = models.IntegerField(default=18, verbose_name='年龄' )
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:
         db_table = 'teacher_info'
@@ -73,14 +71,10 @@ class Teacher(models.Model):
         return "[{0}]的教师: {1}".format(self.classroom, self.name)
 
 class Student(models.Model):
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
     number = models.CharField(max_length=45, unique=True, verbose_name='学号')
-    sex = models.CharField(max_length=6, choices=(('男', '男'), ('女', '女')), default='女', verbose_name='性别')
-    phone = models.CharField(max_length=32, null=True, blank=True,verbose_name='电话')
-    email = models.EmailField(null=True, blank=True, max_length=50, verbose_name='邮箱')
-    image = models.ImageField(null=True, blank=True, default='image/default.png', upload_to='student/%Y/%m', verbose_name='头像')
-    age = models.IntegerField(default=18, verbose_name='年龄')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:
         db_table = 'student_info'

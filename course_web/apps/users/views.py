@@ -63,8 +63,17 @@ class LoginView(View):
             # 获取用户提交的用户名和密码
             user_name = request.POST.get('username', None)
             pass_word = request.POST.get('password', None)
+            check_box_list = request.POST.get('check_box_list', None)
+            print(check_box_list)
+            if int(check_box_list) == 1:
+                is_student = 1
+                is_teacher = 0
+                print(is_student,is_teacher)
+            else:
+                is_teacher = 1
+                is_student = 0
             # 成功返回user对象,失败None
-            user = authenticate(username=user_name, password=pass_word)
+            user = authenticate(username=user_name, password=pass_word, is_teacher=is_teacher, is_student=is_student)
             # 如果不是null说明验证成功
             if user is not None:
                 if user.is_active:
@@ -72,10 +81,12 @@ class LoginView(View):
                     login(request, user)
                     return HttpResponseRedirect(reverse('index'))
                 else:
-                    return render(request, 'login.html', {'msg': '用户名或密码错误', 'login_form': login_form})
+                    return render(request, 'login.html', {'msg': '请前往邮箱激活账号', 'login_form': login_form})
             # 只有当用户名或密码不存在时，才返回错误信息到前端
             else:
                 return render(request, 'login.html', {'msg': '用户名或密码错误','login_form':login_form})
+
+
         else:
             return render(request,'login.html',{'login_form':login_form})
 
@@ -90,6 +101,15 @@ class LoginIndexView(View):
             # 获取用户提交的用户名和密码
             user_name = request.POST.get('username', None)
             pass_word = request.POST.get('password', None)
+            check_box_list = request.POST.get('check_box_list', None)
+            if int(check_box_list) == 1:
+                is_student = 1
+                is_teacher = 0
+
+            else:
+                is_teacher = 1
+                is_student = 0
+
             # 成功返回user对象,失败None
             user = authenticate(username=user_name, password=pass_word)
             # 如果不是null说明验证成功
@@ -99,7 +119,7 @@ class LoginIndexView(View):
                     login(request, user)
                     return HttpResponseRedirect(reverse('index'))
                 else:
-                    return render(request, 'index.html', {'msg': '用户名或密码错误', 'login_form': login_form})
+                    return render(request, 'index.html', {'msg': '请前往邮箱激活账号', 'login_form': login_form})
             # 只有当用户名或密码不存在时，才返回错误信息到前端
             else:
                 return render(request, 'index.html', {'msg': '用户名或密码错误','login_form':login_form})
@@ -128,7 +148,7 @@ class ActiveUserView(View):
 
 
 class LogoutView(View):
-    '''用户登出'''
+    '''用户退出'''
     def get(self,request):
         logout(request)
         return HttpResponseRedirect(reverse('index'))
@@ -143,16 +163,23 @@ class RegisterView(View):
 
     def post(self,request):
         register_form = RegisterForm(request.POST)
+        # 实例化一个user_profile对象
+        user_profile = UserProfile()
         if register_form.is_valid():
+            username = request.POST.get('username', None)
             user_name = request.POST.get('email', None)
             # 如果用户已存在，则提示错误信息
-            if UserProfile.objects.filter(email = user_name):
+            if UserProfile.objects.filter(email = username):
                 return render(request, 'register.html', {'register_form':register_form,'msg': '用户已存在'})
-
             pass_word = request.POST.get('password', None)
-            # 实例化一个user_profile对象
-            user_profile = UserProfile()
-            user_profile.username = user_name
+            check_box_list = request.POST.get('check_box_list', None)
+
+            if int(check_box_list) == 1:
+                user_profile.is_student = 1
+            else:
+                user_profile.is_teacher = 1
+
+            user_profile.username = username
             user_profile.email = user_name
             user_profile.is_active = False
             # 对保存到数据库的密码加密
