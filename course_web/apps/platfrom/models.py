@@ -1,7 +1,8 @@
 from datetime import datetime
 from django.db import models
 from course_manager.models import Course, Teacher
-from college.models import Student
+from college.models import Student, Department, Classroom
+
 
 # Create your models here.
 
@@ -36,11 +37,22 @@ class News(models.Model):
         return self.title
 
 class WorkCommit(models.Model):
+    GRADE_CHOICES = (
+
+        ("freshman", u"大一"),
+        ("sophomore", u"大二"),
+        ("junior", u"大三"),
+        ("senior", u"大四"),
+
+    )
     student = models.ForeignKey(Student, verbose_name='学生', on_delete=models.CASCADE)
     course = models.ForeignKey(Course, verbose_name='课程名', on_delete=models.CASCADE)
     teacher = models.ForeignKey(Teacher, verbose_name='教师', on_delete=models.CASCADE)
+    classroom = models.ForeignKey(Classroom, verbose_name='班级', on_delete=models.CASCADE)
+    grade = models.CharField(max_length=45, choices=GRADE_CHOICES, verbose_name='年级', default="freshman")
     title = models.CharField(max_length=45, verbose_name='作业题目')
-    content = models.FileField(upload_to='work', verbose_name='作业内容', max_length=100)
+    content = models.FileField(upload_to='work/content/%Y/%m', verbose_name='作业内容', max_length=100)
+    image = models.ImageField(upload_to='work/%Y/%m', default='image/default.png', max_length=100, verbose_name='图片')
     commit_time = models.DateTimeField(default=datetime.now, verbose_name='提交时间')
     class Meta:
         db_table = 'work_commit'

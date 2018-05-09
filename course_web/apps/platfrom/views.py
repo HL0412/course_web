@@ -1,6 +1,8 @@
+from pure_pagination import Paginator, PageNotAnInteger
 from django.shortcuts import render
 from django.views.generic.base import View
 # Create your views here.
+from college.models import Classroom
 from platfrom.models import Notice, WorkCommit, News
 
 
@@ -11,9 +13,8 @@ class NoticeListView(View):
 
 
 class NoticeDetailView(View):
-    def get(self, request):
-        notice_id = request.GET.get('notice_id')
-        notice = Notice.objects.get(id=notice_id)
+    def get(self, request, notice_id):
+        notice = Notice.objects.get(id=int(notice_id))
         return render(request, 'platfrom/notice_detail.html', {'notice' : notice})
 
 
@@ -24,19 +25,45 @@ class NewsListView(View):
 
 
 class NewsDetailView(View):
-    def get(self, request):
-        news_id = request.GET.get('news_id')
-        news = News.objects.get(id=news_id)
+    def get(self, request, news_id):
+        news = News.objects.get(id=int(news_id))
         return render(request, 'platfrom/news_detail.html', {'news': news})
 
 
 class WorkListView(View):
+
     def get(self, request):
-        all_work = WorkCommit.objects.all()
-        return render(request, 'platfrom/work_list.html', {'work': all_work})
+        all_work = WorkCommit.objects.all().order_by('-commit_time')
+        grade = request.GET.get('grade', "")
+        if grade:
+            if grade == 'freshman':
+                all_work = all_work.filter(grade=grade)
+            elif grade == 'sophomore':
+                all_work = all_work.filter(grade=grade)
+            elif grade == 'junior':
+                all_work = all_work.filter(grade=grade)
+            elif grade == 'senior':
+                all_work = all_work.filter(grade=grade)
+        # 分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_work,2 , request=request)
+        works = p.page(page)
+        return render(request, 'platfrom/work_list.html', {
+            'works': works,
+            'grade': grade,
+        })
+
+
+class WorkDetailView(View):
+    def get(self, request, work_id):
+        work = WorkCommit.objects.get(id=int(work_id))
+        print(work)
+        return render(request, 'platfrom/work_detail.html', {'work': work})
 
 
 class PlatfromListView(View):
     def get(self, request):
-
         return render(request, 'platfrom/platfrom_list.html')

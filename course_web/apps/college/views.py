@@ -12,8 +12,7 @@ class CollegeView(View):
         # 所有教学单位
         all_departments = Department.objects.objects.all().order_by('-publish_time')
         # 所有班级
-        print(all_departments)
-        all_classrooms = Department.objects.objects.all().order_by('-department_id')
+        all_classroom = Department.objects.objects.all().order_by('-department_id')
 
         # 教学单位搜索功能
         search_keywords = request.GET.get('keywords', '')
@@ -32,10 +31,16 @@ class CollegeView(View):
             all_departments = all_departments.filter(id=int(classroom_id))
 
         # 年级筛选
-        grade = request.GET.get('grade', '')
+        grade = request.GET.get('grade', "")
         if grade:
-            all_departments = all_departments.filter(grade=grade)
-
+            if grade == 'freshman':
+                all_classroom = all_classroom.filter(grade=grade)
+            elif grade == 'sophomore':
+                all_classroom = all_classroom.filter(grade=grade)
+            elif grade == 'junior':
+                all_classroom = all_classroom.filter(grade=grade)
+            elif grade == 'senior':
+                all_classroom = all_classroom.filter(grade=grade)
         # 学习人数和课程数筛选
         sort = request.GET.get('sort', "")
         if sort:
@@ -45,7 +50,7 @@ class CollegeView(View):
                 all_departments = all_departments.order_by("-course_nums")
 
         # 有多少个班级
-        classroom_nums = all_classrooms.count()
+        classroom_nums = all_classroom.count()
         # 对教学单位进行分页
         # 尝试获取前台get请求传递过来的page参数
         # 如果是不合法的配置参数默认返回第一页
@@ -59,9 +64,9 @@ class CollegeView(View):
         department = p.page(page)
 
         return render(request, "department_list.html", {
-            # "grade": grade,
+            "grade": grade,
             "all_department": department,
-            "all_classrooms": all_classrooms,
+            "all_classroom": all_classroom,
             "classroom_nums": classroom_nums,
             'classroom_id': classroom_id,
             "department_id": department_id,

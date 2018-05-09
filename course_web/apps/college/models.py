@@ -7,7 +7,19 @@ from users.models import UserProfile
 
 class Department(models.Model):
     '''教学单位'''
-    name = models.CharField(max_length=100, verbose_name='教学单位')
+    NAME_CHOICES = (
+
+        ("djx", u"电子信息与计算机工程系"),
+        ("tmx", u"资源勘查与土木工程系"),
+        ("zih", u"自动化工程系"),
+        ("wyx", u"外语系"),
+        ("glx", u"管理系"),
+        ("ysx", u"艺术设计系"),
+        ("hnx", u"核工程与新能源技术系"),
+        ("jjx", u"经济系"),
+
+    )
+    name = models.CharField(max_length=100, choices=NAME_CHOICES, default='djx', verbose_name='教学单位')
     desc = models.CharField(max_length=200, verbose_name='描述')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:

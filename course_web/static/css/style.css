@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #202020;
 }
+
 p{
     text-indent: 2em;
 }
@@ -635,7 +636,7 @@ nav .personal a:hover {
     border: 1px solid #e9e9e9;
     background: white;
     margin-bottom: 5%;
-    margin-top: 4%;
+    /*margin-top: 4%;*/
 }
 .detail h2{
     background: #e9e9e9;
@@ -3138,7 +3139,6 @@ footer .footer .links a:hover {
 
 .list {
     height: auto;
-    margin-top: 40px;
     margin-bottom: 40px;
     min-height: 200px;
     overflow: hidden;
@@ -3163,8 +3163,6 @@ footer .footer .links a:hover {
 .list .left {
     width: 900px;
     float: left;
-
-
 }
 
 .list .right {
@@ -3173,7 +3171,6 @@ footer .footer .links a:hover {
     margin-bottom: 20px;
     overflow: hidden;
 }
-
 .list .right .more {
     float: right;
     color: #717171;
@@ -3205,8 +3202,11 @@ footer .footer .links a:hover {
     height: 48px;
     line-height: 48px;
     width: auto;
-}
 
+}
+.tab_header a:hover{
+    text-decoration: none;
+}
 .tab_header .active {
     border-bottom: 2px solid #717171;
     color: #717171;
@@ -3215,11 +3215,14 @@ footer .footer .links a:hover {
 
 .tab_cont {
     clear: both;
-    width: 96%;
-    padding: 2%;
+    width: 99.8%;
     height: auto;
     overflow: hidden;
     line-height: 200%;
+    border-bottom: 1px solid #e4e4e4;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    background: #ffffff;
 }
 
 .tab_cont.tab_cont2 {
@@ -3292,26 +3295,27 @@ footer .footer .links a:hover {
     height: auto;
     overflow: hidden;
 }
-
-.list .group_list .box {
-    width: 280px;
-    height: 320px;
-    margin: 3px;
-    overflow: hidden;
-}
-
-.list .group_list .box a {
+.list .group_list table{
     width: 100%;
 }
+.list .group_list tr{
+    height: 40px;
 
-.list .group_list .box .des {
-    height: 70px;
-    /*width: 100%;*/
 }
+.list .group_list .work_heard {
+    color: #0a0a0a;
+    font-size: 14px;
 
-.list .group_list .box .des h2 {
-    font-size: 18px;
-    line-height: 30px;
+    background: #e2e2e2;
+}
+.list .group_list .work_show a{
+     cursor: pointer;
+}
+.list .group_list tr{
+    padding-left: 2%;
+    padding-right: 10%;
+    text-align: center;
+    overflow: hidden;
 }
 
 .list .group_list .des span {
