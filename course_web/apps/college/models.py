@@ -28,6 +28,23 @@ class Department(models.Model):
         verbose_name_plural = '教学单位'
 
     def __str__(self):
+        if self.name == 'djx':
+            self.name = '电子信息与计算机工程系'
+        if self.name == 'tmx':
+            self.name = ' 资源勘查与土木工程系'
+        if self.name == 'ysx':
+            self.name = '艺术设计系'
+        if self.name == 'wyx':
+            self.name = '外语系'
+        if self.name == 'hnx':
+            self.name = '电子信息与计算机工程系'
+        if self.name == 'glx':
+            self.name = '管理'
+        if self.name == 'jjx':
+            self.name = '经济系'
+        if self.name == 'zdh':
+            self.name = '自动化工程系'
+
         return self.name
 
 class Classroom(models.Model):
@@ -60,7 +77,7 @@ class Classroom(models.Model):
         return self.teacher_set.all().count()
 
     def __str__(self):
-        return "[{0}]的班级: {1}".format(self.department, self.name)
+        return  self.name
 
 class Teacher(models.Model):
     '''教师表'''
@@ -80,7 +97,7 @@ class Teacher(models.Model):
         return self.course_set.all().count()
 
     def __str__(self):
-        return "[{0}]的教师: {1}".format(self.classroom, self.name)
+        return self.name
 
 class Student(models.Model):
     user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')

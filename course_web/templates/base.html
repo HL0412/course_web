@@ -76,7 +76,7 @@
                 {% if request.user.is_authenticated %}
                     <div class="personal">
                         <dl class="user fr">
-                            <dt><img width="30" height="30" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                            <dt><img class="img-circle" width="30" height="30" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
                         </dl>
                         <a class="fr" href="{% url 'logout' %}">退出</a>
                     </div>

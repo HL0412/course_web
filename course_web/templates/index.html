@@ -84,7 +84,7 @@
                                 <input name="username"   type="text" placeholder="用户名/邮箱" />
                             </div>
                             <div class="form-group marb8 {% if login_form.errors.username %}errorput{% endif %}">
-                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                                <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
                                 <input name="password"  type="password" placeholder="请输入密码" />
                             </div>
                             <div class="checkbox-index">
@@ -99,7 +99,6 @@
                             </div>
                             <div class="auto-box marb38">
                                 <label class="checkbox">
-                                    <input type="checkbox" name="remember" value="1"/>记住我
                                     <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>
                                 </label>
                             </div>
@@ -175,10 +174,10 @@
                                 <p>{{ course_one.course_intro}}</p>
                                 <br>
                                 <br>
-                                <p><a href= "{% url 'course:course_detail' course_one.id%}" class="btn btn-info" role="button">详细了解</a></p>
+                                <a href= "{% url 'course:course_detail' course_one.id%}" class="btn btn-info" role="button">详细了解</a>
                             </div>
                             <div class="col-sm-4">
-                                <img width="300px" height="300px" src="{{ MEDIA_URL }}{{ course_one.course_picture }}" class="img-thumbnail" alt="{{ course_one.name}}"/>
+                                <img src="{{ MEDIA_URL }}{{ course_one.course_picture }}" class="img-thumbnail" alt="{{ course_one.name}}"/>
                             </div>
                         </div>
                     </div>
@@ -189,7 +188,7 @@
                                 <p> {{ course_two.course_intro}}</p>
                                 <br>
                                 <br>
-                                <p><a href="{% url 'course:course_detail' course_two.id%}" class="btn btn-info" role="button">详细了解</a></p>
+                                <a href="{% url 'course:course_detail' course_two.id%}" class="btn btn-info" role="button">详细了解</a>
                             </div>
                             <div class="col-sm-4">
                                 <img src="{{ MEDIA_URL }}{{ course_two.course_picture }}" class="img-thumbnail" alt="{{ course_two.name}}"/>
@@ -203,7 +202,7 @@
                                 <p style="font-size:14px"> {{ course_three.course_intro}}</p>
                                 <br>
                                 <br>
-                                <p><a href="{% url 'course:course_detail' course_three.id %}" class="btn btn-info" role="button">详细了解</a></p>
+                                <a href="{% url 'course:course_detail' course_three.id %}" class="btn btn-info" role="button">详细了解</a>
                             </div>
                             <div class="col-sm-4">
                                 <img src="{{ MEDIA_URL }}{{ course_three.course_picture }}" class="img-thumbnail" alt="{{ course_three.name}}"/>
@@ -217,7 +216,7 @@
                                 <p style="font-size:14px">{{ course_four.course_intro}}</p>
                                 <br>
                                 <br>
-                                <p><a href="{% url 'course:course_detail' course_four.id %}" class="btn btn-info" role="button">详细了解</a></p>
+                                <a href="{% url 'course:course_detail' course_four.id %}" class="btn btn-info" role="button">详细了解</a>
                             </div>
                             <div class="col-sm-4">
                                 <img src="{{ MEDIA_URL }}{{ course_four.course_picture }}" class="img-thumbnail" alt="{{ course_four.name}}"/>

@@ -9,10 +9,12 @@ from college.models import Teacher, Department
 class CollegeView(View):
     '''课程教学单位'''
     def get(self, request):
+        # 所有班级
+        all_classroom = Department.objects.objects.all()
+        classroom_nums = all_classroom.count()
         # 所有教学单位
         all_departments = Department.objects.objects.all().order_by('-publish_time')
-        # 所有班级
-        all_classroom = Department.objects.objects.all().order_by('-department_id')
+
 
         # 教学单位搜索功能
         search_keywords = request.GET.get('keywords', '')
@@ -59,8 +61,8 @@ class CollegeView(View):
         except PageNotAnInteger:
             page = 1
 
-        # 这里指从所有的教学单位中取五个出来，每页显示5个
-        p = Paginator(all_departments, 2, request=request)
+        # 这里指从所有的教banji中取10个出来，每页显示10个
+        p = Paginator(all_departments, 10, request=request)
         department = p.page(page)
 
         return render(request, "department_list.html", {
