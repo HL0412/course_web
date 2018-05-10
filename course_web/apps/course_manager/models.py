@@ -8,7 +8,9 @@ class Course(models.Model):
     name = models.CharField(max_length=45, verbose_name=u"课程名")
     course_num = models.IntegerField(unique=True, verbose_name=u"课程号")
     course_intro = models.TextField(null=True, blank=True, verbose_name='课程介绍')
-    department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True, upload_to='classroom/%Y/%m', default='image/default.png',
+                              max_length=100, verbose_name="班级图片")
+    # department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     course_picture = models.ImageField(null=True, blank=True, upload_to='course/image/%Y/%m', default='image/default.png', max_length=100, verbose_name='课程图片')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')

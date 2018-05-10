@@ -71,8 +71,6 @@ class CollegeView(View):
         p = Paginator(all_classroom, 5, request=request)
         classroom = p.page(page)
 
-
-
         return render(request, "college/department_list.html", {
             "all_classroom": classroom,
             "all_department": all_department,
@@ -112,78 +110,60 @@ class DepartmentView(View):
 
         return render(request, 'college/department_list.html')
 
-class DepartmentHomeView(View):
-    '''教学单位首页'''
+class ClassroomHomeView(View):
+    '''班级首页'''
 
-    def get(self, request, department_id):
+    def get(self, request, classroom_id):
         current_page = 'home'
-        course_department = Department.objects.get(id=int(department_id))
-        # 反向查询到教学单位的所有班级,再根据班级查询老师，课程
-        all_classroom = course_department.classroom_set.all()[:4]
-        all_courses = course_department.course_set.all()[:4]
-        all_teacher = course_department.teacher_set.all()[:4]
+        course_classroom = Classroom.objects.get(id=int(classroom_id))
+
+        # 反向查询到班级的所有老师，课程
+        all_courses = course_classroom.course_set.all()[:4]
+        all_teacher = course_classroom.teacher_set.all()[:4]
         return render(request,'college/department_detail_homepage.html',{
-            'course_department': course_department,
-            'all_classroom': all_classroom,
+            'course_classroom': course_classroom,
             'all_courses':all_courses,
             'all_teacher':all_teacher,
             'current_page':current_page,
         })
 
-class DepartmentCourseView(View):
+class ClassroomCourseView(View):
     """
-    教学单位课程列表页
+    班级课程页
     """
-    def get(self, request, department_id):
+    def get(self, request, classroom_id):
         current_page = 'course'
-        # 根据id取到教学单位
-        course_department = Department.objects.get(id=int(department_id))
-        all_courses = course_department.course_set.all()
+        course_classroom = Classroom.objects.get(id=int(classroom_id))
+        all_courses = course_classroom.course_set.all()
         return render(request, 'college/department_detail_course.html',{
             'all_courses':all_courses,
-            'course_department': course_department,
+            'course_classroom': course_classroom,
             'current_page':current_page,
 
         })
 
 
-class DepartmentDescView(View):
-    '''教学单位介绍页'''
-    def get(self, request, department_id):
+class ClassroomDescView(View):
+    '''班级介绍页'''
+    def get(self, request, classroom_id):
         current_page = 'desc'
-        # 根据id取到教学单位
-        course_department = Department.objects.get(id= int(department_id))
-
+        course_classroom = Classroom.objects.get(id=int(classroom_id))
         return render(request, 'college/department_detail_desc.html',{
-            'course_department': course_department,
+            'course_classroom ': course_classroom ,
             'current_page':current_page,
         })
-class  DepartmentClassroomView(View):
-    """
-        教学单位班级页
-    """
-    def get (self, request, department_id):
-        current_page = 'classroom'
-        course_department = Department.objects.get(id=int(department_id))
-        all_classroom = course_department.classroom_set.all()
 
-        return render(request, 'college/department_detail_classroom.html', {
-            'all_teacher': all_classroom,
-            'course_department': course_department,
-            'current_page': current_page,
-        })
-class DepartmentTeacherView(View):
+class ClassroomTeacherView(View):
     """
     班级教师页
     """
-    def get(self, request, department_id):
+    def get(self, request, classroom_id):
         current_page = 'teacher'
-        course_department = Department.objects.get(id=int(department_id))
-        all_teacher = course_department.teacher_set.all()
-
+        course_classroom = Classroom.objects.get(id=int(classroom_id))
+        all_teacher = course_classroom.teacher_set.all()
         return render(request, 'college/department_detail_teachers.html',{
             'all_teacher':all_teacher,
-            'course_department': course_department,
+            'course_classroom': course_classroom,
             'current_page':current_page,
         })
 

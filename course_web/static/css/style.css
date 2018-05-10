@@ -3948,8 +3948,8 @@ footer .footer .links a:hover {
 .butler_list .cont li {
     height: 30px;
     line-height: 30px;
-    width: 300px;
-    padding-left: 0;
+    width: 100px;
+    padding-left: 20px;
 }
 
 .butler_list .cont li span {
@@ -4332,7 +4332,7 @@ footer .footer .links a:hover {
     height: 110px;
     border-radius: 50%;
     border: 3px solid #dadada;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 
 .module5.share .count {
@@ -6872,7 +6872,12 @@ footer .footer .links a:hover {
 .department-fav-box:first-child {
     border-top: 0;
 }
-
+.middle.department.header{
+    margin-top: 4%;
+}
+.middle.department.header h1{
+    margin-left: 20px;
+}
 .messagelist .butler_list .users.des dt {
     border-radius: 50%;
     overflow: hidden;

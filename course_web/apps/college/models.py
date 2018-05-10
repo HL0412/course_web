@@ -21,6 +21,8 @@ class Department(models.Model):
     )
     name = models.CharField(max_length=100, choices=NAME_CHOICES, default='djx', verbose_name='教学单位')
     desc = models.CharField(max_length=200, verbose_name='描述')
+    image = models.ImageField(blank=True, null=True, upload_to='department/%Y/%m', default='image/default.png', max_length=100,
+                              verbose_name="教学单位图片")
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     class Meta:
         db_table = 'department_info'
@@ -63,7 +65,8 @@ class Classroom(models.Model):
     name = models.CharField(max_length=50, verbose_name='班级名称')
     desc = models.TextField(verbose_name='班级描述')
     department = models.ForeignKey(Department, verbose_name='所在教学单位', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='classroom/%Y/%m', default='image/default.png', max_length=100, verbose_name = "班级图片"),
+    image = models.ImageField(null=True, blank=True, upload_to='classroom/%Y/%m', default='image/default.png',
+                              max_length=100, verbose_name = "班级图片")
     grade = models.CharField(max_length=45, choices=GRADE_CHOICES,verbose_name='年级', default="freshman")
     classes = models.IntegerField(verbose_name='班号', default=1)
     students = models.IntegerField(default=0, verbose_name='班级人数')
