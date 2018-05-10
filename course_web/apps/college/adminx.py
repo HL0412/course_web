@@ -12,9 +12,9 @@ class DepartmentAdmin:
     model_icon = 'fa fa-home'
 
 class ClassroomAdmin:
-    list_display = ['name', 'department', 'grade', 'major', 'classes', 'add_time']
-    search_fileds = ['name', 'department', 'grade', 'major', 'classes']
-    list_filter = ['name', 'department', 'grade', 'major', 'classes']
+    list_display = ['name', 'department', 'grade', 'classes', 'add_time']
+    search_fileds = ['name', 'department', 'grade',  'classes']
+    list_filter = ['name', 'department', 'grade', 'classes']
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:

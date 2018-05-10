@@ -11,7 +11,7 @@ class Department(models.Model):
 
         ("djx", u"电子信息与计算机工程系"),
         ("tmx", u"资源勘查与土木工程系"),
-        ("zih", u"自动化工程系"),
+        ("zdh", u"自动化工程系"),
         ("wyx", u"外语系"),
         ("glx", u"管理系"),
         ("ysx", u"艺术设计系"),
@@ -37,15 +37,18 @@ class Department(models.Model):
         if self.name == 'wyx':
             self.name = '外语系'
         if self.name == 'hnx':
-            self.name = '电子信息与计算机工程系'
+            self.name = '核工程与新能源技术系'
         if self.name == 'glx':
-            self.name = '管理'
+            self.name = '管理系'
         if self.name == 'jjx':
             self.name = '经济系'
         if self.name == 'zdh':
             self.name = '自动化工程系'
 
         return self.name
+
+
+
 
 class Classroom(models.Model):
     '''班级'''
@@ -60,11 +63,14 @@ class Classroom(models.Model):
     name = models.CharField(max_length=50, verbose_name='班级名称')
     desc = models.TextField(verbose_name='班级描述')
     department = models.ForeignKey(Department, verbose_name='所在教学单位', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='classroom/%Y/%m', default='image/default.png', max_length=100, verbose_name = "班级图片"),
     grade = models.CharField(max_length=45, choices=GRADE_CHOICES,verbose_name='年级', default="freshman")
-    major =models.CharField(max_length=45,  verbose_name='专业')
     classes = models.IntegerField(verbose_name='班号', default=1)
     students = models.IntegerField(default=0, verbose_name='班级人数')
     course_nums = models.IntegerField(default=0, verbose_name='课程数')
+    # teacher = models.ForeignKey(Teacher, verbose_name='班级教师', on_delete=models.CASCADE)
+    # course = models.ForeignKey(Course, verbose_name='班级课程', on_delete=models.CASCADE)
+    # student = models.ForeignKey(Student, verbose_name='班级学生', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -76,6 +82,14 @@ class Classroom(models.Model):
         #获取班级的教师数
         return self.teacher_set.all().count()
 
+    def get_course_nums(self):
+        # 获取班级的课程数
+        return self.course_set.all().count()
+    
+    def get_student_nums(self):
+        # 获取班级的学生数
+        return self.student_set.all().count()
+
     def __str__(self):
         return  self.name
 
@@ -83,6 +97,7 @@ class Teacher(models.Model):
     '''教师表'''
     user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
     number = models.CharField(max_length=45, verbose_name='职工号')
     work_years = models.CharField(max_length=45, verbose_name='教学年限')

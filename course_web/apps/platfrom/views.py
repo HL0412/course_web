@@ -33,6 +33,7 @@ class NewsDetailView(View):
 class WorkListView(View):
 
     def get(self, request):
+
         all_work = WorkCommit.objects.all().order_by('-commit_time')
         grade = request.GET.get('grade', "")
         if grade:
@@ -49,7 +50,7 @@ class WorkListView(View):
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        p = Paginator(all_work,2 , request=request)
+        p = Paginator(all_work, 10, request=request)
         works = p.page(page)
         return render(request, 'platfrom/work_list.html', {
             'works': works,

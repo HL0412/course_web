@@ -1,16 +1,16 @@
 from datetime import datetime
 from django.db import models
-from college.models import Teacher
 # Create your models here.
+from college.models import Classroom, Department
 
 
 class Course(models.Model):
-
     name = models.CharField(max_length=45, verbose_name=u"课程名")
     course_num = models.IntegerField(unique=True, verbose_name=u"课程号")
     course_intro = models.TextField(null=True, blank=True, verbose_name='课程介绍')
+    department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
+    classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     course_picture = models.ImageField(null=True, blank=True, upload_to='course/image/%Y/%m', default='image/default.png', max_length=100, verbose_name='课程图片')
-    course_teacher = models.ForeignKey(Teacher, verbose_name='课程教师', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
 

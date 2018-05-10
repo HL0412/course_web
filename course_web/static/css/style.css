@@ -2500,7 +2500,9 @@ textarea:focus {
 .active2 {
     color: #76e0ff !important;
 }
-
+.active2 a:hover{
+    text-decoration: none;
+}
 .module1 .imgslide2 {
     width: 470px;
     height: 100%;
@@ -3162,7 +3164,6 @@ footer .footer .links a:hover {
     background: #f8f8f8;
     color: #333;
     height: 50px;
-    line-height: 50px;
     text-indent: 20px;
     font-size: 14px;
 }
@@ -3630,6 +3631,10 @@ footer .footer .links a:hover {
     color: #fff;
     padding-top: 10px;
 }
+.right.departmentcenter .head{
+    padding-top: 15px;
+
+}
 
 .groupPurchase_detail .toppro .right h2 {
     width: 92%;
@@ -3817,7 +3822,6 @@ footer .footer .links a:hover {
 }
 
 .butler_list .des {
-    width: 903px;
     height: 160px;
     border-bottom: 1px solid #e3e3e3;
     padding: 20px;
@@ -4304,7 +4308,7 @@ footer .footer .links a:hover {
 }
 
 .module5.share {
-    height: 450px;
+    /*height: 450px;*/
     width: 1198px;
     border: 1px solid #ccc;
     margin-top: 20px;
@@ -4889,7 +4893,7 @@ footer .footer .links a:hover {
 .personal_des .btns {
     width: 200px !important;
     border: 0 !important;
-    color: #ff7200;
+    color: #ff859e;
     position: absolute;
     top: 25px;
     right: -40px;
@@ -4898,13 +4902,13 @@ footer .footer .links a:hover {
 .personal_des .btn1 {
     background: url(../images/btn1.png) no-repeat left center;
     padding: 0 30px;
-    color: #ff7200;
+    color: #ff89a4;
 }
 
 .personal_des .btn2 {
     background: url(../images/btn2.png) no-repeat left center;
     padding: 0 30px;
-    color: #ff7200;
+    color: #ff89a4;
     cursor: pointer;
 }
 
@@ -5012,7 +5016,13 @@ footer .footer .links a:hover {
 .module5 .middle li {
     width: 100%;
 }
-
+.module5.share.department_diary_box{
+    padding-top: 20px;
+    height: 181px;
+}
+.right.departmentcenter.layout{
+    background-color: white;
+}
 .module5 .middle .btn {
     display: block;
     width: 100px;
@@ -5026,12 +5036,19 @@ footer .footer .links a:hover {
     right: 0;
     bottom: 10px;
 }
-
+.butler_list{
+    background-color: white;
+}
+.brief.group_list{
+    background-color: white;
+}
 .set-owner-diary {
     margin-left: 20px;
     margin-top: 8px;
 }
-
+.personal_list .left a:hover{
+    text-decoration: none;
+}
 .rewrite-diary {
     border-top: 1px solid #eaeaea;
     padding: 10px 0 20px;
@@ -5439,6 +5456,7 @@ footer .footer .links a:hover {
     margin: 0;
     border: 0 !important;
     background: white;
+    height: auto;
 }
 
 .butler_list.department .layout {
@@ -5477,6 +5495,10 @@ footer .footer .links a:hover {
 
 .butler_list.department dd {
     width: 678px !important;
+}
+.butler_list.department .layout dl{
+    width: 943px;
+    height: 212px;
 }
 
 .butler_list.department dd h1 {
@@ -5594,6 +5616,7 @@ footer .footer .links a:hover {
     text-align: center;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 .departmentrank .num {
@@ -5601,8 +5624,8 @@ footer .footer .links a:hover {
 }
 
 .departmentrank .des {
-    width: 90% !important;
-    padding: 5% !important;
+    width: 100% !important;
+    padding: 12px !important;
     height: 100px !important;
 }
 
@@ -5659,7 +5682,7 @@ footer .footer .links a:hover {
     line-height: 40px;
     color: #fff;
     text-align: center;
-    background: #ff8833 url(../images/star-btn.png) no-repeat 15px center;
+    background: #ff89a4 url(../images/star-btn.png) no-repeat 15px center;
     text-indent: 15px;
     border-radius: 3px;
     margin-top: 40px;
@@ -5678,6 +5701,7 @@ footer .footer .links a:hover {
     border: 0;
     width: 945px;
     height: 280px !important;
+    background: white;
 }
 
 .departmentcenter .star_score {
@@ -5773,7 +5797,7 @@ footer .footer .links a:hover {
     line-height: 40px;
     color: #fff;
     text-align: center;
-    background: #ff8833;
+    background: #ff89a4;
     border-radius: 3px;
     cursor: pointer;
     position: absolute;
@@ -5790,8 +5814,23 @@ footer .footer .links a:hover {
     width: 96%;
     padding: 2%;
     color: #858484;
+
+}
+.departmentcenter .diarys .module5 {
+    border: none;
+    background-color: white;
+    margin: 0;
+}
+.departmentcenter .diarys .left{
+    border: none;
+    background-color: white;
+
 }
 
+.departmentcenter .diarys .right .middle{
+    border: 0;
+
+}
 .departmentcenter .diarys li {
     width: 23%;
     float: left;
@@ -5800,6 +5839,7 @@ footer .footer .links a:hover {
     height: 180px;
     position: relative;
     color: #fff;
+
 }
 
 .departmentcenter .diarys li p {
@@ -6235,7 +6275,7 @@ footer .footer .links a:hover {
 }
 
 .contractchanges input:focus {
-    border-color: #F83;
+    border-color: #ff89a4;
 }
 
 .contractchanges textarea {
@@ -6326,7 +6366,7 @@ footer .footer .links a:hover {
 }
 
 .personal_des .department .btn-get-bid {
-    background: #ff7800;
+    background: #ff89a4;
 }
 
 /*mybill*/
@@ -6462,12 +6502,12 @@ footer .footer .links a:hover {
 }
 
 .billlist .schedule .rbtn {
-    background: #ff7800;
+    background: #ff89a4;
 }
 
 .billlist .schedule .rborderbtn {
-    border: 1px solid #ff7800;
-    color: #ff7800;
+    border: 1px solid #ff89a4;
+    color: #ff89a4;
 }
 
 .billlist .schedule .gbtn {
@@ -6734,7 +6774,7 @@ footer .footer .links a:hover {
 }
 
 .messagelist table .red {
-    color: #ff8833 !important;
+    color: #ff89a4 !important;
 }
 
 .messagelist table .green {
@@ -6866,7 +6906,7 @@ footer .footer .links a:hover {
 }
 
 .col_diary .box:hover {
-    border-color: #fb8341;
+    border-color: #ff89a4;
 }
 
 .col_diary .box dt {
@@ -7043,7 +7083,7 @@ footer .footer .links a:hover {
     height: 40px;
     line-height: 20px;
     color: #fff;
-    background: #ff7800;
+    background: #ff89a4;
 }
 
 .personal_list .inforcon .right li select {
@@ -7210,7 +7250,7 @@ footer .footer .links a:hover {
     text-indent: 20px;
     border-radius: 3px;
     margin-top: 50px;
-    background: #ff8833;
+    background: #ff859e;
 }
 
 .comp_top.brief .des li {
@@ -7689,7 +7729,7 @@ footer .footer .links a:hover {
 }
 
 .comenlist .wordbox:focus {
-    border-color: #F83;
+    border-color: #ff89a4;
     height: 60px;
 }
 
@@ -8656,289 +8696,289 @@ table .upload-btn {
     width: 730px;
 }
 
-/**管家详情公司信息**/
+/*!**管家详情公司信息**!*/
 
-.butler-diaryd-box {
-    padding-bottom: 100px;
-}
+/*.butler-diaryd-box {*/
+    /*padding-bottom: 100px;*/
+/*}*/
 
-.butler-diaryd-box .module5 .middle {
-    padding: 0 20px 20px 0;
-    height: auto;
-}
+/*.butler-diaryd-box .module5 .middle {*/
+    /*padding: 0 20px 20px 0;*/
+    /*height: auto;*/
+/*}*/
 
-.butler-detail-box .list {
-    clear: none;
-    margin: 0
-}
+/*.butler-detail-box .list {*/
+    /*clear: none;*/
+    /*margin: 0*/
+/*}*/
 
-.butler-detail-box .brief {
-    margin-bottom: 26px;
-}
+/*.butler-detail-box .brief {*/
+    /*margin-bottom: 26px;*/
+/*}*/
 
-.butler-detail-box .butler-department-box {
-    width: 270px !important;
-    float: right;
-    border: 1px solid #eaeaea;
-    padding-bottom: 26px;
-    margin-bottom: 26px;
-    overflow: hidden;
-}
+/*.butler-detail-box .butler-department-box {*/
+    /*width: 270px !important;*/
+    /*float: right;*/
+    /*border: 1px solid #eaeaea;*/
+    /*padding-bottom: 26px;*/
+    /*margin-bottom: 26px;*/
+    /*overflow: hidden;*/
+/*}*/
 
-.butler-department-box .head {
-    background: #717171;
-    height: 70px;
-    color: #fff;
-    line-height: 30px;
-    text-indent: 20px;
-    width: 100%;
-}
+/*.butler-department-box .head {*/
+    /*background: #717171;*/
+    /*height: 70px;*/
+    /*color: #fff;*/
+    /*line-height: 30px;*/
+    /*text-indent: 20px;*/
+    /*width: 100%;*/
+/*}*/
 
-.butler-department-box .head h1 {
-    color: #fff;
-    padding-top: 10px;
-}
+/*.butler-department-box .head h1 {*/
+    /*color: #fff;*/
+    /*padding-top: 10px;*/
+/*}*/
 
-.butler-department-box h2 {
-    width: 92%;
-    margin: 0 auto;
-    overflow: hidden;
-}
+/*.butler-department-box h2 {*/
+    /*width: 92%;*/
+    /*margin: 0 auto;*/
+    /*overflow: hidden;*/
+/*}*/
 
-.butler-department-box .pic {
-    width: 150px;
-    height: 80px;
-    margin: 20px auto;
-    border: 1px solid #eaeaea;
-    overflow: hidden;
-}
+/*.butler-department-box .pic {*/
+    /*width: 150px;*/
+    /*height: 80px;*/
+    /*margin: 20px auto;*/
+    /*border: 1px solid #eaeaea;*/
+    /*overflow: hidden;*/
+/*}*/
 
-.butler-department-box .tell {
-    color: #717171;
-    font-weight: bold;
-    line-height: 30px;
-    font-size: 14px;
-}
+/*.butler-department-box .tell {*/
+    /*color: #717171;*/
+    /*font-weight: bold;*/
+    /*line-height: 30px;*/
+    /*font-size: 14px;*/
+/*}*/
 
-.butler-department-box .btn {
-    float: none;
-    display: block;
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
-    border: 1px solid #ff7800;
-    border-radius: 2px;
-    color: #ff7800;
-    margin: 20px auto;
-    cursor: pointer;
-    text-align: center;
-}
+/*.butler-department-box .btn {*/
+    /*float: none;*/
+    /*display: block;*/
+    /*width: 100px;*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    /*border: 1px solid #ff7800;*/
+    /*border-radius: 2px;*/
+    /*color: #ff7800;*/
+    /*margin: 20px auto;*/
+    /*cursor: pointer;*/
+    /*text-align: center;*/
+/*}*/
 
-.butler-department-box .btn:hover {
-    background: #ff7800;
-    color: #fff;
-}
+/*.butler-department-box .btn:hover {*/
+    /*background: #ff7800;*/
+    /*color: #fff;*/
+/*}*/
 
-.butler-department-box .collected {
-    background: #ff7800;
-    color: #fff;
-}
+/*.butler-department-box .collected {*/
+    /*background: #ff7800;*/
+    /*color: #fff;*/
+/*}*/
 
-.collectionbtn.collected {
-    background: #ff7800;
-    cursor: pointer;
-    color: #fff !important;
-}
+/*.collectionbtn.collected {*/
+    /*background: #ff7800;*/
+    /*cursor: pointer;*/
+    /*color: #fff !important;*/
+/*}*/
 
-.butler-department-box .clear {
-    width: 80%;
-    margin: 0 auto;
-    line-height: 25px;
-    color: #9f9f9f;
-    vertical-align: middle;
-}
+/*.butler-department-box .clear {*/
+    /*width: 80%;*/
+    /*margin: 0 auto;*/
+    /*line-height: 25px;*/
+    /*color: #9f9f9f;*/
+    /*vertical-align: middle;*/
+/*}*/
 
-.butler-department-box .clear p {
-    color: #717171;
-    font-weight: bold;
-    line-height: 30px;
-}
+/*.butler-department-box .clear p {*/
+    /*color: #717171;*/
+    /*font-weight: bold;*/
+    /*line-height: 30px;*/
+/*}*/
 
-.butler-department-box .clear li img {
-    vertical-align: middle;
-    width: 20px;
-}
+/*.butler-department-box .clear li img {*/
+    /*vertical-align: middle;*/
+    /*width: 20px;*/
+/*}*/
 
-.butler-department-box .clear li .precision img {
-    width: 12px;
-}
+/*.butler-department-box .clear li .precision img {*/
+    /*width: 12px;*/
+/*}*/
 
-#jsChangePhoneDialog .find-password-captcha {
-    left: 0;
-}
+/*#jsChangePhoneDialog .find-password-captcha {*/
+    /*left: 0;*/
+/*}*/
 
-.butler-fav-box .des {
-    height: 110px;
-}
+/*.butler-fav-box .des {*/
+    /*height: 110px;*/
+/*}*/
 
-.messagelist .butler-fav-box dd {
-    width: 770px;
-}
+/*.messagelist .butler-fav-box dd {*/
+    /*width: 770px;*/
+/*}*/
 
-.butler-fav-box .des h1 > a {
-    color: #464646;
-}
+/*.butler-fav-box .des h1 > a {*/
+    /*color: #464646;*/
+/*}*/
 
-.butler-fav-box .cont {
-    height: auto;
-    margin: 0;
-}
+/*.butler-fav-box .cont {*/
+    /*height: auto;*/
+    /*margin: 0;*/
+/*}*/
 
-.butler-fav-box .cont > li {
-    width: auto;
-}
+/*.butler-fav-box .cont > li {*/
+    /*width: auto;*/
+/*}*/
 
-.diary-fav-box .diary-p {
-    line-height: 30px;
-}
+/*.diary-fav-box .diary-p {*/
+    /*line-height: 30px;*/
+/*}*/
 
-.diary-fav-box .cont > li {
-    padding-left: 0;
-}
+/*.diary-fav-box .cont > li {*/
+    /*padding-left: 0;*/
+/*}*/
 
-.icon-inline {
-    display: inline-block;
-}
+/*.icon-inline {*/
+    /*display: inline-block;*/
+/*}*/
 
-.icon-diary-supervisor {
-    width: 36px;
-    height: 18px;
-    background: url(../images/icon-diary-jl.png) no-repeat 0 center;
-}
+/*.icon-diary-supervisor {*/
+    /*width: 36px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-diary-jl.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-diary-my {
-    width: 36px;
-    height: 18px;
-    background: url(../images/icon-diary-my.png) no-repeat 0 center;
-}
+/*.icon-diary-my {*/
+    /*width: 36px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-diary-my.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-diary-user {
-    width: 36px;
-    height: 18px;
-    background: url(../images/icon-diary-user.png) no-repeat 0 center;
-}
+/*.icon-diary-user {*/
+    /*width: 36px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-diary-user.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-release-over {
-    width: 46px;
-    height: 18px;
-    background: url(../images/icon-release-over.png) no-repeat 0 center;
-}
+/*.icon-release-over {*/
+    /*width: 46px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-release-over.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-release-active {
-    width: 46px;
-    height: 18px;
-    background: url(../images/icon-release-active.png) no-repeat 0 center;
-}
+/*.icon-release-active {*/
+    /*width: 46px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-release-active.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-release-on {
-    width: 46px;
-    height: 18px;
-    background: url(../images/icon-release-on.png) no-repeat 0 center;
-}
+/*.icon-release-on {*/
+    /*width: 46px;*/
+    /*height: 18px;*/
+    /*background: url(../images/icon-release-on.png) no-repeat 0 center;*/
+/*}*/
 
-.icon-absolute {
-    position: absolute;
-    display: block;
-}
+/*.icon-absolute {*/
+    /*position: absolute;*/
+    /*display: block;*/
+/*}*/
 
-.icon-off-time {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-}
+/*.icon-off-time {*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    /*text-align: center;*/
+/*}*/
 
-.bg-mask {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.6;
-    filter: Alpha(opacity=0.6);
-}
+/*.bg-mask {*/
+    /*position: absolute;*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: #000;*/
+    /*opacity: 0.6;*/
+    /*filter: Alpha(opacity=0.6);*/
+/*}*/
 
-.top-font {
-    position: relative;
-    z-index: 30;
-    color: #fff !important;
-}
+/*.top-font {*/
+    /*position: relative;*/
+    /*z-index: 30;*/
+    /*color: #fff !important;*/
+/*}*/
 
-.Releasecont .brief td {
-    padding: 20px;
-    border: 0;
-}
+/*.Releasecont .brief td {*/
+    /*padding: 20px;*/
+    /*border: 0;*/
+/*}*/
 
-.Releasecont .brief .title {
-    font-size: 18px;
-    color: #717171;
-    text-align: center;
-    border-right: 1px solid #ededed;
-    line-height: 26px;
-}
+/*.Releasecont .brief .title {*/
+    /*font-size: 18px;*/
+    /*color: #717171;*/
+    /*text-align: center;*/
+    /*border-right: 1px solid #ededed;*/
+    /*line-height: 26px;*/
+/*}*/
 
-.department-fav-box .des {
-    width: 920px !important;
-}
+/*.department-fav-box .des {*/
+    /*width: 920px !important;*/
+/*}*/
 
-.butler_list.department-fav-box dd {
-    width: 735px !important;
-}
+/*.butler_list.department-fav-box dd {*/
+    /*width: 735px !important;*/
+/*}*/
 
-.department-credit img {
-    margin: 6px 8px 0 0
-}
+/*.department-credit img {*/
+    /*margin: 6px 8px 0 0*/
+/*}*/
 
-.departmentcenter .department-diary-wrap {
-    height: auto !important;
-    overflow: hidden;
-}
+/*.departmentcenter .department-diary-wrap {*/
+    /*height: auto !important;*/
+    /*overflow: hidden;*/
+/*}*/
 
-.departmentcenter .department-diary-box {
-    width: 945px;
-    height: auto;
-    margin-top: 0;
-    border: 0;
-    border-bottom: 1px solid #eaeaea;
-    overflow: hidden;
-}
+/*.departmentcenter .department-diary-box {*/
+    /*width: 945px;*/
+    /*height: auto;*/
+    /*margin-top: 0;*/
+    /*border: 0;*/
+    /*!*border-bottom: 1px solid #eaeaea;*!*/
+    /*overflow: hidden;*/
+/*}*/
 
-.departmentcenter .department-diary-box .left {
-    background: #fff;
-    border: 0;
-}
+/*.departmentcenter .department-diary-box .left {*/
+    /*background: #fff;*/
+    /*border: 0;*/
+/*}*/
 
-.departmentcenter .department-diary-box .right {
-    width: 725px;
-}
+/*.departmentcenter .department-diary-box .right {*/
+    /*width: 725px;*/
+/*}*/
 
-.departmentcenter .department-diary-box .middle {
-    height: auto;
-    padding-right: 20px;
-    word-break: break-all;
-}
+/*.departmentcenter .department-diary-box .middle {*/
+    /*height: auto;*/
+    /*padding-right: 20px;*/
+    /*word-break: break-all;*/
+/*}*/
 
-.diary-share-box .bdsharebuttonbox {
-    margin-top: 0;
-}
+/*.diary-share-box .bdsharebuttonbox {*/
+    /*margin-top: 0;*/
+/*}*/
 
-.group-share-box {
-    position: absolute;
-    left: 0;
-    bottom: 15px;
-}
+/*.group-share-box {*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: 15px;*/
+/*}*/
 
 /**公共样式start**/
 
@@ -9529,7 +9569,7 @@ table .upload-btn {
 }
 
 .list .right .hd-btn:hover{
-    background:#00ad29;
+    background: #78d9e0;
 }
 
 #MsgDot{
@@ -9542,7 +9582,7 @@ table .upload-btn {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background:#ff7800;
+    background: #ff89a4;
     text-align:center;
     font-size:12px;
     color:#fff;

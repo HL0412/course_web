@@ -1,7 +1,7 @@
 from datetime import datetime
 from django.db import models
-from course_manager.models import Course, Teacher
-from college.models import Student, Department, Classroom
+from course_manager.models import Course
+from college.models import Student, Department, Classroom, Teacher
 
 
 # Create your models here.
@@ -74,5 +74,21 @@ class WorkPublish(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class UserAsk(models.Model):
+    '''用户学习'''
+    name = models.CharField('姓名',max_length=20)
+    mobile = models.CharField('手机',max_length=11)
+    course_name = models.CharField('课程名',max_length=50)
+    add_time = models.DateTimeField('添加时间',default=datetime.now)
+
+    class Meta:
+        verbose_name = '用户学习'
+        verbose_name_plural = '用户学习'
+
+    def __str__(self):
+        return self.name
+
 
 
