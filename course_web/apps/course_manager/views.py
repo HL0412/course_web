@@ -15,6 +15,7 @@ class CourseListView(View):
 class CourseDetailView(View):
     # 课程详情
     def get(self, request, course_id):
+
         course = Course.objects.get(id=int(course_id))
         return render(request, 'course/course_detail.html', {'course' : course})
 

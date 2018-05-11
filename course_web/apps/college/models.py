@@ -2,7 +2,6 @@ from datetime import datetime
 from django.db import models
 
 # Create your models here.
-from users.models import UserProfile
 
 
 class Department(models.Model):
@@ -50,8 +49,6 @@ class Department(models.Model):
         return self.name
 
 
-
-
 class Classroom(models.Model):
     '''班级'''
     GRADE_CHOICES = (
@@ -66,14 +63,11 @@ class Classroom(models.Model):
     desc = models.TextField(verbose_name='班级描述')
     department = models.ForeignKey(Department, verbose_name='所在教学单位', on_delete=models.CASCADE)
     image = models.ImageField(null=True, blank=True, upload_to='classroom/%Y/%m', default='image/default.png',
-                              max_length=100, verbose_name = "班级图片")
+                      max_length=100, verbose_name = "班级图片")
     grade = models.CharField(max_length=45, choices=GRADE_CHOICES,verbose_name='年级', default="freshman")
     classes = models.IntegerField(verbose_name='班号', default=1)
     students = models.IntegerField(default=0, verbose_name='班级人数')
     course_nums = models.IntegerField(default=0, verbose_name='课程数')
-    # teacher = models.ForeignKey(Teacher, verbose_name='班级教师', on_delete=models.CASCADE)
-    # course = models.ForeignKey(Course, verbose_name='班级课程', on_delete=models.CASCADE)
-    # student = models.ForeignKey(Student, verbose_name='班级学生', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -96,37 +90,3 @@ class Classroom(models.Model):
     def __str__(self):
         return  self.name
 
-class Teacher(models.Model):
-    '''教师表'''
-    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
-    classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
-    department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
-    name = models.CharField(max_length=45, verbose_name='姓名')
-    number = models.CharField(max_length=45, verbose_name='职工号')
-    work_years = models.CharField(max_length=45, verbose_name='教学年限')
-    rank = models.CharField(max_length=45, verbose_name='职称')
-    add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
-    class Meta:
-        db_table = 'teacher_info'
-        verbose_name = '教师信息'
-        verbose_name_plural = "教师信息"
-
-    def get_course_nums(self):
-        return self.course_set.all().count()
-
-    def __str__(self):
-        return self.name
-
-class Student(models.Model):
-    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
-    classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
-    name = models.CharField(max_length=45, verbose_name='姓名')
-    number = models.CharField(max_length=45, unique=True, verbose_name='学号')
-    add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
-    class Meta:
-        db_table = 'student_info'
-        verbose_name = '学生信息'
-        verbose_name_plural = "学生信息"
-
-    def __str__(self):
-        return self.name

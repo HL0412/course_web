@@ -3,7 +3,8 @@ from django.db.models import Q
 from django.shortcuts import render
 from django.views.generic.base import View
 # Create your views here.
-from college.models import Teacher, Department, Classroom
+from college.models import Classroom, Department
+from course_manager.models import Teacher, Course
 
 
 class CollegeView(View):
@@ -81,21 +82,41 @@ class CollegeView(View):
             'sort': sort
         })
 
+
 class TeacherListView(View):
     # 教师列表
     def get(self, request):
-        rank = ['教授', '副教授', '讲师']
-        perfessor = Teacher.objects.filter(rank=rank[0])
-        associate_perfessor = Teacher.objects.filter(rank=rank[1])
-        teach = Teacher.objects.filter(rank=rank[2])
+        all_teachers = Teacher.objects.all()
+        # 总共有多少老师使用count进行统计
+        teacher_nums = all_teachers.count()
+        sort = request.GET.get('sort', '')
+        if sort:
+            if sort == 'department':
+                all_teachers = all_teachers.order_by('-department')
+            if sort == 'classroom':
+                all_teachers = all_teachers.order_by('-classroom')
+
+        # 教师排行榜
+        sorted_teacher = Teacher.objects.all().order_by('-work_years')[:10]
+        # 进行分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_teachers, 5, request=request)
+        teachers = p.page(page)
         return render(request, 'college/teacher_list.html',
-                      {'perfessor' : perfessor, 'associate_perfessor':associate_perfessor, 'teach':teach})
+                      {'all_teachers': teachers,
+                       'teacher_nums': teacher_nums,
+                       'sort': sort,
+                       'sorted_teacher': sorted_teacher})
 
 
 class TeacherDetailView(View):
     # 教师详情
-    def get(self, request):
-        return render(request, 'college/teacher_detail.html')
+    def get(self, request, teacher_id):
+        teacher = Teacher.objects.get(id=int(teacher_id))
+        return render(request, 'college/teacher_detail.html', {'teacher' : teacher})
 
 
 class MessageView(View):
@@ -161,10 +182,16 @@ class ClassroomTeacherView(View):
         current_page = 'teacher'
         course_classroom = Classroom.objects.get(id=int(classroom_id))
         all_teacher = course_classroom.teacher_set.all()
+        # for techer in all_teacher:
+        #     course_id = techer.course.id
+        #     print(course_id)
+        #     course_num= Course.objects.filter(id=int(course_id)).count()
+            # course_num = course.objects.all().count()
         return render(request, 'college/department_detail_teachers.html',{
             'all_teacher':all_teacher,
             'course_classroom': course_classroom,
             'current_page':current_page,
+            # 'course_num':course_num,
         })
 
 

@@ -1,7 +1,8 @@
 from datetime import datetime
 from django.db import models
-from course_manager.models import Course
-from college.models import Student, Department, Classroom, Teacher
+
+from college.models import Classroom
+from course_manager.models import Course, Student, Teacher
 
 
 # Create your models here.

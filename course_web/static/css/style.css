@@ -7,7 +7,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #202020;
 }
-
+a:hover{
+    text-decoration: none;
+}
 p{
     text-indent: 2em;
 }
@@ -1544,7 +1546,6 @@ textarea:focus {
 .noactivebox .green, .dialogbox .green, .green {
     color: #717171 !important;
 }
-
 .noactivebox .btn {
     width: 100px;
     height: 30px;
@@ -1563,7 +1564,9 @@ textarea:focus {
 .okdialog .cont .des {
     margin-top: 40px;
 }
-
+.des h1{
+    padding-top: 10px;
+}
 .okdialog .cont img {
     float: left;
 }
@@ -2406,7 +2409,8 @@ textarea:focus {
 }
 
 .group_list .box img {
-    height: 190px;
+    height: 210px;
+    padding-top: 20px;
 }
 
 .group_list .des {
@@ -3948,7 +3952,7 @@ footer .footer .links a:hover {
 .butler_list .cont li {
     height: 30px;
     line-height: 30px;
-    width: 100px;
+    width: auto;
     padding-left: 20px;
 }
 
@@ -4007,10 +4011,11 @@ footer .footer .links a:hover {
 
 .butler_list_box .right .des {
     border-bottom: 1px solid #eaeaea;
-    padding: 10px 5px;
-    width: 200px;
-    height: 60px;
+    padding: 20px 5px;
+
+    height: 120px;
     vertical-align: middle;
+    background-color: white;
 }
 
 .butler_list_box .right .des:last-child {
@@ -4030,20 +4035,23 @@ footer .footer .links a:hover {
 }
 
 .butler_list_box .right dt {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px;
     border-width: 2px;
 }
 
 .butler_list_box .right dd {
-    width: 80px;
+    width: 60px;
     height: 50px;
-    margin-top: 10px;
+    padding-top: 15px;
     line-height: 150%;
-    float: right;
-}
+    float: left;
 
+}
+.tab_header .active{
+    border-bottom: 2px solid black;
+}
 .picbig.key {
     padding: 5px;
 }
@@ -4773,8 +4781,6 @@ footer .footer .links a:hover {
 .personal_list .brief .des .key {
     background: url(../images/authentication.png) no-repeat left center;
     padding: 30px;
-    margin-left: 10px;
-    color: #ff7800;
     font-size: 14px;
 }
 
@@ -5036,9 +5042,7 @@ footer .footer .links a:hover {
     right: 0;
     bottom: 10px;
 }
-.butler_list{
-    background-color: white;
-}
+
 .brief.group_list{
     background-color: white;
 }
@@ -5455,7 +5459,6 @@ footer .footer .links a:hover {
 .butler_list.department {
     margin: 0;
     border: 0 !important;
-    background: white;
     height: auto;
 }
 
@@ -5885,7 +5888,7 @@ footer .footer .links a:hover {
 }
 
 .departmentcenter .group_list .box {
-    height: 300px;
+    height: 310px;
     position: relative;
     margin: 30px 10px;
     width: 214px !important;
@@ -5893,12 +5896,15 @@ footer .footer .links a:hover {
 
 .departmentcenter .group_list .box .des {
     width: 95%;
-    margin: 2%;
-    height: 90px;
+    margin: 7%;
+    height: 70px;
     border: 0;
     position: relative;
 }
-
+.departmentcenter .group_list .box .des .fr{
+    left: -20px;
+    position: relative;
+}
 .departmentcenter .group_list .box .des h2 {
     height: 30px;
     line-height: 30px;
@@ -5936,7 +5942,6 @@ footer .footer .links a:hover {
     color: #333333;
     line-height: 50px;
 }
-
 .departmentcenter .comenlist {
     width: 100%;
 }
@@ -9126,9 +9131,7 @@ table .upload-btn {
 .comp-img-box {
     position: relative;
     display: block;
-    height: 190px;
     line-height: normal;
-    border-bottom: 1px solid #eaeaea;
     overflow: hidden;
 }
 

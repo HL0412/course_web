@@ -14,7 +14,7 @@ Including another pathconf
     2. Add a path to pathpatterns:  path('blog/', include('blog.urls'))
 """
 from django.views.static import serve
-from course_web.settings import MEDIA_ROOT
+from course_web.settings import STATIC_ROOT, MEDIA_ROOT
 from django.urls import path, include, re_path
 
 from users.views import IndexView, LoginView, LogoutView, RegisterView, ForgetPwdView, ModifyPwdView, ResetView, \
@@ -29,6 +29,7 @@ xadmin.autodiscover()
 
 urlpatterns = [
 
+    re_path(r'^static/(?P<path>.*)', serve, {"document_root": STATIC_ROOT}),
     path('xadmin/', xadmin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('login/',LoginView.as_view(),name = 'login'),

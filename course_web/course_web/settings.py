@@ -26,9 +26,11 @@ sys.path.insert(0,os.path.join(BASE_DIR,'extra_apps'))
 SECRET_KEY = 'zz=w4i+%2js!#omqrkwr$23izmo_cxqo-p&@3#o&3*do47648!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [ ]
+ALLOWED_HOSTS = ['*']
+
+
 
 AUTH_USER_MODEL = 'users.UserProfile'
 # Application definition
@@ -152,14 +154,15 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR,'static'),
+# )
 
 
 # 设置上传文件的路径
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')   #指定根目录
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 

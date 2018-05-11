@@ -2,7 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 import xadmin
-from college.models import Classroom, Department, Teacher, Student
+from college.models import Classroom, Department
+from course_manager.models import Teacher, Student
 
 
 class DepartmentAdmin:
