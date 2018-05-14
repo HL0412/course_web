@@ -30,7 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
+# DEBUG = True
 
 AUTH_USER_MODEL = 'users.UserProfile'
 # Application definition

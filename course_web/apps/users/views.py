@@ -2,6 +2,7 @@
 import json
 
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator, PageNotAnInteger
 from django.shortcuts import render
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse,HttpResponseRedirect
@@ -10,11 +11,11 @@ from django.contrib.auth.backends import ModelBackend
 from django.urls import reverse
 
 from course_manager.models import Course
-from platfrom.models import Notice, News
+from platfrom.models import Notice, News, WorkCommit, UserMessage, UserCourse
 from .models import UserProfile,EmailVerifyRecord
 from django.db.models import Q
 from django.views.generic.base import View
-from .forms import LoginForm, RegisterForm, ForgetPwdForm, ModifyPwdForm, UserInfoForm
+from .forms import LoginForm, RegisterForm, ForgetPwdForm, ModifyPwdForm, UserInfoForm, UploadImageForm
 from django.contrib.auth.hashers import make_password
 from utils.email_send import send_register_eamil
 
@@ -39,7 +40,6 @@ class IndexView(View):
     '''首页'''
     def get(self, request):
         '''获取数据库中前四个课程信息'''
-        # courses = Course.objects.all()[:4]
         course_one = Course.objects.get(id='1')
         course_two = Course.objects.get(id='2')
         course_three = Course.objects.get(id='3')
@@ -242,7 +242,7 @@ class ModifyPwdView(View):
 class UserinfoView(LoginRequiredMixin,View):
     '''用户个人信息'''
     def get(self,request):
-        return render(request,'usercenter-info.html')
+        return render(request,'users/usercenter_info.html')
 
     def post(self, request):
         user_info_form = UserInfoForm(request.POST, instance=request.user)
@@ -316,31 +316,30 @@ class UploadImageView(LoginRequiredMixin,View):
 #             return HttpResponse('{"email":"验证码无效"}', content_type='application/json')
 #
 #
-# class MyCourseView(LoginRequiredMixin, View):
-#     '''我的课程'''
-#     def get(self, request):
-#         user_courses = UserCourse.objects.filter(user=request.user)
-#         return render(request, "usercenter-mycourse.html", {
-#             "user_courses":user_courses,
-#         })
-#
-#
-# class MyFavOrgView(LoginRequiredMixin,View):
-#     '''我收藏的课程机构'''
-#
-#     def get(self, request):
-#         org_list = []
-#         fav_orgs = UserFavorite.objects.filter(user=request.user, fav_type=2)
-#         # 上面的fav_orgs只是存放了id。我们还需要通过id找到机构对象
-#         for fav_org in fav_orgs:
-#             # 取出fav_id也就是机构的id。
-#             org_id = fav_org.fav_id
-#             # 获取这个机构对象
-#             org = CourseOrg.objects.get(id=org_id)
-#             org_list.append(org)
-#         return render(request, "usercenter-fav-org.html", {
-#             "org_list": org_list,
-#         })
+class MyCourseView(LoginRequiredMixin, View):
+    '''我的课程'''
+    def get(self, request):
+        user_courses = UserCourse.objects.filter(user=request.user)
+        return render(request, "users/usercenter_mycourse.html", {
+            "user_courses":user_courses,
+        })
+
+
+class MyWorkView(LoginRequiredMixin,View):
+    '''我的作业'''
+
+    def get(self, request):
+        # work_list = []
+        # user_id = WorkCommit.objects.filter(user=request.user)
+        # # 上面的user_id只是存放了id。我们还需要通过id找到学生作业
+        # for student in user_id:
+        #
+        #     student_id = student.user_id
+        #     # 获取这个机构对象
+        #     org = CourseOrg.objects.get(id=org_id)
+        #     org_list.append(org)
+        return render(request, "usercenter_work.html" )
+
 #
 #
 #
@@ -377,21 +376,21 @@ class UploadImageView(LoginRequiredMixin,View):
 
 
 
-# class MyMessageView(LoginRequiredMixin, View):
-#     '''我的消息'''
-#
-#     def get(self, request):
-#         all_message = UserMessage.objects.filter(user= request.user.id)
-#
-#         try:
-#             page = request.GET.get('page', 1)
-#         except PageNotAnInteger:
-#             page = 1
-#         p = Paginator(all_message, 4,request=request)
-#         messages = p.page(page)
-#         return  render(request, "usercenter-message.html", {
-#         "messages":messages,
-#         })
+class MyMessageView(LoginRequiredMixin, View):
+    '''我的消息'''
+
+    def get(self, request):
+        all_message = UserMessage.objects.filter(user= request.user.id)
+
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_message, 4,request=request)
+        messages = p.page(page)
+        return  render(request, "usercenter-message.html", {
+        "messages":messages,
+        })
 
 
 from django.shortcuts import render_to_response

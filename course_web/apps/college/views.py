@@ -182,16 +182,10 @@ class ClassroomTeacherView(View):
         current_page = 'teacher'
         course_classroom = Classroom.objects.get(id=int(classroom_id))
         all_teacher = course_classroom.teacher_set.all()
-        # for techer in all_teacher:
-        #     course_id = techer.course.id
-        #     print(course_id)
-        #     course_num= Course.objects.filter(id=int(course_id)).count()
-            # course_num = course.objects.all().count()
         return render(request, 'college/department_detail_teachers.html',{
             'all_teacher':all_teacher,
             'course_classroom': course_classroom,
             'current_page':current_page,
-            # 'course_num':course_num,
         })
 
 
@@ -206,7 +200,7 @@ class AddUserAskView(View):
     def post(self, request):
         userask_form = UserAskForm(request.POST)
         if userask_form.is_valid():
-            user_ask = userask_form.save(commit=True)
+            userask_form.save(commit=True)
             # 如果保存成功,返回json字符串,后面content type是告诉浏览器返回的数据类型
             return HttpResponse('{"status":"success"}', content_type='application/json')
         else:

@@ -1,7 +1,5 @@
 {#templates/base.html#}
-
 {% load staticfiles %}
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,27 +39,27 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!--具体菜单项-->
             <ul class="nav navbar-nav">
-                <li {% if request.path == '/' %} class="active" {% endif %}><a
+                <li class="{% if request.path == '/' %}active{% endif %}"><a
                     href="{% url 'index' %}">首页</a>
                 </li>
-                <li {% if request.path|slice:'8' == '/college' %} class="active" {% endif %}>
+                <li class="{% if request.path|slice:'8' == '/college' %}active{% endif %}">
                     <a href="{% url 'college:department_list' %}">
                         教学单位
                     </a>
                 </li>
-                <li {% if request.path|slice:'16' == '/college/teacher' %} class="active" {% endif %}>
+                <li class="{% if request.path|slice:'16' == '/college/teacher' %}active{% endif %}">
                     <a href="{% url 'college:teacher_list' %}">师资队伍</a>
                 </li>
-                <li {% if request.path|slice:'14' == '/platfrom/work' %} class="active" {% endif %}>
+                <li class="{% if request.path|slice:'14' == '/platfrom/work' %} 'active' {% endif %}">
                     <a href="{% url 'platfrom:work_list' %}">作业展示</a>
                 </li>
-                <li {% if request.path|slice:'9' == '/platfrom' %} class="active" {% endif %}>
+                <li class="{% if request.path|slice:'9' == '/platfrom' %} 'active' {% endif %}">
                     <a href="{% url 'platfrom:platfrom_list' %}">平台服务</a>
                 </li>
-                <li {% if request.path|slice:'10' == '/guestbook' %}class="active"{% endif %}>
+                <li class="{% if request.path|slice:'10' == '/guestbook' %}'active'{% endif %}">
                     <a href="{% url 'guestbook:guestbook' %}">交流社区</a>
                 </li>
-                <li {% if request.path|slice:'16' == '/college/message' %}class="active"{% endif %}>
+                <li class="{% if request.path|slice:'16' == '/college/message' %}'active'{% endif %}">
                     <a href="{% url 'college:message' %}">关于我们</a>
                 </li>
             </ul>
@@ -72,17 +70,30 @@
                 <button type="submit" class="btn bg-info">搜索</button>
             </form>
             <div class="navbar-nav navbar-right" >
-                <!--登录后跳转-->
                 {% if request.user.is_authenticated %}
-                    <div class="personal">
-                        <dl class="user fr">
-                            <dt><img class="img-circle" width="30" height="30" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
-                        </dl>
-                        <a class="fr" href="{% url 'logout' %}">退出</a>
-                    </div>
-                {% else %}
-                    <a class="fr registerbtn" href="{% url 'register' %}">注册</a>
-                {% endif %}
+                        <div class="personals">
+                            <dl class="user fr">
+                                <dd>{{ user.username }}<img class="down fr"
+                                                            src="{% static 'images/top_down.png' %}" /></dd>
+                                <dt><img width="40" height="40" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                            </dl>
+                            <div class="userdetail">
+                                <dl>
+                                    <dt><img width="80" height="80" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                                    <dd>
+                                        <h2>{{ request.user.nick_name }}</h2>
+                                        <p>{{ request.user.username }}</p>
+                                    </dd>
+                                </dl>
+                                <div class="btn">
+                                    <a class="personcenter fl" href="{% url 'users:user_info' %}">进入个人中心</a>
+                                    <a class="fr" href="{% url 'logout' %}">退出</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                <a style="color:white" class="fr registerbtn" href="{% url 'register' %}">注册</a>
+                    {% endif %}
             </div>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -140,7 +151,7 @@
             $.ajax({
                 cache: false,
                 type: "POST",
-                url: "/org/add_ask/",
+                url: "{% url 'college:add_ask' %}",
                 data: $('#jsStayForm').serialize(),
                 async: true,
                 success: function (data) {
@@ -153,7 +164,10 @@
                 },
             });
         });
-    })
+    });
+
+
+
 
 </script>
 
