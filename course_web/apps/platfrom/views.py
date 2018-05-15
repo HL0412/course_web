@@ -71,29 +71,29 @@ class CommitWorktView(View):
 class DownPPTView(View):
     def get(self, request):
         current_page = "down_ppt"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_downPPT.html',{'current_page':current_page})
 
 class DownDataView(View):
     def get(self, request):
         current_page = "down_data"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_downdata.html',{'current_page':current_page})
 
 class PublishWorkView(View):
     def get(self, request):
         current_page = "publishWork"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_publishWork.html',{'current_page':current_page})
 
 class UpPPTView(View):
     def get(self, request):
         current_page = "up_ppt"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_uploadPPT.html',{'current_page':current_page})
 
 class UpDataView(View):
     def get(self, request):
         current_page = "up_data"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_uploadData.html',{'current_page':current_page})
 
 class UpVideoView(View):
     def get(self, request):
         current_page = "up_video"
-        return render(request, 'platfrom/platfrom_commitWork.html',{'current_page':current_page})
+        return render(request, 'platfrom/platfrom_uploadVideo.html',{'current_page':current_page})

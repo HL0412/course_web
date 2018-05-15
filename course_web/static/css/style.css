@@ -653,7 +653,6 @@ nav .personal a:hover {
     height: 40px;
     padding-left: 20px;
     padding-top: 10px;
-    font-weight: bold;
     border-radius: 5px;
     margin-bottom: 0;
     font-family: "Baskerville Old Face", serif;
@@ -970,7 +969,7 @@ nav .personal a:hover {
     font-size: 16px;
     font-family: '等线 Light', monospace;
     border: 1px solid #dcdcdc;
-    padding: 20px;
+    padding-top:20px;
 }
 .myself img{
     width: 120px;
@@ -1061,8 +1060,8 @@ textarea{
 .guestbook .search_btn {
     background: #42baff;
     cursor: pointer;
-    margin-top: 12.4%;
-    margin-right: 10.2%;
+    margin-top: 14.2%;
+    margin-right: 8.4%;
 }
 .guestbook_list{
     margin-top: 50px;
@@ -2378,7 +2377,8 @@ textarea:focus {
 .feature {
     height: 125px;
     border: 1px solid #ccc;
-    margin: 30px 0;
+    margin: 30px auto;
+    width: 80%;
 }
 
 .feature li {
@@ -2402,7 +2402,7 @@ textarea:focus {
 .feature .pic {
     position: absolute;
     top: 20px;
-    left: 130px;
+    left: 100px;
     transition: all 0.5s ease 0s;
 }
 
@@ -4730,10 +4730,6 @@ footer .footer .links a:hover {
     color: #3a3a3a;
     border-bottom: 1px solid #eaeaea;
     background: url(../images/arrow.png) no-repeat 95% center;
-}
-
-.personal_list .left li:last-child {
-    border: 0;
 }
 
 .personal_list .left li:hover, .personal_list .left .active2 {
