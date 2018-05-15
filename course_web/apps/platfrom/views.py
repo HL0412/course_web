@@ -61,10 +61,32 @@ class WorkListView(View):
 class WorkDetailView(View):
     def get(self, request, work_id):
         work = WorkCommit.objects.get(id=int(work_id))
-        print(work)
         return render(request, 'platfrom/work_detail.html', {'work': work})
 
-
-class PlatfromListView(View):
+class CommitWorktView(View):
     def get(self, request):
-        return render(request, 'platfrom/platfrom_list.html')
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class DownPPTView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class DownDataView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class PublishWorkView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class UpPPTView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class UpDataView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')
+
+class UpVideoView(View):
+    def get(self, request):
+        return render(request, 'platfrom/platfrom_commitWork.html')

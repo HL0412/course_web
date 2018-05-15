@@ -54,7 +54,7 @@
                     <a href="{% url 'platfrom:work_list' %}">作业展示</a>
                 </li>
                 <li class="{% if request.path|slice:'9' == '/platfrom' %} 'active' {% endif %}">
-                    <a href="{% url 'platfrom:platfrom_list' %}">平台服务</a>
+                    <a href="{% url 'platfrom:platfrom' %}">平台服务</a>
                 </li>
                 <li class="{% if request.path|slice:'10' == '/guestbook' %}'active'{% endif %}">
                     <a href="{% url 'guestbook:guestbook' %}">交流社区</a>

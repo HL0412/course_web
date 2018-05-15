@@ -5,7 +5,7 @@ from college.models import Classroom, Department
 from users.models import UserProfile
 class Teacher(models.Model):
     '''教师表'''
-    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     department = models.ForeignKey(Department, verbose_name='所属教学单位', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
@@ -67,7 +67,7 @@ class Course(models.Model):
 
 class Student(models.Model):
     '''学生表'''
-    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, primary_key=True, verbose_name='用户名')
+    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     course = models.ForeignKey(Course, verbose_name='所学课程', on_delete=models.CASCADE)
     name = models.CharField(max_length=45, verbose_name='姓名')
