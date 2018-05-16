@@ -597,10 +597,26 @@ caption {
     margin-top: 100px;
     font-family: 幼圆, serif;
     display:inline;
-
+}
+.loginbtn {
+    width: 80px;
+    line-height: 30px;
+    float: right;
+    background: #8ed9f2;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 100px;
+    font-family: 幼圆, serif;
+    display:inline;
 }
 
 .registerbtn:hover {
+    background: #95e6ff;
+}
+.loginbtn:hover {
     background: #95e6ff;
 
 }
@@ -672,29 +688,16 @@ nav .personal a:hover {
 }
 
 /*首页的登录*/
-.login{
+.index_img{
     background-color: #fff;
-    height: 400px;
+    height: 440px;
     border-radius:5px;
     padding-top: 40px;
     padding-left: 12%;
-    color: #5bc0de;
-    font-family: "Arial Rounded MT Bold", cursive;
     border:1px solid #dcdcdc;;
     font-size: 16px;
 }
-.login .marb8 input {
-    color: #5bc0de;
-    font-size: 14px;
-    width: 60%;
-    border-radius: 5px;
-}
-.login .marb20 input {
-    color: #5bc0de;
-    font-size: 14px;
-    width: 60%;
-    border-radius: 5px;
-}
+
 /*首页登录后显示个人信息*/
 .personal_details{
     background-color: #fff;

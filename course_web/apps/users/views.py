@@ -47,8 +47,9 @@ class IndexView(View):
         course_four = Course.objects.get(id='4')
         notices = Notice.objects.all().order_by('-publish_time')[:10]
         news = News.objects.all().order_by('-publish_time')[:10]
+        works = WorkCommit.objects.all()[:10]
         return render(request, "index.html", {'course_one' : course_one, 'course_two' : course_two, 'course_three' : course_three,
-                                              'course_four' : course_four, 'notices' : notices, 'news' : news})
+                                              'course_four' : course_four, 'notices' : notices, 'news' : news, 'works' : works})
 
 
 class LoginView(View):
@@ -64,19 +65,23 @@ class LoginView(View):
             # 获取用户提交的用户名和密码
             user_name = request.POST.get('username', None)
             pass_word = request.POST.get('password', None)
-            check_box_list = request.POST.get('check_box_list', None)
-            print(check_box_list)
-            if int(check_box_list) == 1:
-                is_student = 1
-                is_teacher = 0
-                print(is_student,is_teacher)
+            rank = request.POST.get('rank', None)
+            if rank == '学生':
+                is_student = True
+                is_teacher = False
             else:
-                is_teacher = 1
-                is_student = 0
+                is_student = False
+                is_teacher = True
             # 成功返回user对象,失败None
-            user = authenticate(username=user_name, password=pass_word, is_teacher=is_teacher, is_student=is_student)
+            user = authenticate(username=user_name, password=pass_word)
+
             # 如果不是null说明验证成功
             if user is not None:
+                if user.is_student == is_student and user.is_teacher == is_teacher:
+                    pass
+                else:
+                    return render(request, 'login.html', {'msg': '用户权限不对', 'login_form': login_form})
+
                 if user.is_active:
                     # 只有注册激活才能登录
                     login(request, user)
@@ -90,42 +95,6 @@ class LoginView(View):
 
         else:
             return render(request,'login.html',{'login_form':login_form})
-
-# 首页的登录
-class LoginIndexView(View):
-    def get(self,request):
-        return render(request, 'index.html')
-    def post(self,request):
-        # 实例化
-        login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            # 获取用户提交的用户名和密码
-            user_name = request.POST.get('username', None)
-            pass_word = request.POST.get('password', None)
-            check_box_list = request.POST.get('check_box_list', None)
-            if int(check_box_list) == 1:
-                is_student = 1
-                is_teacher = 0
-
-            else:
-                is_teacher = 1
-                is_student = 0
-
-            # 成功返回user对象,失败None
-            user = authenticate(username=user_name, password=pass_word)
-            # 如果不是null说明验证成功
-            if user is not None:
-                if user.is_active:
-                    # 只有注册激活才能登录
-                    login(request, user)
-                    return HttpResponseRedirect(reverse('index'))
-                else:
-                    return render(request, 'index.html', {'msg': '请前往邮箱激活账号', 'login_form': login_form})
-            # 只有当用户名或密码不存在时，才返回错误信息到前端
-            else:
-                return render(request, 'index.html', {'msg': '用户名或密码错误','login_form':login_form})
-        else:
-            return render(request,'index.html',{'login_form':login_form})
 
 # 激活用户
 class ActiveUserView(View):
@@ -209,6 +178,7 @@ class ForgetPwdView(View):
 
 
 class ResetView(View):
+    '''重置密码'''
     def get(self, request, active_code):
         all_records = EmailVerifyRecord.objects.filter(code=active_code)
         if all_records:
@@ -319,12 +289,23 @@ class UpdateEmailView(LoginRequiredMixin, View):
 
 
 class MyCourseView(LoginRequiredMixin, View):
-    '''我的课程'''
+    '''我的课程--学生'''
     def get(self, request):
         current_page = 'mycourse'
         user_courses = UserCourse.objects.filter(user=request.user)
         print(user_courses)
         return render(request, "users/usercenter_mycourse.html", {
+            "user_courses" : user_courses,
+            "current_page" : current_page
+        })
+
+class MyTeachCourseView(LoginRequiredMixin, View):
+    '''我所教的课程--教师'''
+    def get(self, request):
+        current_page = 'my_teach_course'
+        user_courses = UserCourse.objects.filter(user=request.user)
+        print(user_courses)
+        return render(request, "users/usercenter_my_teach_course.html", {
             "user_courses" : user_courses,
             "current_page" : current_page
         })
@@ -337,9 +318,16 @@ class MyWorkView(LoginRequiredMixin,View):
         current_page = 'mywork'
         return render(request, "users/usercenter_work.html" ,{'current_page': current_page})
 
+class MyPublishWorkView(LoginRequiredMixin,View):
+    '''我发布作业'''
+
+    def get(self, request):
+        current_page = 'my_publish_work'
+        return render(request, "users/usercenter_publish_work.html" ,{'current_page': current_page})
+
 
 class WorkFinishView(LoginRequiredMixin,View):
-
+    '''我提交的作业'''
     def get(self, request):
         return render(request, "users/usercenter_workfinish.html")
 

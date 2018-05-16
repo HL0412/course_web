@@ -14,11 +14,11 @@ Including another pathconf
     2. Add a path to pathpatterns:  path('blog/', include('blog.urls'))
 """
 from django.views.static import serve
-from course_web.settings import STATIC_ROOT, MEDIA_ROOT
+from course_web.settings import  MEDIA_ROOT
 from django.urls import path, include, re_path
 
 from users.views import IndexView, LoginView, LogoutView, RegisterView, ForgetPwdView, ModifyPwdView, ResetView, \
-    ActiveUserView, LoginIndexView
+    ActiveUserView
 from xadmin.plugins import xversion
 import xadmin
 
@@ -29,11 +29,10 @@ xadmin.autodiscover()
 
 urlpatterns = [
 
-    re_path(r'^static/(?P<path>.*)', serve, {"document_root": STATIC_ROOT}),
+    # re_path(r'^static/(?P<path>.*)', serve, {"document_root": STATIC_ROOT}),
     path('xadmin/', xadmin.site.urls),
     path('', IndexView.as_view(), name='index'),
     path('login/',LoginView.as_view(),name = 'login'),
-    path('login_index/',LoginIndexView.as_view(), name = 'login_index'),
     path('logout/', LogoutView.as_view(), name="logout"),
     path('register/',RegisterView.as_view(),name = 'register'),
     re_path('active/(?P<active_code>.*)/',ActiveUserView.as_view(),name='user_active'),
@@ -55,7 +54,7 @@ urlpatterns = [
     path('ueditor/',include('DjangoUeditor.urls' )),
 
 ]
-# 全局404页面配置
-handler404 = 'users.views.pag_not_found'
-# 全局500页面配置
-handler500 = 'users.views.page_error'
+# # 全局404页面配置
+# handler404 = 'users.views.pag_not_found'
+# # 全局500页面配置
+# handler500 = 'users.views.page_error'

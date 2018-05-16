@@ -74,8 +74,8 @@
                         {{ msg }}
                     </div>
                     <div class="checkbox">
-                            <input type="checkbox" name="check_box_list" id="student" value="1">&nbsp;<label>学生</label>
-                            <input type="checkbox" name="check_box_list" id="teacher" value="2">&nbsp;<label>教师</label>
+                            <input type="radio"  name="rank" value="学生" checked="True">&nbsp;<label>学生</label>
+                            <input type="radio" name="rank" value="老师">&nbsp;<label>教师</label>
                     </div>
                     <div class="auto-box marb38">
                         <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>

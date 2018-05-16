@@ -133,7 +133,6 @@ class DepartmentView(View):
 
 class ClassroomHomeView(View):
     '''班级首页'''
-
     def get(self, request, classroom_id):
         current_page = 'home'
         course_classroom = Classroom.objects.get(id=int(classroom_id))
@@ -160,7 +159,6 @@ class ClassroomCourseView(View):
             'all_courses':all_courses,
             'course_classroom': course_classroom,
             'current_page':current_page,
-
         })
 
 
@@ -170,8 +168,8 @@ class ClassroomDescView(View):
         current_page = 'desc'
         course_classroom = Classroom.objects.get(id=int(classroom_id))
         return render(request, 'college/department_detail_desc.html',{
-            'course_classroom ': course_classroom ,
-            'current_page':current_page,
+            'course_classroom': course_classroom,
+            'current_page': current_page,
         })
 
 class ClassroomTeacherView(View):
