@@ -63,6 +63,11 @@ class WorkDetailView(View):
         work = WorkCommit.objects.get(id=int(work_id))
         return render(request, 'platfrom/work_detail.html', {'work': work})
 
+class PlatfromView(View):
+    def get(self, request):
+        current_page = "platfrom"
+        return render(request, 'platfrom/platfrom_home.html',{'current_page':current_page})
+
 class CommitWorktView(View):
     def get(self, request):
         current_page = "commitWork"

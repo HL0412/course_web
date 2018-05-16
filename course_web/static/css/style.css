@@ -5709,9 +5709,10 @@ footer .footer .links a:hover {
 .department-tips {
     float: left;
     width: 100%;
+    margin-left: -3px;
     text-align: center;
     color: #fff;
-    background-color: #ff261e;
+    background-color: #ff928e;
 }
 
 .departmentright .rightform div.errorput {

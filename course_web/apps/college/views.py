@@ -195,10 +195,11 @@ class AddUserAskView(View):
     """
     用户添加学习
     """
+
     def post(self, request):
         userask_form = UserAskForm(request.POST)
         if userask_form.is_valid():
-            userask_form.save(commit=True)
+            user_ask = userask_form.save(commit=True)
             # 如果保存成功,返回json字符串,后面content type是告诉浏览器返回的数据类型
             return HttpResponse('{"status":"success"}', content_type='application/json')
         else:
