@@ -138,9 +138,12 @@ class RegisterView(View):
         if register_form.is_valid():
             username = request.POST.get('username', None)
             user_name = request.POST.get('email', None)
-            # 如果用户已存在，则提示错误信息
-            if UserProfile.objects.filter(email = username):
-                return render(request, 'register.html', {'register_form':register_form,'msg': '用户已存在'})
+            # 如果邮箱已存在，则提示错误信息
+            if UserProfile.objects.filter(email = user_name):
+                return render(request, 'register.html', {'register_form':register_form,'msg': '邮箱已存在,请重新输入'})
+            if UserProfile.objects.filter(username=username):
+                return render(request, 'register.html', {'register_form': register_form, 'msg': '用户名已存在,请重新输入'})
+
             pass_word = request.POST.get('password', None)
             check_box_list = request.POST.get('check_box_list', None)
 
@@ -170,7 +173,7 @@ class ForgetPwdView(View):
     def post(self,request):
         forget_form = ForgetPwdForm(request.POST)
         if forget_form.is_valid():
-            email = request.POST.get('email',None)
+            email = request.POST.get('email', None)
             send_register_eamil(email,'forget')
             return render(request, 'send_success.html')
         else:
@@ -217,10 +220,7 @@ class UserinfoView(LoginRequiredMixin, View):
         return render(request,'users/usercenter_info.html', {"current_page" : current_page})
 
     def post(self, request):
-
-        print(request.user)
         user_info_form = UserInfoForm(request.POST, instance=request.user)
-        print(user_info_form.is_valid())
         if user_info_form.is_valid():
             user_info_form.save()
             return HttpResponse('{"status":"success"}', content_type='application/json')
@@ -295,11 +295,17 @@ class MyCourseView(LoginRequiredMixin, View):
     '''我的课程--学生'''
     def get(self, request):
         current_page = 'mycourse'
-        user_courses = UserCourse.objects.filter(user=request.user)
+        # user_courses = UserCourse.objects.filter(user=request.user)
+        # print(user_courses)
+        # return render(request, "users/usercenter_mycourse.html", {
+        #     "user_courses" : user_courses,
+        #     "current_page" : current_page
+        # })
+        user_courses =Course.objects.filter(student=request.user.id)
         print(user_courses)
         return render(request, "users/usercenter_mycourse.html", {
-            "user_courses" : user_courses,
-            "current_page" : current_page
+            "user_courses": user_courses,
+            "current_page": current_page
         })
 
 class MyTeachCourseView(LoginRequiredMixin, View):

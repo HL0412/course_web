@@ -17,7 +17,7 @@ class UserProfile(AbstractUser):
     nick_name = models.CharField('昵称',max_length=50,default='')
     birthday = models.DateField('生日',null=True,blank=True)
     gender = models.CharField('性别',max_length=10,choices=gender_choices,default='female')
-    adress = models.CharField('地址',max_length=100,default='')
+    address = models.CharField('所在系',max_length=100,default='')
     mobile = models.CharField('手机号',max_length=11,null=True,blank=True)
     age = models.IntegerField(default=18, verbose_name='年龄')
     image = models.ImageField(upload_to='users/%Y/%m',default='image/default.png',max_length=100)

@@ -176,7 +176,7 @@ $(function(){
                 }else if(data.birday){
                    _showValidateError($('#birth_day'), data.birday);
                 }else if(data.address){
-                   _showValidateError($('#adress'), data.adress);
+                   _showValidateError($('#address'), data.address);
                 }else if(data.status == "failure"){
                      Dml.fun.showTipsDialog({
                         title: '保存失败',
