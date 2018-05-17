@@ -9,15 +9,15 @@ a:hover{
 }
 .c-box{
     width:100%;
-    min-width: 1190px;
+    min-width: 1200px;
     overflow:hidden;
 }
 .fff-box{
     background:#fff;
 }
 .bg-box{
-    /*margin-top: -10%;*/
     background:url(../images/2.jpg) repeat center center;
+    height: 100%;
 }
 .header-box{
     width:1000px;
@@ -27,16 +27,14 @@ a:hover{
     font-size:14px;
     color:#666;
 }
-.hd-tips{
 
-}
 .hd-bar > li{
     float:left;
     padding:0 26px;
     border-right:1px solid #eaeaea;
 }
 .hd-bar > li > span{
-    color:#fa8341;
+    color: #ff859e;
     font-weight:bold;
 }
 .hd-bar > li > a{
@@ -45,7 +43,7 @@ a:hover{
 
 .login-box{
     width:900px;
-    margin:150px auto;
+    margin:80px auto;
 }
 .hd-login{
     position:relative;
@@ -80,7 +78,8 @@ a:hover{
     margin-top:48px;
     padding-left:20px;
     color:#fff;
-    background:url(../images/homepage.png) no-repeat 0 top;
+    background:url(../images/homepage.png) no-repeat 0;
+    margin-right: 50px;
 }
 .slide{
     position: relative;

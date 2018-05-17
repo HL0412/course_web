@@ -83,6 +83,40 @@ class CollegeView(View):
         })
 
 
+
+class CollegeListView(View):
+    '''教学单位列表'''
+    def get(self, request):
+
+        all_department = Department.objects.all()
+
+        for department in all_department:
+            if department.name == 'djx':
+                department.name = '电子信息与计算机工程系'
+            if department.name == 'tmx':
+                department.name = ' 资源勘查与土木工程系'
+            if department.name == 'ysx':
+                department.name = '艺术设计系'
+            if department.name == 'wyx':
+                department.name = '外语系'
+            if department.name == 'hnx':
+                department.name = '核工程与新能源技术系'
+            if department.name == 'glx':
+                department.name = '管理系'
+            if department.name == 'jjx':
+                department.name = '经济系'
+            if department.name == 'zdh':
+                department.name = '自动化工程系'
+        return render(request, "college/college_list.html", {'all_department': all_department})
+
+class DepartmentDetailView(View):
+    '''教学单位详情'''
+    def get(self, request, department_id):
+        department = Department.objects.get(id=int(department_id))
+        return render(request, 'college/department_detail.html', {'department': department})
+
+
+
 class TeacherListView(View):
     # 教师列表
     def get(self, request):

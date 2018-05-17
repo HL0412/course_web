@@ -210,14 +210,17 @@ class ModifyPwdView(View):
 
 
 
-class UserinfoView(LoginRequiredMixin,View):
+class UserinfoView(LoginRequiredMixin, View):
     '''用户个人信息'''
     def get(self,request):
         current_page = 'myself'
         return render(request,'users/usercenter_info.html', {"current_page" : current_page})
 
     def post(self, request):
+
+        print(request.user)
         user_info_form = UserInfoForm(request.POST, instance=request.user)
+        print(user_info_form.is_valid())
         if user_info_form.is_valid():
             user_info_form.save()
             return HttpResponse('{"status":"success"}', content_type='application/json')
@@ -239,7 +242,7 @@ class UploadImageView(LoginRequiredMixin,View):
             return HttpResponse('{"status":"fail"}', content_type='application/json')
 
 
-class UpdatePwdView(View):
+class UpdatePwdView(LoginRequiredMixin,View):
     """
     个人中心修改用户密码
     """

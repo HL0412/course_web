@@ -67,15 +67,15 @@
                         <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                         <input name="password" id="password_l" type="password" placeholder="请输入密码" />
                     </div>
-                    <div class="error btns login-form-tips" id="jsLoginTips">
+                    <div class="checkbox">
+                            <input type="radio"  name="rank" value="学生" checked="True">&nbsp;<label>学生</label>
+                            <input type="radio" name="rank" value="老师">&nbsp;<label>教师</label>
+                    </div>
+                     <div class="error btns login-form-tips" id="jsLoginTips">
                         {% for key,error in login_form.errors.items %}
                             {{ error }}
                         {% endfor %}
                         {{ msg }}
-                    </div>
-                    <div class="checkbox">
-                            <input type="radio"  name="rank" value="学生" checked="True">&nbsp;<label>学生</label>
-                            <input type="radio" name="rank" value="老师">&nbsp;<label>教师</label>
                     </div>
                     <div class="auto-box marb38">
                         <a class="fr" href="{% url 'forget_pwd' %}">忘记密码？</a>

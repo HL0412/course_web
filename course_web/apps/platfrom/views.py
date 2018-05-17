@@ -35,6 +35,7 @@ class WorkListView(View):
     def get(self, request):
 
         all_work = WorkCommit.objects.all().order_by('-commit_time')
+        students = WorkCommit.objects.all()[:10]
         grade = request.GET.get('grade', "")
         if grade:
             if grade == 'freshman':
@@ -55,6 +56,7 @@ class WorkListView(View):
         return render(request, 'platfrom/work_list.html', {
             'works': works,
             'grade': grade,
+            'students':  students
         })
 
 
@@ -65,8 +67,18 @@ class WorkDetailView(View):
 
 class PlatfromView(View):
     def get(self, request):
-        current_page = "platfrom"
-        return render(request, 'platfrom/platfrom_home.html',{'current_page':current_page})
+        if request.user.is_authenticated is False:
+            current_page = "platfrom"
+            return render(request, 'platfrom/platfrom_home.html', {'current_page': current_page})
+        else:
+            if request.user.is_student:
+                current_page = "commitWork"
+                return render(request, 'platfrom/platfrom_commitWork.html', {'current_page': current_page})
+            elif request.user.is_teacher:
+                current_page = "publishWork"
+                return render(request, 'platfrom/platfrom_publishWork.html', {'current_page': current_page})
+
+
 
 class CommitWorktView(View):
     def get(self, request):

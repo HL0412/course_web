@@ -12,11 +12,12 @@ function sendCodeChangeEmail($btn){
         cache: false,
         type: "get",
         dataType:'json',
-        url:"/users/sendemail_code/",
+        url:"../sendemail_code",
         data:$('#jsChangeEmailForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
             $btn.val("发送中...");
+
             $btn.attr('disabled',true);
         },
         success: function(data){
@@ -36,11 +37,11 @@ function sendCodeChangeEmail($btn){
     });
 
 }
-//个人资料邮箱修改
+//个人中心邮箱修改
 function changeEmailSubmit($btn){
 var verify = verifyDialogSubmit(
         [
-          {id: '#jsChangeEmail', tips: Dml.Msg.epMail, errorTips: Dml.Msg.erMail, regName: 'email', require: true},
+          {id: '#jsChangeEmail', tips: Dml.Msg.epMail, errorTips: Dml.Msg.erMail, regName: 'email', require: true}
         ]
     );
     if(!verify){
@@ -50,7 +51,7 @@ var verify = verifyDialogSubmit(
         cache: false,
         type: 'post',
         dataType:'json',
-        url:"/users/update_email/ ",
+        url:"../update_email/",
         data:$('#jsChangeEmailForm').serialize(),
         async: true,
         beforeSend:function(XMLHttpRequest){
@@ -86,7 +87,7 @@ $(function(){
             cache: false,
             type: "POST",
             dataType:'json',
-            url:"",
+            url:"../update/pwd/",
             data:$('#jsResetPwdForm').serialize(),
             async: true,
             success: function(data) {
@@ -97,7 +98,7 @@ $(function(){
                 }else if(data.status == "success"){
                     Dml.fun.showTipsDialog({
                         title:'提交成功',
-                        h2:'修改密码成功，请重新登录!',
+                        h2:'修改密码成功，请重新登录!'
                     });
                     Dml.fun.winReload();
                 }else if(data.msg){
@@ -146,8 +147,9 @@ $(function(){
     );
   //保存个人资料
     $('#jsEditUserBtn').on('click', function(){
+
         var _self = $(this),
-            $jsEditUserForm = $('#jsEditUserForm')
+            $jsEditUserForm = $('#jsEditUserForm'),
             verify = verifySubmit(
             [
                 {id: '#nick_name', tips: Dml.Msg.epNickName, require: true}
@@ -156,11 +158,12 @@ $(function(){
         if(!verify){
            return;
         }
+
         $.ajax({
             cache: false,
             type: 'post',
             dataType:'json',
-            url:"/users/info/",
+            url:"../info/",
             data:$jsEditUserForm.serialize(),
             async: true,
             beforeSend:function(XMLHttpRequest){
@@ -193,6 +196,4 @@ $(function(){
             }
         });
     });
-
-
 });

@@ -2499,7 +2499,7 @@ textarea:focus {
 }
 
 .module .key, .key {
-    color: #ee9698 !important;
+
     font-size: 14px;
 }
 
@@ -3472,10 +3472,10 @@ footer .footer .links a:hover {
 }
 
 .list .group_recommend dl {
-    height: 240px;
+    height: 160px;
     padding: 20px;
     border-top: 1px solid #dcdcdc;
-    padding-bottom: 40px;
+    background-color: white;
 }
 
 .list .group_recommend dl:first-child {
@@ -3488,10 +3488,10 @@ footer .footer .links a:hover {
     line-height: 20px;
 }
 
-.list .group_recommend .key {
-    font-size: 18px;
-    color: #ff9d33;
-}
+/*.list .group_recommend .key {*/
+    /*font-size: 18px;*/
+    /*color: #ff9d33;*/
+/*}*/
 
 /*.groupPurchase_detail*/
 .groupPurchase_detail .toppro .left {
