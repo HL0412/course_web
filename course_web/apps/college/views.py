@@ -5,17 +5,22 @@ from django.views.generic.base import View
 # Create your views here.
 from college.models import Classroom, Department
 from course_manager.models import Teacher, Course
+from django.http import HttpResponse
+from .forms import UserAskForm
+
 
 class SearchView(View):
     '''导航条的搜索'''
     def get(self, request):
         q = request.GET.get('q')
-        if not q:
-            return HttpResponse('{"status":"fail", "msg":"请输入搜索内容"}', content_type='application/json')
+        # if not q:
+        #     return HttpResponse('{"status":"fail", "msg":"请输入搜索内容"}', content_type='application/json')
         course_list = Course.objects.filter(name__icontains=q)
         print(course_list.exists())
         if course_list.exists():
-            return HttpResponse('{"status":"success"}', content_type='application/json')
+            print("跳转到课程列表页")
+            # return HttpResponse('{"status":"success"}', content_type='application/json')
+            return render(request, "course/course_list.html", {'course_list': course_list})
         else:
             return HttpResponse('{"status":"fail", "msg":"没有此课程信息，请重新输入"}', content_type='application/json')
 
@@ -232,10 +237,6 @@ class ClassroomTeacherView(View):
             'course_classroom': course_classroom,
             'current_page':current_page,
         })
-
-
-from django.http import HttpResponse
-from .forms import UserAskForm
 
 
 class AddUserAskView(View):
