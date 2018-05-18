@@ -17,9 +17,11 @@
     {% block custom_css %}
 
     {% endblock %}
+
     <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/search.js' %}"></script>
 
 </head>
 <body>
@@ -50,47 +52,48 @@
                 <li class="{% if request.path|slice:'16' == '/college/teacher' %}active{% endif %}">
                     <a href="{% url 'college:teacher_list' %}">师资队伍</a>
                 </li>
-                <li class="{% if request.path|slice:'14' == '/platfrom/work' %} 'active' {% endif %}">
+                <li class="{% if request.path|slice:'14' == '/platfrom/work' %}active{% endif %}">
                     <a href="{% url 'platfrom:work_list' %}">作业展示</a>
                 </li>
-                <li class="{% if request.path|slice:'9' == '/platfrom' %} 'active' {% endif %}">
+                <li class="{% if request.path|slice:'9' == '/platfrom' %}active{% endif %}">
                     <a href="{% url 'platfrom:platfrom' %}">平台服务</a>
                 </li>
-                <li class="{% if request.path|slice:'10' == '/guestbook' %}'active'{% endif %}">
+                <li class="{% if request.path|slice:'10' == '/guestbook' %}active{% endif %}">
                     <a href="{% url 'guestbook:guestbook' %}">交流社区</a>
                 </li>
-                <li class="{% if request.path|slice:'16' == '/college/message' %}'active'{% endif %}">
+                <li class="{% if request.path|slice:'16' == '/college/message' %}active{% endif %}">
                     <a href="{% url 'college:message' %}">关于我们</a>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left" id="searchForm">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="请输入课程名" name="q" required>
                 </div>
-                <button type="submit" class="btn bg-info">搜索</button>
+                <button type="submit" class="btn bg-info" id="search">搜索</button>
+                {% csrf_token %}
             </form>
             <div class="navbar-nav navbar-right" >
                 {% if request.user.is_authenticated %}
-                        <div class="personals">
-                            <dl class="user fr">
-                                <dd>{{ user.username }}<img class="down fr"
-                                                            src="{% static 'images/top_down.png' %}" /></dd>
-                                <dt><img width="40" height="40" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                    <div class="personals">
+                        <dl class="user fr">
+                            <dd>{{ user.username }}<img class="down fr"
+                                                        src="{% static 'images/top_down.png' %}" /></dd>
+                            <dt><img width="40" height="40" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                        </dl>
+                        <div class="userdetail">
+                            <dl>
+                                <dt><img width="80" height="80" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
+                                <dd>
+                                    <h2>{{ request.user.nick_name }}</h2>
+                                    <p>{{ request.user.username }}</p>
+                                </dd>
                             </dl>
-                            <div class="userdetail">
-                                <dl>
-                                    <dt><img width="80" height="80" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
-                                    <dd>
-                                        <h2>{{ request.user.nick_name }}</h2>
-                                        <p>{{ request.user.username }}</p>
-                                    </dd>
-                                </dl>
-                                <div class="btn">
-                                    <a class="personcenter fl" href="{% url 'users:user_info' %}">进入个人中心</a>
-                                    <a class="fr" href="{% url 'logout' %}">退出</a>
-                                </div>
+                            <div class="btn">
+                                <a class="personcenter fl" href="{% url 'users:user_info' %}">进入个人中心</a>
+                                <a class="fr" href="{% url 'logout' %}">退出</a>
                             </div>
                         </div>
+                    </div>
                     {% else %}
                     <a style="color:white" class="fr registerbtn" href="{% url 'register' %}">注册</a>
                     <a style="color:white; margin-right: 20px" class="fr loginbtn" href="{% url 'login' %}">登录</a>
@@ -160,16 +163,12 @@
                         $('#jsStayForm')[0].reset();
                         alert("提交成功")
                     } else if (data.status == 'fail') {
-                        $('#jsCompanyTips').html(data.msg)
+                        $('#jsDepartmentTips').html(data.msg)
                     }
-                },
+                }
             });
         });
     });
-
-
-
-
 </script>
 
 {% block custom_js %}{% endblock %}

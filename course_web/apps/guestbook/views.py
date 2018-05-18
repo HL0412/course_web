@@ -17,7 +17,6 @@ class PublishGuestbookView(LoginRequiredMixin,View):
     def post(self, request):
         if not request.user.is_authenticated:
             # 未登录时返回json提示未登录，跳转到登录页面是在ajax中做的
-
             return HttpResponse('{"status":"fail", "msg":"用户未登录"}', content_type='application/json')
             # return redirect('%s?next=%s' %(settings.LOGIN_URL, request.path))
 

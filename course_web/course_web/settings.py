@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import sys
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 sys.path.insert(0,os.path.join(BASE_DIR,'extra_apps'))
@@ -163,6 +166,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')   #指定根目录
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_URL='login'
+
+
 
 
 

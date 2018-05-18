@@ -36,9 +36,8 @@ class CustomBackend(ModelBackend):
         except Exception as e:
             return None
 
-
+#首页
 class IndexView(View):
-    '''首页'''
     def get(self, request):
         '''获取数据库中前四个课程信息'''
         course_one = Course.objects.get(id='1')
@@ -52,9 +51,8 @@ class IndexView(View):
                                               'course_four' : course_four, 'notices' : notices, 'news' : news, 'works' : works})
 
 
+#用户登录
 class LoginView(View):
-    '''用户登录'''
-
     def get(self,request):
         return render(request, 'login.html')
 

@@ -5,7 +5,6 @@ from django.views.generic.base import View
 # Create your views here.
 from course_manager.models import Course
 
-
 class CourseListView(View):
     # 课程列表
     def get(self, request):
