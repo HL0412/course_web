@@ -15,7 +15,7 @@ class SearchView(View):
         course_list = Course.objects.filter(name__icontains=q)
         print(course_list.exists())
         if course_list.exists():
-            return HttpResponse('{"status":"success", "course_list":course_list}', content_type='application/json')
+            return HttpResponse('{"status":"success"}', content_type='application/json')
         else:
             return HttpResponse('{"status":"fail", "msg":"没有此课程信息，请重新输入"}', content_type='application/json')
 
