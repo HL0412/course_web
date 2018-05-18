@@ -687,13 +687,12 @@ nav .personal a:hover {
     color: #5bc0de;
 }
 
-/*首页的登录*/
+
 .index_img{
     background-color: #fff;
-    height: 440px;
+    height: 280px;
     border-radius:5px;
-    padding-top: 40px;
-    padding-left: 12%;
+    padding: 40px 10%;
     border:1px solid #dcdcdc;;
     font-size: 16px;
 }
@@ -701,24 +700,24 @@ nav .personal a:hover {
 /*首页登录后显示个人信息*/
 .personal_details{
     background-color: #fff;
-    height: 400px;
+    height: 240px;
     border-radius:5px;
-    padding-top: 40px;
-    padding-left: 40px;
+    padding: 10px 40px;
     font-family: "Arial Rounded MT Bold", cursive;
     border:1px solid #dcdcdc;
     color: #8a8a8a;
-    font-size: 16px;
+    font-size: 14px;
+
 }
 .personal_details img{
-    height: 100px;
+    height: 80px;
     width: 80px;
     margin-bottom: 10px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
 }
 .personal_details dd{
-    line-height: 30px;
+    line-height: 20px;
 }
 /*from-group*/
 .form-group > input{
@@ -787,19 +786,19 @@ nav .personal a:hover {
     width: 61%;
 }
 #work{
-    height: 400px;
+    height: 240px;
     background-color: #fff;
     border: 1px solid #dcdcdc;
     margin-left: 0;
     margin-right: 0;
-    padding-top: 40px;
+    padding-top: 30px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 #work img{
     width: 300px;
-    height: 300px;
+    height: 180px;
 }
 /*news*/
 .news h4{
@@ -857,16 +856,16 @@ nav .personal a:hover {
 
 .content{
     border:1px solid #dcdcdc;
-    min-height: 320px;
+    min-height: 380px;
     line-height: 30px;
-    padding-left: 20px;
     margin-bottom: 30px;
-    padding-top: 5px;
+    padding-top: 15px;
     color: #8a8a8a;
     font-size: 16px;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     border-radius: 5px;
     background: white;
+    overflow: hidden;
 }
 .message{
     border:1px solid #dcdcdc;
@@ -891,7 +890,7 @@ nav .personal a:hover {
     width: 100%;
     border-radius: 10px;
     background: white;
-    min-height: 700px;
+    min-height: 320px;
 }
 .course_list dl{
     height: 240px;
@@ -928,32 +927,32 @@ nav .personal a:hover {
 .course_list dt a:hover{
     color: red;
 }
-.pagination{
-    float: right;
-}
-.pagination ul li {
-    float: left;
-    background-color: #7fd5ee;
-    width: 50px;
-    height: 30px;
-    text-align: center;
-    margin-right:5px;
-    padding-top: 8px;
-    margin-top: 30px;
-    border-radius: 2px;
-    cursor: pointer;
-    display:inline;
-}
-.pagination a{
-    text-decoration: none;
-    color: white;
-}
-.pagination li:hover{
-     background-color: #c4d6dc;
-}
-.pagination .active{
-     background-color: #c4d6dc;
-}
+/*.pagination{*/
+    /*float: right;*/
+/*}*/
+/*.pagination ul li {*/
+    /*float: left;*/
+    /*background-color: #7fd5ee;*/
+    /*width: 50px;*/
+    /*height: 30px;*/
+    /*text-align: center;*/
+    /*margin-right:5px;*/
+    /*padding-top: 8px;*/
+    /*margin-top: 30px;*/
+    /*border-radius: 2px;*/
+    /*cursor: pointer;*/
+    /*display:inline;*/
+/*}*/
+/*.pagination a{*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+/*}*/
+/*.pagination li:hover{*/
+     /*background-color: #c4d6dc;*/
+/*}*/
+/*.pagination .active{*/
+     /*background-color: #c4d6dc;*/
+/*}*/
 
 
 /*留言部分*/
@@ -967,7 +966,7 @@ nav .personal a:hover {
     width: 20%;
 }
 .myself{
-    height: 340px;
+    height: 342px;
     background: #ffffff;
     border-radius: 10px;
     font-size: 16px;
@@ -976,9 +975,9 @@ nav .personal a:hover {
     padding-top:20px;
 }
 .myself img{
-    width: 120px;
-    height: 100px;
-    margin: 10px;
+    width: 180px;
+    height: 280px;
+    margin: 10px 25px;
 
 }
 .myself dt{
@@ -1041,7 +1040,7 @@ textarea{
 .guestbook{
     border: 1px solid #dcdcdc;
     min-height: 400px;
-    margin-top: 18%;
+    margin-top: 21%;
     background: #ffffff;
     padding-left: 10%;
     overflow: hidden;
@@ -2380,9 +2379,10 @@ textarea:focus {
 /*feature*/
 .feature {
     height: 125px;
-    border: 1px solid #ccc;
+    border: 1px solid #dddddd;
     margin: 30px auto;
     width: 80%;
+    background: white;
 }
 
 .feature li {
@@ -3321,6 +3321,8 @@ footer .footer .links a:hover {
     height: 50px;
     line-height: 50px;
     text-indent: 0;
+    border: 1px solid #eaeaea;
+    border-bottom: none;
 }
 
 .tab_header li {

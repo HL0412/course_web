@@ -1,4 +1,4 @@
-
+from django.db.models.query_utils import Q
 from pure_pagination import Paginator, PageNotAnInteger
 from django.shortcuts import render
 from django.views.generic.base import View
@@ -13,14 +13,19 @@ class SearchView(View):
     '''导航条的搜索'''
     def get(self, request):
         q = request.GET.get('q')
-        # if not q:
-        #     return HttpResponse('{"status":"fail", "msg":"请输入搜索内容"}', content_type='application/json')
-        course_list = Course.objects.filter(name__icontains=q)
-        print(course_list.exists())
-        if course_list.exists():
-            print("跳转到课程列表页")
-            # return HttpResponse('{"status":"success"}', content_type='application/json')
-            return render(request, "course/course_list.html", {'course_list': course_list})
+        course_list = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))
+        course = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))[:]
+        # 进行分页
+        try:
+            page = request.GET.get('page', 1)
+            print(page)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(course_list, 5, request=request)
+        course_list = p.page(page)
+        if course_list:
+            return render(request, "course/course_list.html", {'course_list': course_list,
+                                                                 'course': course})
         else:
             return HttpResponse('{"status":"fail", "msg":"没有此课程信息，请重新输入"}', content_type='application/json')
 
