@@ -960,6 +960,14 @@ nav .personal a:hover {
     margin-top: 6%;
     margin-bottom: 10%;
 }
+.guestbook_message li a {
+    color: #65cae0;
+
+}
+.guestbook_message li a:hover {
+    color: #0a0a0a;
+
+}
 .guestbook-left{
     margin-left: 5%;
     margin-right: 5%;
@@ -975,14 +983,16 @@ nav .personal a:hover {
     padding-top:20px;
 }
 .myself img{
-    width: 180px;
-    height: 280px;
-    margin: 10px 25px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+
 
 }
 .myself dt{
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 50px;
     line-height: 30px;
 }
 textarea{
@@ -1068,11 +1078,12 @@ textarea{
 }
 .guestbook_list{
     margin-top: 50px;
-    min-height: 400px;
+    /*min-height: 400px;*/
     border: 1px solid #dcdcdc;
     background: #ffffff;
     font-size: 14px;
     overflow: hidden;
+    height: auto;
 
 }
 .guestbook_list h2{
@@ -1095,21 +1106,21 @@ textarea{
     padding-top: 10px;
 }
 .guestbook_list .contents{
-    width: 84%;
+    width: 80%;
     margin-left: 20px;
     overflow: hidden;
     padding-left: 10px;
     text-overflow: ellipsis;
     white-space:nowrap;
-    text-align: center;
 }
 .guestbook_list .time{
-    width: 10%;
+    width: 20%;
     float: right;
     text-align: center;
     display:inline;
     text-overflow: ellipsis;
     white-space:nowrap;
+    margin-top: -12px;
 }
 /*作业展示*/
 .work_list{
@@ -3381,6 +3392,8 @@ footer .footer .links a:hover {
     margin: 50px auto;
     display: table;
     text-align: center;
+    /*position: relative;*/
+    /*top: 180px;*/
 }
 
 .pageturn .pagelist {

@@ -5,9 +5,9 @@ import xadmin
 from guestbook.models import GuestBook
 
 class GuestBookAdmin:
-    list_display = ['title', 'ID_Card', 'author', 'sex', 'checkout', 'type', 'add_time']
-    search_fileds = ['title', 'ID_Card', 'author']
-    list_filter = ['title', 'ID_Card', 'author']
+    list_display = ['title', 'user', 'checkout', 'type']
+    search_fileds = ['title',  'user']
+    list_filter = ['title',  'user']
     model_icon = 'fa fa-list'
 
 xadmin.site.register(GuestBook, GuestBookAdmin)

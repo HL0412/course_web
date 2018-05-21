@@ -1,0 +1,1 @@
+from django import formsfrom guestbook.models import GuestBookclass publishGuestbookForm(forms.ModelForm):    class Meta:        model = GuestBook        fields = ['title', 'g_content', 'g_time']

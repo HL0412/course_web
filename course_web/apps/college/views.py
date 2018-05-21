@@ -14,18 +14,17 @@ class SearchView(View):
     def get(self, request):
         q = request.GET.get('q')
         course_list = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))
-        course = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))[:]
+        course = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))[:1]
         # 进行分页
         try:
             page = request.GET.get('page', 1)
-            print(page)
         except PageNotAnInteger:
             page = 1
         p = Paginator(course_list, 5, request=request)
-        course_list = p.page(page)
+        all_course = p.page(page)
+        print(course_list)
         if course_list:
-            return render(request, "course/course_list.html", {'course_list': course_list,
-                                                                 'course': course})
+            return render(request, "course/course_list.html", {'all_course':  all_course, 'course': course})
         else:
             return HttpResponse('{"status":"fail", "msg":"没有此课程信息，请重新输入"}', content_type='application/json')
 
