@@ -1,1 +1,1 @@
-from django import formsfrom guestbook.models import GuestBookclass publishGuestbookForm(forms.ModelForm):    class Meta:        model = GuestBook        fields = ['title', 'g_content', 'g_time']
+from django import formsfrom guestbook.models import GuestBook, Replyclass PublishGuestbookForm(forms.ModelForm):    class Meta:        model = GuestBook        fields = ['title', 'g_content', 'g_time']class ReplyForm(forms.ModelForm):    class Meta:        model = Reply        fields = ['r_content', 'r_time', 'guestbook']

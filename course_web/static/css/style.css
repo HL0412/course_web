@@ -1037,10 +1037,13 @@ textarea{
     border-right: 1px solid #cbcbcb;
     border-bottom: 1px solid #cbcbcb;
 }
+#guestbook_search{
+    margin-top: 10px;
+}
 .guestbook .fl{
-    margin-top: 30px;
+    margin-top: 20px;
     height: 30px;
-    width: 77%;
+    width: 75%;
     padding-left: 10px;
 }
 .guestbook img{
@@ -1057,7 +1060,7 @@ textarea{
     border-radius: 10px;
 }
 .guestbook h3{
-    margin-top: 80px;
+    margin-top: 20px;
     background: whitesmoke;
     width: 120%;
     height: 40px;
@@ -1073,8 +1076,7 @@ textarea{
 .guestbook .search_btn {
     background: #42baff;
     cursor: pointer;
-    margin-top: 14.2%;
-    margin-right: 8.4%;
+
 }
 .guestbook_list{
     margin-top: 50px;
@@ -1121,6 +1123,91 @@ textarea{
     text-overflow: ellipsis;
     white-space:nowrap;
     margin-top: -12px;
+}
+/*留言回复*/
+.guestbook_reply{
+    width: 87%;
+    margin-left: 6.6%;
+    border: 1px solid #efefef;
+    background: white;
+    min-height:400px;
+    margin-bottom: 7%;
+    font-size: 14px;
+}
+.guestbook_reply ul li{
+    float: left;
+}
+
+.guestbook_reply .guestbook_img{
+    padding: 3% 2% 2% 3%;
+}
+.guestbook_name{
+    margin-top: 3.5%;
+}
+.guestbook_time{
+    margin-top: 6%;
+    margin-left: -3%;
+}
+.guestbook_contents{
+    width: 82%;
+    min-height: 100px;
+    margin-top: 8%;
+    margin-left: 9%;
+    border-bottom: 1px solid #bcbcbc;
+    padding: 10px;
+    margin-bottom: 3%;
+}
+.reply{
+    margin-top: 6%;
+    margin-left:  68%;
+    cursor: pointer;
+}
+.reply a:hover{
+
+}
+.reply_content{
+    width: 82%;
+    margin-left: 9%;
+    display: none;
+    padding-bottom: 3%;
+}
+.reply_content textarea{
+    height:160px ;
+    padding: 15px;
+}
+.reply_list{
+    border-top: 20px solid #64cce2;
+    width: 82%;
+    margin-left: 9%;
+    background: white;
+    min-height:400px;
+    font-size: 14px;
+    padding-bottom: 3%;
+}
+.reply_list ul{
+    margin-top: 3%;
+}
+.reply_name{
+    margin-left: 2%;
+}
+.reply_time{
+    margin-top: 2.5%;
+    margin-left: -4%;
+
+}
+.re-reply{
+    margin-left: 77%;
+    margin-top: 2%;
+    margin-right: 0;
+}
+.reply_contents{
+
+    min-height: 100px;
+    margin-top: 8%;
+    margin-left: 6%;
+    border-bottom: 1px solid #bcbcbc;
+    padding: 10px;
+
 }
 /*作业展示*/
 .work_list{
