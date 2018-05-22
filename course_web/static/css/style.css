@@ -983,12 +983,10 @@ nav .personal a:hover {
     padding-top:20px;
 }
 .myself img{
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 260px;
     display: block;
-    margin: 20px auto;
-
-
+    margin: 20px 25px;
 }
 .myself dt{
     padding-top: 20px;
@@ -1127,8 +1125,8 @@ textarea{
 /*留言回复*/
 .guestbook_reply{
     width: 87%;
-    margin-left: 6.6%;
-    border: 1px solid #efefef;
+    margin-left: 5.6%;
+    border: 1px solid rgba(109, 111, 128, 0.13);
     background: white;
     min-height:400px;
     margin-bottom: 7%;
@@ -1146,7 +1144,7 @@ textarea{
 }
 .guestbook_time{
     margin-top: 6%;
-    margin-left: -3%;
+    margin-left: -10px;
 }
 .guestbook_contents{
     width: 82%;
@@ -1159,7 +1157,7 @@ textarea{
 }
 .reply{
     margin-top: 6%;
-    margin-left:  68%;
+    margin-left: 780px;
     cursor: pointer;
 }
 .reply a:hover{
@@ -1192,13 +1190,12 @@ textarea{
 }
 .reply_time{
     margin-top: 2.5%;
-    margin-left: -4%;
+    margin-left: -12px;
 
 }
 .re-reply{
-    margin-left: 77%;
-    margin-top: 2%;
-    margin-right: 0;
+    margin-left: 720px;;
+    margin-top: 20px;
 }
 .reply_contents{
 

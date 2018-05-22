@@ -8,7 +8,7 @@ from guestbook.forms import PublishGuestbookForm, ReplyForm
 from guestbook.models import GuestBook, Reply
 
 # Create your views here.
-class GuestbookView(View):
+class GuestbookView(LoginRequiredMixin, View):
     def get(self, request):
         all_guestbook = GuestBook.objects.all()
         hot_guestbook = GuestBook.objects.all().order_by('g_time')[:10]
@@ -68,7 +68,7 @@ class GuestbookSearchView(View):
                 return render(request, 'guestbook/guestbook.html', {'all_guestbook': all_guestbook, 'hot_guestbook':hot_guestbook})
 
 
-class GuestbookDetailView(View):
+class GuestbookDetailView(LoginRequiredMixin, View):
     def get(self, request, guestbook_id):
         guestbook = GuestBook.objects.get(id=int(guestbook_id))
         all_reply = Reply.objects.filter(guestbook_id=int(guestbook_id))
@@ -81,7 +81,7 @@ class GuestbookDetailView(View):
         return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook, 'all_reply': all_reply})
 
 
-class ReplyView(View):
+class ReplyView(LoginRequiredMixin, View):
 
     def post(self, request):
         if not request.user.is_authenticated:

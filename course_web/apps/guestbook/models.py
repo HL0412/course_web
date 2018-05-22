@@ -25,8 +25,9 @@ class GuestBook(models.Model):
 class Reply(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='回复者')
     r_content = models.TextField(verbose_name='回复内容')
-    r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
     guestbook = models.ForeignKey(GuestBook, on_delete=models.CASCADE, verbose_name='留言')
+    next_reply = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='回复')
+    r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
 
     class Meta:
         db_table = 'reply_info'
