@@ -13,13 +13,13 @@ class DepartmentAdmin:
     model_icon = 'fa fa-home'
 
 class ClassroomAdmin:
-    list_display = ['name', 'department', 'grade', 'classes', 'add_time']
-    search_fileds = ['name', 'department', 'grade',  'classes']
-    list_filter = ['name', 'department', 'grade', 'classes']
+    list_display = ['name', 'department', 'grade', 'add_time']
+    search_fileds = ['name', 'department', 'grade']
+    list_filter = ['name', 'department', 'grade']
     model_icon = 'fa fa-info'
 
 class TeacherAdmin:
-    list_display = ['name', 'number', 'rank',  'classroom', 'add_time']
+    list_display = ['name', 'number', 'rank', 'classroom', 'add_time']
     search_fileds = ['name', 'number']
     list_filter = ['name', 'number', 'classroom']
     model_icon = 'fa fa-users'

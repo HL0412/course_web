@@ -78,8 +78,8 @@ class GuestbookDetailView(LoginRequiredMixin, View):
         p = Paginator(all_reply, 5, request=request)
         all_reply = p.page(page)
         return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook, 'all_reply': all_reply})
-    def post(self, request, guestbook_id):
-        return render(request, 'guestbook/guestbook_detail.html')
+    # def post(self, request, guestbook_id):
+    #     return render(request, 'guestbook/guestbook_detail.html')
 
 
 class ReplyView(LoginRequiredMixin, View):

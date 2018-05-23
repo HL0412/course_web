@@ -75,7 +75,7 @@ class CollegeView(View):
                 all_classroom = all_classroom.filter(grade=grade)
 
         # 热门教学单位班级
-        hot_classroom = all_classroom.order_by('course_nums')[:10]
+        hot_classroom = all_classroom.order_by('-add_time')[:10]
 
         # 排序筛选
         sort = request.GET.get('sort', "")

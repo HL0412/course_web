@@ -1,9 +1,7 @@
 from datetime import datetime
 from django.db import models
-# Create your models here.
 from users.models import UserProfile
-
-
+# Create your models here.
 
 
 class GuestBook(models.Model):
@@ -11,7 +9,6 @@ class GuestBook(models.Model):
     title = models.CharField(max_length=45, verbose_name='标题')
     g_content = models.TextField(verbose_name='内容')
     g_time = models.DateTimeField(default=datetime.now, verbose_name='留言时间')
-
 
     class Meta:
         db_table = 'guestbook_info'
@@ -27,28 +24,16 @@ class Reply(models.Model):
     r_content = models.TextField(verbose_name='回复内容')
     guestbook = models.ForeignKey(GuestBook, on_delete=models.CASCADE, verbose_name='留言')
     r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
+    to_user = models.ForeignKey(UserProfile, blank=True, null=True,
+                                on_delete=models.CASCADE, verbose_name='二级回复者' , related_name='to_reply_user')
+    # 多级回复需要进行自关联
+    parent = models.ForeignKey("Reply",  on_delete=models.CASCADE, related_name="rid", null=True, blank=True)
 
     def __unicode__(self):
-        return "{0}@{1}".format(self.guestbook.user, self.user)
+        return "{0}@{1}".format(self.user, self.to_user)
 
     class Meta:
         db_table = 'reply_info'
         verbose_name = '留言回复管理'
         verbose_name_plural = "留言回复管理"
-
-class Reply_Reply(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='回复者')
-    r_content = models.TextField(verbose_name='回复内容')
-    Reply = models.ForeignKey(GuestBook, on_delete=models.CASCADE, verbose_name='回复')
-    next_reply = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='下一个回复')
-    r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
-
-    def __unicode__(self):
-        return "{0}@{1}".format(self.Reply.user, self.user)
-
-    class Meta:
-        db_table = 'reply_info'
-        verbose_name = '留言回复管理'
-
-
 
