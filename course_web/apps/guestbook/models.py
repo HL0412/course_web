@@ -26,15 +26,29 @@ class Reply(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='回复者')
     r_content = models.TextField(verbose_name='回复内容')
     guestbook = models.ForeignKey(GuestBook, on_delete=models.CASCADE, verbose_name='留言')
-    next_reply = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='回复')
     r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
+
+    def __unicode__(self):
+        return "{0}@{1}".format(self.guestbook.user, self.user)
 
     class Meta:
         db_table = 'reply_info'
         verbose_name = '留言回复管理'
         verbose_name_plural = "留言回复管理"
 
-    def __str__(self):
-        return self.r_content
+class Reply_Reply(models.Model):
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, verbose_name='回复者')
+    r_content = models.TextField(verbose_name='回复内容')
+    Reply = models.ForeignKey(GuestBook, on_delete=models.CASCADE, verbose_name='回复')
+    next_reply = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='下一个回复')
+    r_time = models.DateTimeField(default=datetime.now, verbose_name='回复时间')
+
+    def __unicode__(self):
+        return "{0}@{1}".format(self.Reply.user, self.user)
+
+    class Meta:
+        db_table = 'reply_info'
+        verbose_name = '留言回复管理'
+
 
 

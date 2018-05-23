@@ -48,7 +48,6 @@ class PublishGuestbookView(LoginRequiredMixin,View):
                     return HttpResponse('{"status":"fail", "msg":"留言发表失败"}', content_type='application/json')
 
 
-
 class GuestbookSearchView(View):
     def get(self, request):
         hot_guestbook = GuestBook.objects.all().order_by('g_time')[:10]
@@ -71,18 +70,19 @@ class GuestbookSearchView(View):
 class GuestbookDetailView(LoginRequiredMixin, View):
     def get(self, request, guestbook_id):
         guestbook = GuestBook.objects.get(id=int(guestbook_id))
-        all_reply = Reply.objects.filter(guestbook_id=int(guestbook_id))
+        all_reply = Reply.objects.filter(guestbook=guestbook)  #只存在一级留言回复
         try:
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        p = Paginator(all_reply, 10, request=request)
+        p = Paginator(all_reply, 5, request=request)
         all_reply = p.page(page)
         return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook, 'all_reply': all_reply})
+    def post(self, request, guestbook_id):
+        return render(request, 'guestbook/guestbook_detail.html')
 
 
 class ReplyView(LoginRequiredMixin, View):
-
     def post(self, request):
         if not request.user.is_authenticated:
             return HttpResponse('{"status":"fail", "msg":"用户未登录"}', content_type='application/json')
@@ -92,12 +92,14 @@ class ReplyView(LoginRequiredMixin, View):
             if replyForm:
                 content = request.POST.get('reply_content')
                 date = request.POST.get('date')
-                if content and date:
+                id = request.POST.get('id')
+                if content and date and id:
                     reply.user = request.user
                     reply.nickname =request.user.nick_name
                     reply.r_content = content
                     reply.r_time = date
+                    reply.guestbook_id = id
                     reply.save()
-                    return HttpResponse('{"status":"success", "msg":"留言回复成功"}', content_type='application/json')
+                    return HttpResponse('{"status":"success", "msg":"留言回复成功" }', content_type='application/json')
                 else:
                     return HttpResponse('{"status":"fail", "msg":"留言回复失败"}', content_type='application/json')

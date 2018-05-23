@@ -1144,14 +1144,13 @@ textarea{
 }
 .guestbook_time{
     margin-top: 6%;
-    margin-left: -10px;
+    margin-left: -38px;
 }
 .guestbook_contents{
     width: 82%;
-    min-height: 100px;
+    height: auto;
     margin-top: 8%;
     margin-left: 9%;
-    border-bottom: 1px solid #bcbcbc;
     padding: 10px;
     margin-bottom: 3%;
 }
@@ -1160,9 +1159,9 @@ textarea{
     margin-left: 780px;
     cursor: pointer;
 }
-.reply a:hover{
 
-}
+
+
 .reply_content{
     width: 82%;
     margin-left: 9%;
@@ -1190,16 +1189,15 @@ textarea{
 }
 .reply_time{
     margin-top: 2.5%;
-    margin-left: -12px;
+    margin-left: -14px;
 
 }
 .re-reply{
-    margin-left: 720px;;
+    margin-left: 722px;;
     margin-top: 20px;
 }
 .reply_contents{
-
-    min-height: 100px;
+    height: auto;
     margin-top: 8%;
     margin-left: 6%;
     border-bottom: 1px solid #bcbcbc;
