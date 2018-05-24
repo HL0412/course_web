@@ -1144,7 +1144,7 @@ textarea{
 }
 .guestbook_time{
     margin-top: 6%;
-    margin-left: -38px;
+    margin-left: -42px;
 }
 .guestbook_contents{
     width: 82%;
@@ -1189,21 +1189,22 @@ textarea{
 }
 .reply_time{
     margin-top: 2.5%;
-    margin-left: -40px;
+    margin-left: -42px;
 
 }
 .re-reply{
     margin-left: 726px;;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .reply_contents{
     height: auto;
-    margin-top: 8%;
     margin-left: 6%;
     border-bottom: 1px solid #bcbcbc;
     padding: 10px;
 
 }
+
 /*作业展示*/
 .work_list{
     padding: 20px;

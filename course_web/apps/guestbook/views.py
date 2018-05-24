@@ -7,7 +7,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from guestbook import utils
-from guestbook.forms import PublishGuestbookForm, ReplyForm, Reply_ReplyForm
+from guestbook.forms import PublishGuestbookForm, ReplyForm
 from guestbook.models import GuestBook, Reply
 
 # Create your views here.
@@ -73,20 +73,18 @@ class GuestbookSearchView(View):
 class GuestbookDetailView(LoginRequiredMixin, View):
     def get(self, request, guestbook_id):
         guestbook_obj = GuestBook.objects.get(id=int(guestbook_id))
-        # all_reply = Reply.objects.all().filter(guestbook=guestbook_obj)
-        print(guestbook_obj)
+        # all_reply = Reply.objects.all().filter(Q(guestbook=guestbook_obj) & Q(parent_reply_id=None))
+        # print(all_reply)
         reply_tree = utils.create_reply_tree(guestbook_obj)
-        print(reply_tree)
+        all_reply = [(k,) + tuple(v) for k, v in reply_tree.items()]
 
-        # try:
-        #     page = request.GET.get('page', 1)
-        # except PageNotAnInteger:
-        #     page = 1
-        # p = Paginator(all_reply, 5, request=request)
-        # all_reply = p.page(page)
-        return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook_obj, 'reply_tree': reply_tree})
-    # def post(self, request, guestbook_id):
-    #     return render(request, 'guestbook/guestbook_detail.html')
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(all_reply, 1, request=request)
+        all_reply = p.page(page)
+        return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook_obj, 'reply_tree': reply_tree, 'all_reply':all_reply})
 
 
 class ReplyView(LoginRequiredMixin, View):
@@ -103,7 +101,6 @@ class ReplyView(LoginRequiredMixin, View):
                 guestbook_id = request.POST.get('id')
                 if content and date and id:
                     reply.user = request.user
-                    reply.nickname =request.user.nick_name
                     reply.r_content = content
                     reply.r_time = date
                     reply.guestbook_id = guestbook_id
@@ -114,23 +111,22 @@ class ReplyView(LoginRequiredMixin, View):
 
 class Reply_ReplyView(LoginRequiredMixin, View):
 
-    def post(self, request):
+    def get(self, request):
         if not request.user.is_authenticated:
             return HttpResponse('{"status":"fail", "msg":"用户未登录"}', content_type='application/json')
         reply =Reply()
-        if request.method == 'POST':
-            replyForm = Reply_ReplyForm(request.POST)
-            if replyForm:
-                content = request.POST.get('reply_content')
-                date = request.POST.get('date')
-                reply_id = request.POST.get('reply_id')
-                if content and date and id:
-                    reply.user = request.user
-                    reply.nickname =request.user.nick_name
-                    reply.r_content = content
-                    reply.r_time = date
-                    reply.parent_reply_id = reply_id
-                    reply.save()
-                    return HttpResponse('{"status":"success", "msg":"留言回复成功" }', content_type='application/json')
-                else:
-                    return HttpResponse('{"status":"fail", "msg":"留言回复失败"}', content_type='application/json')
+        if request.method == 'GET':
+            id = request.GET.get('id')
+            content = request.GET.get('reply_content')
+            date = request.GET.get('date')
+            reply_id = request.GET.get('reply_id')
+            if content and date and reply_id:
+                reply.user = request.user
+                reply.r_content = content
+                reply.r_time = date
+                reply.parent_reply_id = reply_id
+                reply.guestbook_id = id
+                reply.save()
+                return HttpResponse('{"status":"success", "msg":"留言回复成功" }', content_type='application/json')
+            else:
+                return HttpResponse('{"status":"fail", "msg":"留言回复失败"}', content_type='application/json')

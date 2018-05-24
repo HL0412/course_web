@@ -81,9 +81,9 @@ class CollegeView(View):
         sort = request.GET.get('sort', "")
         if sort:
             if sort == "students":
-                all_classroom = all_classroom.order_by("-students")
+                all_classroom = all_classroom.order_by("-student")
             elif sort == "courses":
-                all_classroom = all_classroom.order_by("-course_nums")
+                all_classroom = all_classroom.order_by("-course")
 
         classroom_num = all_classroom.count()
         try:
