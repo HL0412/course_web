@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 # Create your views here.
 from college.models import Classroom, Department
-from course_manager.models import Teacher, Course
+from course_manager.models import Teacher, Course, Student
 from django.http import HttpResponse
 from .forms import UserAskForm
 
@@ -14,17 +14,22 @@ class SearchView(View):
     def get(self, request):
         q = request.GET.get('q')
         course_list = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))
+        print(course_list)
+        for cur in course_list:
+            all_teacher =Course.objects.get(id=int(cur.id)).teacher.all()
+        print(all_teacher)
+
         course = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))[:1]
         # 进行分页
         try:
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        p = Paginator(course_list, 5, request=request)
-        all_course = p.page(page)
-        print(course_list)
+        p = Paginator(all_teacher, 5, request=request)
+        all_teacher = p.page(page)
+
         if course_list:
-            return render(request, "course/course_list.html", {'all_course':  all_course, 'course': course})
+            return render(request, "course/course_list.html", {'all_course': course_list, 'course': course, 'all_teacher':all_teacher})
         else:
             return HttpResponse('{"status":"fail", "msg":"没有此课程信息，请重新输入"}', content_type='application/json')
 
@@ -75,15 +80,21 @@ class CollegeView(View):
                 all_classroom = all_classroom.filter(grade=grade)
 
         # 热门教学单位班级
+
         hot_classroom = all_classroom.order_by('-add_time')[:10]
+
+        for classroom in all_classroom:
+            classroom.students = classroom.get_student_nums()
+            classroom.course_nums = classroom.get_course_nums()
+            classroom.save()
 
         # 排序筛选
         sort = request.GET.get('sort', "")
         if sort:
             if sort == "students":
-                all_classroom = all_classroom.order_by("-student")
+                all_classroom = all_classroom.order_by('-students')
             elif sort == "courses":
-                all_classroom = all_classroom.order_by("-course")
+                all_classroom = all_classroom.order_by('-course_num')
 
         classroom_num = all_classroom.count()
         try:
@@ -195,6 +206,7 @@ class ClassroomHomeView(View):
 
         # 反向查询到班级的所有老师，课程
         all_courses = course_classroom.course_set.all()[:4]
+
         all_teacher = course_classroom.teacher_set.all()[:4]
         return render(request,'college/department_detail_homepage.html',{
             'course_classroom': course_classroom,

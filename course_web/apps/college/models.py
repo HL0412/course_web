@@ -50,6 +50,7 @@ class Department(models.Model):
         return self.name
 
 
+
 class Classroom(models.Model):
     '''班级'''
     GRADE_CHOICES = (
@@ -67,9 +68,8 @@ class Classroom(models.Model):
     image = models.ImageField(null=True, blank=True, upload_to='classroom/%Y/%m', default='image/default.png',
                       max_length=100, verbose_name = "班级图片")
     grade = models.CharField(max_length=45, choices=GRADE_CHOICES,verbose_name='年级', default="freshman")
-    # classes = models.IntegerField(verbose_name='班号', default=1)
-    # students = models.IntegerField(default=0, verbose_name='班级人数')
-    # course_nums = models.IntegerField(default=0, verbose_name='课程数')
+    students = models.IntegerField(null=True, blank=True, verbose_name='学生人数')
+    course_nums = models.IntegerField(null=True, blank=True,  verbose_name='课程数')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -79,6 +79,7 @@ class Classroom(models.Model):
 
     def get_teacher_nums(self):
         #获取班级的教师数
+
         return self.teacher_set.all().count()
 
     def get_course_nums(self):
@@ -87,7 +88,8 @@ class Classroom(models.Model):
     
     def get_student_nums(self):
         # 获取班级的学生数
-        return self.student_set.all().count()
+        students = self.student_set.all().count()
+        return students
 
     def __str__(self):
         return  self.name

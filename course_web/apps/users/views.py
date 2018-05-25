@@ -11,8 +11,8 @@ from django.contrib.auth.backends import ModelBackend
 from django.urls import reverse
 from pure_pagination import Paginator
 
-from course_manager.models import Course
-from platfrom.models import Notice, News, WorkCommit, UserMessage, UserCourse
+from course_manager.models import Course, Student, Teacher
+from platfrom.models import Notice, News, WorkCommit, UserMessage
 from .models import UserProfile,EmailVerifyRecord
 from django.db.models import Q
 from django.views.generic.base import View
@@ -293,14 +293,15 @@ class MyCourseView(LoginRequiredMixin, View):
     '''我的课程--学生'''
     def get(self, request):
         current_page = 'mycourse'
-        # user_courses = UserCourse.objects.filter(user=request.user)
-        # print(user_courses)
-        # return render(request, "users/usercenter_mycourse.html", {
-        #     "user_courses" : user_courses,
-        #     "current_page" : current_page
-        # })
-        user_courses =Course.objects.filter(student=request.user.id)
-        print(user_courses)
+        user_courses =Student.objects.get(user=request.user.id).course.all()
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+            # 这里指从all_department中取五个出来，每页显示5个
+        p = Paginator(user_courses, 5, request=request)
+        user_courses = p.page(page)
+
         return render(request, "users/usercenter_mycourse.html", {
             "user_courses": user_courses,
             "current_page": current_page
@@ -310,8 +311,15 @@ class MyTeachCourseView(LoginRequiredMixin, View):
     '''我所教的课程--教师'''
     def get(self, request):
         current_page = 'my_teach_course'
-        user_courses = UserCourse.objects.filter(user=request.user)
+        user_courses = Teacher.objects.get(user=request.user.id).course.all()
         print(user_courses)
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+            # 这里指从all_department中取五个出来，每页显示5个
+        p = Paginator(user_courses, 5, request=request)
+        user_courses = p.page(page)
         return render(request, "users/usercenter_my_teach_course.html", {
             "user_courses" : user_courses,
             "current_page" : current_page
@@ -323,7 +331,9 @@ class MyWorkView(LoginRequiredMixin,View):
 
     def get(self, request):
         current_page = 'mywork'
-        return render(request, "users/usercenter_work.html" ,{'current_page': current_page})
+        work_list = WorkCommit.objects.filter(student=request.user.student.id)
+        print(work_list)
+        return render(request, "users/usercenter_work.html" ,{'current_page': current_page, 'work_list': work_list})
 
 class MyPublishWorkView(LoginRequiredMixin,View):
     '''我发布作业'''

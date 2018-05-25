@@ -1,4 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.db.models import Q
 from django.views.decorators.csrf import csrf_protect
 from pure_pagination import Paginator, PageNotAnInteger
@@ -11,6 +11,9 @@ from guestbook.forms import PublishGuestbookForm, ReplyForm
 from guestbook.models import GuestBook, Reply
 
 # Create your views here.
+from utils.mixin_utils import LoginRequiredMixin
+
+
 class GuestbookView(LoginRequiredMixin, View):
     def get(self, request):
         all_guestbook = GuestBook.objects.all()
@@ -73,19 +76,21 @@ class GuestbookSearchView(View):
 class GuestbookDetailView(LoginRequiredMixin, View):
     def get(self, request, guestbook_id):
         guestbook_obj = GuestBook.objects.get(id=int(guestbook_id))
-        # all_reply = Reply.objects.all().filter(Q(guestbook=guestbook_obj) & Q(parent_reply_id=None))
-        # print(all_reply)
         reply_tree = utils.create_reply_tree(guestbook_obj)
-        all_reply = [(k,) + tuple(v) for k, v in reply_tree.items()]
 
-        try:
-            page = request.GET.get('page', 1)
-        except PageNotAnInteger:
-            page = 1
-        p = Paginator(all_reply, 1, request=request)
-        all_reply = p.page(page)
-        return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook_obj, 'reply_tree': reply_tree, 'all_reply':all_reply})
-
+        # 分页功能的实现
+        # all_reply = [(k,) + tuple(v) for k, v in reply_tree.items()]
+        # print(all_reply)
+        #
+        # try:
+        #     page = request.GET.get('page', 1)
+        # except PageNotAnInteger:
+        #     page = 1
+        # p = Paginator(all_reply, 1, request=request)
+        # all_reply = p.page(page)
+        # return render(request, 'guestbook/guestbook_detail.html', {'guestbook': guestbook_obj, 'reply_tree': reply_tree, 'all_reply':all_reply})
+        return render(request, 'guestbook/guestbook_detail.html',
+                      {'guestbook': guestbook_obj, 'reply_tree': reply_tree})
 
 class ReplyView(LoginRequiredMixin, View):
 

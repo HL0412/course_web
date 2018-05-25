@@ -114,3 +114,8 @@ class UpVideoView(View):
     def get(self, request):
         current_page = "up_video"
         return render(request, 'platfrom/platfrom_uploadVideo.html',{'current_page':current_page})
+
+class VideoView(View):
+    def get(self, request):
+        current_page = "video"
+        return render(request, 'platfrom/platfrom_video.html',{'current_page':current_page})

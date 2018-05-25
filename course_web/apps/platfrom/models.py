@@ -95,24 +95,13 @@ class UserAsk(models.Model):
 
 
 class UserMessage(models.Model):
-    user = models.IntegerField('接受用户',default=0)
+    user = models.IntegerField('接收用户',default=0)
     message = models.CharField('消息内容',max_length=500)
     has_read = models.BooleanField('是否已读',default=False)
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:
         verbose_name = '用户消息'
-        verbose_name_plural = verbose_name
-
-
-class UserCourse(models.Model):
-    '''用户课程'''
-    user = models.ForeignKey(UserProfile,verbose_name='用户',on_delete=models.CASCADE)
-    course = models.ForeignKey(Course,verbose_name='课程',on_delete=models.CASCADE)
-    add_time = models.DateTimeField('添加时间', default=datetime.now)
-
-    class Meta:
-        verbose_name = '用户课程'
         verbose_name_plural = verbose_name
 
 

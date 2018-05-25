@@ -912,12 +912,10 @@ nav .personal a:hover {
 }
 .course_list dt{
     font-size: 1.2em;
-    width: 80px;
     height: 30px;
     border-radius: 10px;
     padding: 10px;
-    display: block;
-    margin: 0 auto;
+    text-align: center;
 
 }
 .course_list dt a{
@@ -2630,7 +2628,6 @@ textarea:focus {
 
 .group_list .box img {
     height: 200px;
-    padding-top: 20px;
 }
 
 .group_list .des {
@@ -3046,7 +3043,7 @@ textarea:focus {
 
 .module5 .top .key {
     font-size: 30px;
-    color: #fb8341
+    color: #fb95a6
 }
 
 .module5 .middle {
@@ -3170,11 +3167,11 @@ textarea:focus {
 }
 
 .module6 .right dd h2:hover {
-    color: #fbc241;
+    color: #fba188;
 }
 
 .module6 .right a:hover {
-    color: #fb8341;
+    color: #fb95a6;
 }
 
 /*foot*/
@@ -3415,7 +3412,6 @@ footer .footer .links a:hover {
     height: 50px;
     line-height: 50px;
     text-indent: 0;
-    border: 1px solid #eaeaea;
     border-bottom: none;
 }
 
@@ -6107,21 +6103,26 @@ footer .footer .links a:hover {
     width: 945px;
     height: auto !important;
     overflow: hidden;
+    padding-left: 20px;
 }
 
 .departmentcenter .group_list .box {
-    height: 300px;
+    height: 260px;
     position: relative;
     margin: 30px 10px;
     width: 214px !important;
 }
-
+.departmentcenter .group_list .box img{
+    border-bottom: 1px dotted #c4c4c4;
+    padding: 20px;
+}
 .departmentcenter .group_list .box .des {
-    width: 95%;
-    margin: 7%;
+    width: 100%;
     height: 70px;
     border: 0;
-    position: relative;
+    background:whitesmoke;
+    margin:0;
+    padding-left: 10px;
 }
 .departmentcenter .group_list .box .des .fr{
     left: -20px;
@@ -6909,12 +6910,12 @@ footer .footer .links a:hover {
 }
 
 .messagelist {
-    width: 943px;
+    width: 944px;
     height: auto;
     overflow: hidden;
     line-height: 150%;
     color: #585858;
-    border: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
     border-top: 0;
 }
 
@@ -7017,6 +7018,7 @@ footer .footer .links a:hover {
     width: 943px;
     margin: 0;
     padding: 0;
+    background: white;
 }
 
 .messages.butler_list.department .des {
@@ -7058,9 +7060,7 @@ footer .footer .links a:hover {
 }
 
 .messagelist .delete {
-    position: absolute;
-    right: 20px;
-    top: 50px;
+    margin: 0 auto;
     width: 31px;
     height: 50px;
     background: url(../images/pic12.png) no-repeat center center;
@@ -9906,3 +9906,5 @@ table .upload-btn {
     height:auto;
     left:auto;
 }
+
+

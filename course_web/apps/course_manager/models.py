@@ -33,8 +33,8 @@ class Course(models.Model):
     course_num = models.IntegerField(unique=True, verbose_name=u"课程号")
     course_intro = models.TextField(null=True, blank=True, verbose_name='课程介绍')
     course_picture = models.ImageField(null=True, blank=True, upload_to='course/image/%Y/%m',
-                                       default='image/default.png', max_length=100, verbose_name='课程图片')
-    teacher = models.ForeignKey(Teacher, verbose_name='课程教师', on_delete=models.CASCADE)
+                                     default='image/default.png', max_length=100, verbose_name='课程图片')
+    teacher = models.ManyToManyField(Teacher, verbose_name='课程教师')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
@@ -68,7 +68,7 @@ class Student(models.Model):
     '''学生表'''
     user = models.OneToOneField(UserProfile, on_delete=models.CASCADE, verbose_name='用户名')
     classroom = models.ForeignKey(Classroom, verbose_name='所属班级', on_delete=models.CASCADE)
-    course = models.ForeignKey(Course, verbose_name='所学课程', on_delete=models.CASCADE)
+    course = models.ManyToManyField(Course, verbose_name='所学课程')
     name = models.CharField(max_length=45, verbose_name='姓名')
     number = models.CharField(max_length=45, unique=True, verbose_name='学号')
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
