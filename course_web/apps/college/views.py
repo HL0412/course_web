@@ -14,10 +14,11 @@ class SearchView(View):
     def get(self, request):
         q = request.GET.get('q')
         course_list = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))
-        print(course_list)
-        for cur in course_list:
-            all_teacher =Course.objects.get(id=int(cur.id)).teacher.all()
-        print(all_teacher)
+        if course_list:
+            for cur in course_list:
+                all_teacher =Course.objects.get(id=int(cur.id)).teacher.all()
+        else:
+            all_teacher=[]
 
         course = Course.objects.filter(Q(name__icontains=q)|Q(course_intro__icontains=q))[:1]
         # 进行分页
@@ -94,7 +95,7 @@ class CollegeView(View):
             if sort == "students":
                 all_classroom = all_classroom.order_by('-students')
             elif sort == "courses":
-                all_classroom = all_classroom.order_by('-course_num')
+                all_classroom = all_classroom.order_by('-course_nums')
 
         classroom_num = all_classroom.count()
         try:

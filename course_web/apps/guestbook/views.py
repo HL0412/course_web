@@ -14,7 +14,7 @@ from guestbook.models import GuestBook, Reply
 from utils.mixin_utils import LoginRequiredMixin
 
 
-class GuestbookView(LoginRequiredMixin, View):
+class GuestbookView(View):
     def get(self, request):
         all_guestbook = GuestBook.objects.all()
         hot_guestbook = GuestBook.objects.all().order_by('g_time')[:10]
@@ -73,7 +73,7 @@ class GuestbookSearchView(View):
                 return render(request, 'guestbook/guestbook.html', {'all_guestbook': all_guestbook, 'hot_guestbook':hot_guestbook})
 
 
-class GuestbookDetailView(LoginRequiredMixin, View):
+class GuestbookDetailView(View):
     def get(self, request, guestbook_id):
         guestbook_obj = GuestBook.objects.get(id=int(guestbook_id))
         reply_tree = utils.create_reply_tree(guestbook_obj)
